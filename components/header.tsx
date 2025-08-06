@@ -136,6 +136,11 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
+              {/* Grain Link */}
+              <Link href="/grain" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+                Grain
+              </Link>
+
               {/* Services Dropdown */}
               <div className="relative">
                 <button
@@ -262,18 +267,9 @@ export function Header() {
               <Link href="/contact" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
                 Contact
               </Link>
-              <Link href="/style-guide" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
-                Style Guide
-              </Link>
 
-              {/* CTA Buttons */}
+              {/* CTA Button */}
               <div className="flex items-center gap-3 ml-4">
-                <Link 
-                  href="/portal" 
-                  className="btn-secondary"
-                >
-                  Producer Portal
-                </Link>
                 <Link 
                   href="/grain" 
                   className="btn-primary"
@@ -318,6 +314,17 @@ export function Header() {
             >
               <div className="p-6 max-h-[70vh] overflow-y-auto">
                 <nav className="space-y-6">
+                  {/* Grain Link */}
+                  <div>
+                    <Link 
+                      href="/grain" 
+                      onClick={toggleMenu}
+                      className="block text-base font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      Grain
+                    </Link>
+                  </div>
+
                   {/* Services Section */}
                   <div>
                     <button
@@ -449,13 +456,6 @@ export function Header() {
                     >
                       Contact
                     </Link>
-                    <Link 
-                      href="/style-guide" 
-                      onClick={toggleMenu}
-                      className="block text-base font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      Style Guide
-                    </Link>
                   </div>
 
                   {/* Mobile CTA */}
@@ -465,7 +465,7 @@ export function Header() {
                       onClick={toggleMenu}
                       className="btn-primary w-full justify-center"
                     >
-                      View Cash Bids
+                      Cash Bids
                     </Link>
                   </div>
                 </nav>

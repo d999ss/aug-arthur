@@ -73,6 +73,9 @@ export function Footer() {
               <Link href="/portal" className="text-sm text-background/70 hover:text-background transition-colors block">
                 Producer Portal
               </Link>
+              <Link href="/style-guide" className="text-sm text-background/70 hover:text-background transition-colors block">
+                Style Guide
+              </Link>
             </div>
           </div>
 
