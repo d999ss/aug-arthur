@@ -92,7 +92,13 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="flex justify-center"
             >
-              <PlaceholderMedia type="image" size="xl" />
+              <Image 
+                src="/Aug 6, 2025, 02_25_19 PM.png"
+                alt="Arthur Companies serving growers"
+                width={600}
+                height={400}
+                priority
+              />
             </motion.div>
           </div>
         </div>
