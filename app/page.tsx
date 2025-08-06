@@ -39,7 +39,7 @@ export default function HomePage() {
               <h1 className="text-hero mb-lg text-balance">
                 Arthur: Where Innovation Grows, From the Ground Up.
               </h1>
-              <p className="text-lead mb-xl content-width">
+              <p className="text-lead mb-xl">
                 Over one hundred years in the field.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
