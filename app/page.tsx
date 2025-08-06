@@ -94,7 +94,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-h2 mb-lg">For Growers</h2>
+              <h2 className="text-h2 mb-md">For Growers</h2>
               <p className="text-lead mb-lg">
                 You know your acres. We know the market. Our team shows up, answers the phone, and competes to earn your business whether you're hauling to an Arthur elevator, planning for next year with our agronomy experts, or growing under contract for specialty end-users.
               </p>
@@ -155,7 +155,7 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="lg:order-1"
             >
-              <h2 className="text-h2 mb-lg">For Partners</h2>
+              <h2 className="text-h2 mb-md">For Partners</h2>
               <p className="text-lead mb-lg">
                 Arthur is a growing agribusiness platform trusted by processors, suppliers, and our industry-leading peers. Our businesses span grain origination, crop inputs, research, logistics, and specialty ingredients—all supported by a culture of integrity and execution.
               </p>
