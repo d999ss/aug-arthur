@@ -258,6 +258,9 @@ export function Header() {
               <Link href="/contact" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
                 Contact
               </Link>
+              <Link href="/style-guide" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+                Style Guide
+              </Link>
 
               {/* CTA Button */}
               <Link 
@@ -433,6 +436,13 @@ export function Header() {
                       className="block text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Contact
+                    </Link>
+                    <Link 
+                      href="/style-guide" 
+                      onClick={toggleMenu}
+                      className="block text-base font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      Style Guide
                     </Link>
                   </div>
 
