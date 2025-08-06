@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Refined Anthropic Style with Image */}
-      <section className="relative min-h-screen flex items-center -mt-16 lg:-mt-20">
+      <section className="relative min-h-screen flex items-center -mt-16 lg:-mt-20 section-lg">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20" />
         
         {/* Robinhood-style lighting effect */}
@@ -36,18 +36,18 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-garamond-display mb-2 text-balance" style={{ fontSize: 'clamp(2.925rem, 3.9vw + 0.65rem, 3.9rem)' }}>
+              <h1 className="text-hero mb-lg text-balance">
                 Arthur: Where Innovation Grows, From the Ground Up.
               </h1>
-              <p className="text-subheading mb-10 max-w-3xl">
+              <p className="text-lead mb-xl content-width">
                 Over one hundred years in the field.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/grain" className="btn-primary">
+                <Link href="/grain" className="btn btn-primary">
                   View Cash Bids
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/about" className="btn-secondary">
+                <Link href="/about" className="btn btn-secondary">
                   About Arthur
                 </Link>
               </div>
@@ -74,7 +74,7 @@ export default function HomePage() {
 
 
       {/* For Growers Section */}
-      <section className="section-y-large relative">
+      <section className="section relative">
         {/* Lighting effect at section transition */}
         <div 
           className="absolute -top-32 left-1/2 w-[1000px] h-[400px] -translate-x-1/2 pointer-events-none"
@@ -94,16 +94,16 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-headline mb-8">For Growers</h2>
-              <p className="text-body mb-8">
+              <h2 className="text-h1 mb-lg">For Growers</h2>
+              <p className="text-body mb-lg">
                 You know your acres. We know the market. Our team shows up, answers the phone, and competes to earn your business whether you're hauling to an Arthur elevator, planning for next year with our agronomy experts, or growing under contract for specialty end-users.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/grain" className="btn-primary">
+                <Link href="/grain" className="btn btn-primary">
                   Grain
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/products-services" className="btn-secondary">
+                <Link href="/products-services" className="btn btn-secondary">
                   Products & Services
                 </Link>
               </div>
@@ -129,7 +129,7 @@ export default function HomePage() {
       </section>
 
       {/* For Partners Section */}
-      <section className="section-y-large bg-muted/30">
+      <section className="section bg-muted">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -155,16 +155,16 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="lg:order-1"
             >
-              <h2 className="text-headline mb-8">For Partners</h2>
-              <p className="text-body mb-8">
+              <h2 className="text-h1 mb-lg">For Partners</h2>
+              <p className="text-body mb-lg">
                 Arthur is a growing agribusiness platform trusted by processors, suppliers, and our industry-leading peers. Our businesses span grain origination, crop inputs, research, logistics, and specialty ingredients—all supported by a culture of integrity and execution.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/products-services" className="btn-primary">
+                <Link href="/products-services" className="btn btn-primary">
                   Products & Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/research-development" className="btn-secondary">
+                <Link href="/research-development" className="btn btn-secondary">
                   Innovation
                 </Link>
               </div>
@@ -174,7 +174,7 @@ export default function HomePage() {
       </section>
 
       {/* Quote Section - Prominent Display */}
-      <section className="section-y-large bg-muted/10 relative overflow-hidden">
+      <section className="section bg-muted relative overflow-hidden">
         {/* Ambient glow effect */}
         <div 
           className="absolute top-1/2 right-0 w-[600px] h-[600px] -translate-y-1/2 translate-x-1/4 pointer-events-none"
@@ -207,7 +207,7 @@ export default function HomePage() {
       </section>
 
       {/* Values Section */}
-      <section className="section-y-large relative">
+      <section className="section relative">
         {/* Dual lighting effects for depth */}
         <div 
           className="absolute top-20 left-0 w-[500px] h-[500px] -translate-x-1/2 pointer-events-none"
@@ -237,8 +237,8 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-headline mb-6">Company Values</h2>
-            <p className="text-body-large max-w-2xl mx-auto">
+            <h2 className="text-h1 mb-md">Company Values</h2>
+            <p className="text-lead content-width mx-auto">
               The principles that have guided our work for over a century.
             </p>
           </motion.div>
@@ -270,7 +270,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="p-6 card-refined"
               >
-                <h3 className="text-title mb-3">{value.title}</h3>
+                <h3 className="text-h3 mb-md">{value.title}</h3>
                 <p className="text-body">
                   {value.description}
                 </p>
@@ -282,11 +282,11 @@ export default function HomePage() {
 
 
       {/* Weather & Market Dashboard */}
-      <section className="section-y bg-muted/20">
+      <section className="section bg-muted">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-headline mb-4">Real-Time Agricultural Intelligence</h2>
-            <p className="text-body-large max-w-4xl mx-auto text-muted-foreground">
+            <h2 className="text-h1 mb-md">Real-Time Agricultural Intelligence</h2>
+            <p className="text-lead content-width mx-auto text-muted">
               Make informed decisions with live market data and precision weather forecasting
             </p>
           </div>
@@ -314,8 +314,8 @@ export default function HomePage() {
               className="p-8 bg-card rounded-2xl shadow-lg"
             >
               <div className="text-center mb-8">
-                <h3 className="text-title mb-3">Futures Market Data</h3>
-                <p className="text-body text-muted-foreground max-w-2xl mx-auto">
+                <h3 className="text-h3 mb-md">Futures Market Data</h3>
+                <p className="text-body text-muted content-width mx-auto">
                   Live futures pricing for corn, soybeans, and wheat contracts
                 </p>
               </div>
@@ -327,7 +327,7 @@ export default function HomePage() {
 
 
       {/* App Download Section */}
-      <section className="section-y-large">
+      <section className="section">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -336,21 +336,21 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-headline mb-6">Arthur Co. Cash Bids</h2>
-              <p className="text-body-large mb-12">
+              <h2 className="text-h1 mb-md">Arthur Co. Cash Bids</h2>
+              <p className="text-lead mb-xl">
                 Free Real-time harvest information for growers, by Arthur Companies.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link 
                   href="#"
-                  className="btn-primary"
+                  className="btn btn-primary"
                 >
                   Download for iOS
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <Link 
                   href="#"
-                  className="btn-secondary"
+                  className="btn btn-secondary"
                 >
                   Download for Android
                 </Link>
@@ -361,7 +361,7 @@ export default function HomePage() {
       </section>
 
       {/* Closing Statement */}
-      <section className="section-y-large bg-foreground text-background">
+      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -370,7 +370,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-serif text-display text-center text-background">
+              <p className="text-h2 text-serif text-center" style={{ color: 'hsl(var(--color-background))' }}>
                 Arthur delivers performance you can measure and people you can trust.
               </p>
             </motion.div>

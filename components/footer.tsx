@@ -2,24 +2,24 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background border-t border-border/20">
-      <div className="container py-20 lg:py-24">
+    <footer style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }} className="border-t border-border/20">
+      <div className="container section-lg">
         {/* Main Footer Grid - Anthropic Style */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-8">
           {/* Company */}
           <div>
-            <h3 className="text-sm font-medium text-background mb-3">Company</h3>
+            <h3 className="text-small font-medium mb-md">Company</h3>
             <div className="space-y-2">
-              <Link href="/about" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/about" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 About
               </Link>
-              <Link href="/careers" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/careers" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Careers
               </Link>
-              <Link href="/contact" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/contact" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Contact
               </Link>
-              <Link href="/about/newsroom" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/about/newsroom" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Newsroom
               </Link>
             </div>
@@ -27,18 +27,18 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-medium text-background mb-3">Services</h3>
+            <h3 className="text-small font-medium mb-md">Services</h3>
             <div className="space-y-2">
-              <Link href="/grain" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/grain" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Grain Marketing
               </Link>
-              <Link href="/services/agronomy" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/services/agronomy" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Agronomy
               </Link>
-              <Link href="/services/precision-agriculture" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/services/precision-agriculture" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Precision Ag
               </Link>
-              <Link href="/services/specialty-crops" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/services/specialty-crops" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Specialty Crops
               </Link>
             </div>
@@ -46,15 +46,15 @@ export function Footer() {
 
           {/* Research */}
           <div>
-            <h3 className="text-sm font-medium text-background mb-3">Research</h3>
+            <h3 className="text-small font-medium mb-md">Research</h3>
             <div className="space-y-2">
-              <Link href="/research-development" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/research-development" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 R&D Overview
               </Link>
-              <Link href="/research/crop-genetics" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/research/crop-genetics" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Crop Genetics
               </Link>
-              <Link href="/research/sustainability" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/research/sustainability" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Sustainability
               </Link>
             </div>
@@ -62,18 +62,18 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-medium text-background mb-3">Resources</h3>
+            <h3 className="text-small font-medium mb-md">Resources</h3>
             <div className="space-y-2">
-              <Link href="/grain" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/grain" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Cash Bids
               </Link>
-              <Link href="/grower-insights" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/grower-insights" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Grower Insights
               </Link>
-              <Link href="/portal" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/portal" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Producer Portal
               </Link>
-              <Link href="/style-guide" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/style-guide" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Style Guide
               </Link>
             </div>
@@ -81,15 +81,15 @@ export function Footer() {
 
           {/* Legal */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-sm font-medium text-background mb-3">Legal</h3>
+            <h3 className="text-small font-medium mb-md">Legal</h3>
             <div className="space-y-2">
-              <Link href="/legal/terms" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/legal/terms" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Terms
               </Link>
-              <Link href="/legal/privacy" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/legal/privacy" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Privacy
               </Link>
-              <Link href="/legal/accessibility" className="text-sm text-background/70 hover:text-background transition-colors block">
+              <Link href="/legal/accessibility" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Accessibility
               </Link>
             </div>

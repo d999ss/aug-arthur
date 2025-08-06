@@ -32,22 +32,13 @@ export function PullQuote({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`
-        relative bg-card rounded-3xl border border-border/10
-        ${baseClasses} ${className}
-      `}
+      className={`pull-quote ${className}`}
     >
-      {/* Quote Text - Exact Anthropic Style */}
+      {/* Quote Text - Design System Style */}
       <blockquote className={`
-        font-normal text-foreground leading-relaxed mb-6
-        ${variant === 'large' 
-          ? 'text-3xl lg:text-4xl font-light' 
-          : 'text-xl lg:text-2xl'
-        }
+        pull-quote-text
         ${variant === 'centered' ? 'text-center' : ''}
-      `}
-        style={{ fontFamily: 'var(--font-garamond), Georgia, serif' }}
-      >
+      `}>
         "{quote}"
       </blockquote>
 
@@ -55,7 +46,7 @@ export function PullQuote({
       <div className={`
         ${variant === 'centered' ? 'text-center' : ''}
       `}>
-        <p className="text-sm text-muted-foreground">
+        <p className="pull-quote-attribution">
           {author}{title && `, ${title}`}{company && `, ${company}`}
         </p>
       </div>

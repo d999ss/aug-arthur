@@ -129,7 +129,7 @@ export function Header() {
               href="/" 
               className="flex items-center group"
             >
-              <span className="text-xl font-bold tracking-tight text-foreground font-[var(--font-styrene-a)]">
+              <span className="text-h3" style={{ fontFamily: 'var(--font-styrene-a), -apple-system, sans-serif', fontWeight: 500 }}>
                 Arthur Companies
               </span>
             </Link>
@@ -137,7 +137,7 @@ export function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
               {/* Grain Link */}
-              <Link href="/grain" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+              <Link href="/grain" className="px-3 py-2 text-small font-medium text-muted hover:text-foreground transition-colors duration-200">
                 Grain
               </Link>
 
@@ -145,7 +145,7 @@ export function Header() {
               <div className="relative">
                 <button
                   onMouseEnter={() => setActiveDropdown('services')}
-                  className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  className="flex items-center px-3 py-2 text-small font-medium text-muted hover:text-foreground transition-colors duration-200"
                 >
                   Services
                   <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${
@@ -204,7 +204,7 @@ export function Header() {
               <div className="relative">
                 <button
                   onMouseEnter={() => setActiveDropdown('research')}
-                  className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  className="flex items-center px-3 py-2 text-small font-medium text-muted hover:text-foreground transition-colors duration-200"
                 >
                   Research
                   <ChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ${
@@ -260,13 +260,13 @@ export function Header() {
               </div>
 
               {/* Simple Links */}
-              <Link href="/about" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+              <Link href="/about" className="px-3 py-2 text-small font-medium text-muted hover:text-foreground transition-colors duration-200">
                 About
               </Link>
-              <Link href="/careers" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+              <Link href="/careers" className="px-3 py-2 text-small font-medium text-muted hover:text-foreground transition-colors duration-200">
                 Careers
               </Link>
-              <Link href="/contact" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+              <Link href="/contact" className="px-3 py-2 text-small font-medium text-muted hover:text-foreground transition-colors duration-200">
                 Contact
               </Link>
 
@@ -274,7 +274,7 @@ export function Header() {
               <div className="flex items-center gap-3 ml-4">
                 <Link 
                   href="/grain" 
-                  className="btn-primary"
+                  className="btn btn-primary"
                 >
                   Cash Bids
                 </Link>
@@ -322,7 +322,7 @@ export function Header() {
                     <Link 
                       href="/grain" 
                       onClick={toggleMenu}
-                      className="block text-base font-medium text-foreground hover:text-primary transition-colors"
+                      className="block text-body font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Grain
                     </Link>
@@ -441,21 +441,21 @@ export function Header() {
                     <Link 
                       href="/about" 
                       onClick={toggleMenu}
-                      className="block text-base font-medium text-foreground hover:text-primary transition-colors"
+                      className="block text-body font-medium text-foreground hover:text-primary transition-colors"
                     >
                       About
                     </Link>
                     <Link 
                       href="/careers" 
                       onClick={toggleMenu}
-                      className="block text-base font-medium text-foreground hover:text-primary transition-colors"
+                      className="block text-body font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Careers
                     </Link>
                     <Link 
                       href="/contact" 
                       onClick={toggleMenu}
-                      className="block text-base font-medium text-foreground hover:text-primary transition-colors"
+                      className="block text-body font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Contact
                     </Link>
@@ -466,7 +466,7 @@ export function Header() {
                     <Link 
                       href="/grain" 
                       onClick={toggleMenu}
-                      className="btn-primary w-full justify-center"
+                      className="btn btn-primary w-full justify-center"
                     >
                       Cash Bids
                     </Link>
