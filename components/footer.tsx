@@ -2,122 +2,119 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/10 bg-background">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
-              <span className="text-xl font-medium text-foreground">Arthur</span>
-            </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Cultivating prosperity across the Northern Plains since 1906.
-            </p>
-          </div>
-
-          {/* Quick Links */}
+    <footer className="border-t border-border/20">
+      <div className="container py-12 lg:py-16">
+        {/* Main Footer Grid - Anthropic Style */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-8">
+          {/* Company */}
           <div>
-            <h3 className="text-sm font-medium text-foreground mb-4">Company</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Locations
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            <h3 className="text-sm font-medium text-foreground mb-3">Company</h3>
+            <div className="space-y-2">
+              <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                About
+              </Link>
+              <Link href="/careers" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Careers
+              </Link>
+              <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Contact
+              </Link>
+              <Link href="/about/newsroom" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Newsroom
+              </Link>
+            </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-medium text-foreground mb-4">Services</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/grain" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Grain Marketing
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/agronomy" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Agronomy
-                </Link>
-              </li>
-              <li>
-                <Link href="/research-development" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Research
-                </Link>
-              </li>
-              <li>
-                <Link href="/grower-insights" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Grower Insights
-                </Link>
-              </li>
-            </ul>
+            <h3 className="text-sm font-medium text-foreground mb-3">Services</h3>
+            <div className="space-y-2">
+              <Link href="/grain" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Grain Marketing
+              </Link>
+              <Link href="/services/agronomy" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Agronomy
+              </Link>
+              <Link href="/services/precision-agriculture" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Precision Ag
+              </Link>
+              <Link href="/services/specialty-crops" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Specialty Crops
+              </Link>
+            </div>
+          </div>
+
+          {/* Research */}
+          <div>
+            <h3 className="text-sm font-medium text-foreground mb-3">Research</h3>
+            <div className="space-y-2">
+              <Link href="/research-development" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                R&D Overview
+              </Link>
+              <Link href="/research/crop-genetics" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Crop Genetics
+              </Link>
+              <Link href="/research/sustainability" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Sustainability
+              </Link>
+            </div>
           </div>
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-medium text-foreground mb-4">Resources</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/grain" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Cash Bids
-                </Link>
-              </li>
-              <li>
-                <Link href="/about/newsroom" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Newsroom
-                </Link>
-              </li>
-              <li>
-                <Link href="/legal/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/legal/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
+            <h3 className="text-sm font-medium text-foreground mb-3">Resources</h3>
+            <div className="space-y-2">
+              <Link href="/grain" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Cash Bids
+              </Link>
+              <Link href="/grower-insights" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Grower Insights
+              </Link>
+              <Link href="/portal" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Producer Portal
+              </Link>
+            </div>
           </div>
-        </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Arthur Companies. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-6">
-              <Link href="/style-guide" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                Style Guide
-              </Link>
-              <Link href="/legal/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                Privacy
-              </Link>
-              <Link href="/legal/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+          {/* Legal */}
+          <div className="col-span-2 md:col-span-1">
+            <h3 className="text-sm font-medium text-foreground mb-3">Legal</h3>
+            <div className="space-y-2">
+              <Link href="/legal/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
                 Terms
               </Link>
-              <Link href="/legal/accessibility" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+              <Link href="/legal/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
+                Privacy
+              </Link>
+              <Link href="/legal/accessibility" className="text-sm text-muted-foreground hover:text-foreground transition-colors block">
                 Accessibility
               </Link>
             </div>
+          </div>
+
+          {/* Brand Section */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-1">
+            <Link href="/" className="inline-block mb-3">
+              <span className="text-base font-medium text-foreground">Arthur Companies</span>
+            </Link>
+            <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+              Since 1906
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Northern Plains Agriculture
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="pt-6 border-t border-border/20">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Arthur Companies. All rights reserved.
+            </p>
+            <Link href="/style-guide" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              Style Guide
+            </Link>
           </div>
         </div>
       </div>
