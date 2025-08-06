@@ -5,6 +5,7 @@ import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown, X, Menu } from "lucide-react"
 import { FuturesHeaderBanner } from './futures-ticker'
+import { styreneA } from '@/lib/fonts'
 
 const navigationData = {
   services: {
@@ -129,8 +130,7 @@ export function Header() {
               href="/" 
               className="flex items-center group"
             >
-              <span style={{ 
-                fontFamily: 'var(--font-styrene-a), -apple-system, BlinkMacSystemFont, sans-serif',
+              <span className={`${styreneA.className}`} style={{ 
                 fontSize: '1.25rem',
                 fontWeight: '700',
                 letterSpacing: '-0.025em'

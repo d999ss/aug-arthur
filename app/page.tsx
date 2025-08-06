@@ -8,6 +8,7 @@ import { WeatherDashboard } from '@/components/weather-dashboard'
 import { FuturesPricing } from '@/components/futures-pricing'
 import { PullQuote, TestimonialGrid } from '@/components/pull-quote'
 import { PlaceholderMedia, RoundedImage } from '@/components/rounded-media'
+import { styreneB } from '@/lib/fonts'
 
 export default function HomePage() {
   return (
@@ -39,8 +40,7 @@ export default function HomePage() {
               <h1 className="text-hero mb-lg text-balance">
                 Arthur: Where Innovation Grows, From the Ground Up.
               </h1>
-              <p className="mb-xl" style={{
-                fontFamily: 'var(--font-styrene-b), -apple-system, sans-serif',
+              <p className={`${styreneB.className} mb-xl`} style={{
                 fontSize: 'clamp(1.125rem, 1.087rem + 0.163vw, 1.25rem)',
                 fontWeight: '400',
                 lineHeight: '1.6',
