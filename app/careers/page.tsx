@@ -23,7 +23,7 @@ export default function CareersPage() {
         <div className="text-center py-8">
           <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
           <p className="text-lg text-red-600 mb-4">{error.message}</p>
-          <Button onClick={() => window.location.reload()}>Try Again</Button>
+          <button onClick={() => window.location.reload()} className="btn-primary">Try Again</button>
         </div>
       );
     }
@@ -223,9 +223,9 @@ export default function CareersPage() {
           <p className="text-xl mb-8">
             Don't see the perfect role? We're always looking for talented individuals to join our team.
           </p>
-          <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-green-600">
+          <Link href="/contact" className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium">
             Send Us Your Resume
-          </Button>
+          </Link>
         </div>
       </section>
     </div>
