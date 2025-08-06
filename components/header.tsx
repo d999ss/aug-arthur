@@ -98,4 +98,3 @@ export function Header({ className = "" }: HeaderProps) {
     </header>
   )
 }
-EOF < /dev/null
