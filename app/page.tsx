@@ -11,34 +11,48 @@ import { PlaceholderMedia, RoundedImage } from '@/components/rounded-media'
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Refined Anthropic Style */}
+      {/* Hero Section - Refined Anthropic Style with Image */}
       <section className="relative min-h-screen flex items-center -mt-16 lg:-mt-20">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20" />
         
         <div className="relative z-10 container py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-5xl"
-          >
-            <h1 className="text-display mb-8 text-balance">
-              Arthur: Where Innovation Grows,{" "}
-              <span className="text-serif-display text-primary italic">From the Ground Up.</span>
-            </h1>
-            <p className="text-subheading mb-12 max-w-3xl">
-              100 years in the field and we're just getting started.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/grain" className="btn-primary">
-                View Cash Bids
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link href="/about" className="btn-secondary">
-                About Arthur
-              </Link>
-            </div>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h1 className="text-display mb-8 text-balance">
+                Arthur: Where Innovation Grows,{" "}
+                <span className="text-serif-display text-primary italic">From the Ground Up.</span>
+              </h1>
+              <p className="text-subheading mb-12 max-w-3xl">
+                100 years in the field and we're just getting started.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/grain" className="btn-primary">
+                  View Cash Bids
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link href="/about" className="btn-secondary">
+                  About Arthur
+                </Link>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="flex justify-center lg:justify-end"
+            >
+              <img 
+                src="/58729f4f-b276-4441-b780-54154ba0b12b.png"
+                alt="Arthur Companies agricultural operations"
+                className="max-w-full h-auto rounded-2xl shadow-lg"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
