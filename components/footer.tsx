@@ -94,4 +94,3 @@ export function Footer({ className = "" }: FooterProps) {
     </footer>
   )
 }
-EOF < /dev/null

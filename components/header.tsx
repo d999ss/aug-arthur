@@ -12,7 +12,7 @@ export function Header({ className = "" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleMenuToggle = () => {
-    setIsMenuOpen(\!isMenuOpen)
+    setIsMenuOpen(!isMenuOpen)
   }
 
   const handleLinkClick = () => {
