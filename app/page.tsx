@@ -40,7 +40,13 @@ export default function HomePage() {
               <h1 className="text-hero mb-lg text-balance">
                 Arthur: Where Innovation Grows, From the Ground Up.
               </h1>
-              <p className={`${styreneB.className} text-body mb-xl`}>
+              <p className="mb-xl" style={{ 
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontSize: 'clamp(1.125rem, 1.087rem + 0.163vw, 1.25rem)',
+                fontWeight: '400',
+                lineHeight: '1.6',
+                color: '#171717'
+              }}>
                 Over one hundred years in the field.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -95,7 +101,13 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-headline mb-md">For Growers</h2>
-              <p className={`${styreneB.className} text-body mb-lg`}>
+              <p className="mb-lg" style={{ 
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontSize: 'clamp(1.125rem, 1.087rem + 0.163vw, 1.25rem)',
+                fontWeight: '400',
+                lineHeight: '1.6',
+                color: '#171717'
+              }}>
                 You know your acres. We know the market. Our team shows up, answers the phone, and competes to earn your business whether you're hauling to an Arthur elevator, planning for next year with our agronomy experts, or growing under contract for specialty end-users.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">

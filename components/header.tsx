@@ -130,7 +130,8 @@ export function Header() {
               href="/" 
               className="flex items-center group"
             >
-              <span className={`${styreneA.className}`} style={{ 
+              <span style={{ 
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontSize: '1.25rem',
                 fontWeight: '700',
                 letterSpacing: '-0.025em'
