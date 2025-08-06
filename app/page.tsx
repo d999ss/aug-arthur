@@ -270,40 +270,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Producer Testimonials */}
-      <section className="section-y-large">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-headline mb-4">What Our Growers Say</h2>
-            <p className="text-body-large max-w-3xl mx-auto text-muted-foreground">
-              Hear from the farmers who trust Arthur Companies with their livelihood
-            </p>
-          </motion.div>
-
-          {/* Single testimonial from actual copy */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <PullQuote
-              variant="large"
-              quote="Arthur is the kind of company that shows up when it matters. We count on them every year, and every year they deliver."
-              author="Mike Johnson"
-              title="Wheat & Soybean Farmer"
-              company="Cass County"
-            />
-          </motion.div>
-        </div>
-      </section>
 
       {/* App Download Section */}
       <section className="section-y-large">
