@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Anthropic Style */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative min-h-screen flex items-center -mt-16 lg:-mt-20">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/20 to-background" />
         
