@@ -21,10 +21,10 @@ export function PullQuote({
   className = '' 
 }: PullQuoteProps) {
   const baseClasses = variant === 'large' 
-    ? 'py-16 px-8 lg:px-16'
+    ? 'py-12 px-8 lg:py-16 lg:px-12'
     : variant === 'centered'
-    ? 'py-12 px-6 text-center'
-    : 'py-8 px-6'
+    ? 'py-8 px-6 text-center'
+    : 'py-6 px-6'
 
   return (
     <motion.div
@@ -37,32 +37,25 @@ export function PullQuote({
         ${baseClasses} ${className}
       `}
     >
-      {/* Quote Text - Anthropic Style */}
+      {/* Quote Text - Exact Anthropic Style */}
       <blockquote className={`
-        text-serif-large text-card-foreground leading-relaxed mb-8
+        font-normal text-card-foreground leading-relaxed mb-6
         ${variant === 'large' 
-          ? 'text-3xl lg:text-4xl font-light' 
-          : 'text-2xl lg:text-3xl font-light'
+          ? 'text-2xl lg:text-3xl' 
+          : 'text-xl lg:text-2xl'
         }
         ${variant === 'centered' ? 'text-center' : ''}
       `}>
         "{quote}"
       </blockquote>
 
-      {/* Attribution - Simple & Clean */}
+      {/* Attribution - Anthropic Style */}
       <div className={`
         ${variant === 'centered' ? 'text-center' : ''}
       `}>
-        <p className="text-body font-medium text-card-foreground mb-1">
-          {author}
+        <p className="text-sm text-muted-foreground">
+          {author}{title && `, ${title}`}{company && `, ${company}`}
         </p>
-        {(title || company) && (
-          <p className="text-body text-muted-foreground">
-            {title && title}
-            {title && company && ', '}
-            {company && company}
-          </p>
-        )}
       </div>
     </motion.div>
   )
