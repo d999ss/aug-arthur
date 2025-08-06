@@ -115,7 +115,13 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="flex justify-center lg:order-2"
             >
-              <PlaceholderMedia type="image" size="xl" />
+              <Image 
+                src="/Aug 6, 2025, 02_31_51 PM.png"
+                alt="Arthur Companies partnering with industry leaders"
+                width={600}
+                height={400}
+                priority
+              />
             </motion.div>
 
             <motion.div
