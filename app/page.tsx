@@ -94,8 +94,8 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-h1 mb-lg">For Growers</h2>
-              <p className="text-body mb-lg">
+              <h2 className="text-h2 mb-lg">For Growers</h2>
+              <p className="text-lead mb-lg">
                 You know your acres. We know the market. Our team shows up, answers the phone, and competes to earn your business whether you're hauling to an Arthur elevator, planning for next year with our agronomy experts, or growing under contract for specialty end-users.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -155,8 +155,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="lg:order-1"
             >
-              <h2 className="text-h1 mb-lg">For Partners</h2>
-              <p className="text-body mb-lg">
+              <h2 className="text-h2 mb-lg">For Partners</h2>
+              <p className="text-lead mb-lg">
                 Arthur is a growing agribusiness platform trusted by processors, suppliers, and our industry-leading peers. Our businesses span grain origination, crop inputs, research, logistics, and specialty ingredients—all supported by a culture of integrity and execution.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -237,7 +237,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-h1 mb-md">Company Values</h2>
+            <h2 className="text-h2 mb-md">Company Values</h2>
             <p className="text-lead content-width mx-auto">
               The principles that have guided our work for over a century.
             </p>
@@ -285,7 +285,7 @@ export default function HomePage() {
       <section className="section bg-muted">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-h1 mb-md">Real-Time Agricultural Intelligence</h2>
+            <h2 className="text-h2 mb-md">Real-Time Agricultural Intelligence</h2>
             <p className="text-lead content-width mx-auto text-muted">
               Make informed decisions with live market data and precision weather forecasting
             </p>
@@ -336,7 +336,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-h1 mb-md">Arthur Co. Cash Bids</h2>
+              <h2 className="text-h2 mb-md">Arthur Co. Cash Bids</h2>
               <p className="text-lead mb-xl">
                 Free Real-time harvest information for growers, by Arthur Companies.
               </p>
