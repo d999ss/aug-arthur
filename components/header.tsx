@@ -160,7 +160,8 @@ export function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 w-[520px] bg-background border border-border/20 rounded-xl shadow-lg p-6 mt-1"
+                      className="absolute top-full left-0 w-[520px] border border-border/20 rounded-xl shadow-lg p-6 mt-1"
+                      style={{ backgroundColor: '#f8f9fa' }}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <div className="grid grid-cols-2 gap-8">
@@ -218,7 +219,8 @@ export function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 w-[480px] bg-background border border-border/20 rounded-xl shadow-lg p-6 mt-1"
+                      className="absolute top-full left-0 w-[480px] border border-border/20 rounded-xl shadow-lg p-6 mt-1"
+                      style={{ backgroundColor: '#f8f9fa' }}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <div className="grid grid-cols-2 gap-8">
@@ -310,7 +312,8 @@ export function Header() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-x-4 top-24 bg-background border border-border/20 rounded-2xl shadow-lg lg:hidden overflow-hidden"
+              className="fixed inset-x-4 top-24 border border-border/20 rounded-2xl shadow-lg lg:hidden overflow-hidden"
+              style={{ backgroundColor: '#f8f9fa' }}
             >
               <div className="p-6 max-h-[70vh] overflow-y-auto">
                 <nav className="space-y-6">
