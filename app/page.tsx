@@ -40,12 +40,13 @@ export default function HomePage() {
               <h1 className="text-hero mb-lg text-balance">
                 Arthur: Where Innovation Grows, From the Ground Up.
               </h1>
-              <p className="mb-xl" style={{ 
-                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                fontSize: 'clamp(1.125rem, 1.087rem + 0.163vw, 1.25rem)',
-                fontWeight: '400',
-                lineHeight: '1.6',
-                color: '#171717'
+              <p style={{ 
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important',
+                fontSize: 'clamp(1.125rem, 1.087rem + 0.163vw, 1.25rem) !important',
+                fontWeight: '400 !important',
+                lineHeight: '1.6 !important',
+                color: '#171717 !important',
+                marginBottom: '3rem'
               }}>
                 Over one hundred years in the field.
               </p>
