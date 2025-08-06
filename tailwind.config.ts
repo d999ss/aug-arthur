@@ -20,11 +20,11 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Arthur Companies Brand Colors
+        // Arthur Companies Brand Colors (Anthropic-inspired)
         brand: {
-          primary: "#16a34a", // Green-600 - Agriculture/Growth
-          secondary: "#059669", // Emerald-600 - Sustainability
-          accent: "#0d9488", // Teal-600 - Innovation
+          primary: "#cc785c", // Coral - Anthropic's primary
+          secondary: "#f8f9fa", // Light slate
+          accent: "#eef0f2", // Subtle cloud
           neutral: "#374151", // Gray-700 - Professional
         },
         // Semantic Colors
@@ -34,43 +34,32 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#16a34a",
-          foreground: "#ffffff",
-          50: "#f0fdf4",
-          100: "#dcfce7",
-          200: "#bbf7d0",
-          300: "#86efac",
-          400: "#4ade80",
-          500: "#22c55e",
-          600: "#16a34a",
-          700: "#15803d",
-          800: "#166534",
-          900: "#14532d",
-          950: "#052e16",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#f8fafc",
-          foreground: "#0f172a",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "#ef4444",
           foreground: "#ffffff",
         },
         muted: {
-          DEFAULT: "#f1f5f9",
-          foreground: "#64748b",
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#0d9488",
-          foreground: "#ffffff",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
-          DEFAULT: "#ffffff",
-          foreground: "#0f172a",
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "#ffffff",
-          foreground: "#0f172a",
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
       },
       fontFamily: {
@@ -124,7 +113,7 @@ const config: Config = {
         "slide-in": "slide-in 0.3s ease-out",
       },
       boxShadow: {
-        "brand": "0 4px 6px -1px rgba(22, 163, 74, 0.1), 0 2px 4px -1px rgba(22, 163, 74, 0.06)",
+        "brand": "0 4px 6px -1px rgba(204, 120, 92, 0.1), 0 2px 4px -1px rgba(204, 120, 92, 0.06)",
       },
     },
   },
