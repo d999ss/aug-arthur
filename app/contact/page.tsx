@@ -90,23 +90,28 @@ export default function ContactPage() {
 
               {/* Key Locations */}
               <div className="p-8 card-refined">
-                <h3 className="text-title mb-6">Key locations</h3>
+                <h3 className="text-title mb-6">Locations</h3>
                 <div className="space-y-6">
                   {[
                     {
-                      name: "Arthur Elevator",
-                      address: "100 Innovation Drive, Arthur, ND 58006",
-                      phone: "(701) 967-8200"
+                      name: "Arthur",
+                      address: "10 Main St, Arthur, ND 58006",
+                      phone: "(701) 967-8312"
                     },
                     {
-                      name: "Carrington Facility", 
+                      name: "Carrington", 
                       address: "1010 Hwy 281 N, Carrington, ND 58421",
                       phone: "(701) 652-2232"
                     },
                     {
-                      name: "Harvey Terminal",
+                      name: "Harvey",
                       address: "600 Lincoln Ave, Harvey, ND 58341", 
                       phone: "(701) 324-4633"
+                    },
+                    {
+                      name: "Page",
+                      address: "50 Main St, Page, ND 58064", 
+                      phone: "(701) 668-2326"
                     }
                   ].map((location, index) => (
                     <div key={location.name} className="pb-4 border-b border-border/30 last:border-0 last:pb-0">

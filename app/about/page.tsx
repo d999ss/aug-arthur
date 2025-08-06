@@ -17,8 +17,8 @@ export default function AboutPage() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="text-display mb-8 text-balance">
-                Built on trust, driven by{" "}
-                <span className="text-serif-large text-primary italic">innovation.</span>
+                Built on Trust, Driven by{" "}
+                <span className="text-serif-large text-primary italic">Innovation</span>
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">
                 Three generations of agricultural leadership in the Northern Plains.
@@ -81,16 +81,19 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-headline mb-8">Our mission</h2>
-              <div className="text-serif text-body-large mb-6 text-muted-foreground italic">
-                "To deliver innovative agricultural solutions that help farmers and partners thrive while building sustainable communities."
+              <h2 className="text-headline mb-8">Company Overview</h2>
+              <div className="text-body mb-6">
+                <strong>Mission:</strong> To deliver innovative agricultural solutions that help farmers and partners thrive while building sustainable communities.
               </div>
-              <p className="text-body mb-6">
-                Our vision is to be the leading agricultural platform in the Northern Plains, known for innovation, integrity, and exceptional service.
-              </p>
-              <p className="text-body mb-8">
-                Arthur Companies is a family-owned agricultural business that has been serving the Northern Plains since 1948. We combine traditional agricultural expertise with modern technology and innovation to provide comprehensive solutions for farmers, processors, and partners across the agricultural value chain.
-              </p>
+              <div className="text-body mb-6">
+                <strong>Vision:</strong> To be the leading agricultural platform in the Northern Plains, known for innovation, integrity, and exceptional service.
+              </div>
+              <div className="text-body mb-6">
+                <strong>Founded:</strong> 1906 in Arthur, North Dakota
+              </div>
+              <div className="text-body mb-8">
+                <strong>Ownership:</strong> Family-owned fourth-generation agricultural business
+              </div>
               <Link 
                 href="/about/history"
                 className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
@@ -128,7 +131,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-headline mb-6">Leadership team</h2>
+            <h2 className="text-headline mb-6">Leadership Team</h2>
             <p className="text-body-large max-w-2xl mx-auto">
               Meet the leaders driving Arthur Companies forward with vision, 
               expertise, and deep commitment to agricultural excellence.

@@ -55,8 +55,15 @@ export function ContactForm() {
   };
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+    <div className="p-8 card-refined">
+      <div className="mb-8">
+        <h3 className="text-title mb-3">Send Us a Message</h3>
+        <p className="text-body text-muted-foreground">
+          Have a question or need assistance? Fill out the form below and we'll get back to you promptly.
+        </p>
+      </div>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
@@ -158,5 +165,6 @@ export function ContactForm() {
         </Button>
       </form>
     </Form>
+    </div>
   );
 }

@@ -17,8 +17,8 @@ export default function GrainPage() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="text-display mb-8 text-balance">
-                Grain marketing, grounded in{" "}
-                <span className="text-serif-large text-primary italic">trust.</span>
+                Grain Marketing, Grounded in{" "}
+                <span className="text-serif-large text-primary italic">Trust</span>
               </h1>
               <p className="text-body-large mb-6 max-w-3xl mx-auto">
                 At Arthur, we deliver grain marketing services that combine local knowledge with market insight.
@@ -28,11 +28,11 @@ export default function GrainPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="#bids" className="btn-primary">
-                  View Cash Bids
+                  View Local Bids
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <Link href="/contact" className="btn-secondary">
-                  Contact Merchandisers
+                  Contact Our Merchandisers
                 </Link>
               </div>
             </motion.div>
@@ -50,7 +50,7 @@ export default function GrainPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-headline mb-6">Our grain services</h2>
+            <h2 className="text-headline mb-6">Our Grain Services</h2>
             <p className="text-body-large max-w-2xl mx-auto">
               Comprehensive grain marketing solutions that maximize your returns 
               through local expertise and market intelligence.
@@ -61,12 +61,12 @@ export default function GrainPage() {
             {[
               {
                 icon: TrendingUp,
-                title: "Cash Bids & Hedge Tools",
+                title: "Cash Bids and Hedge Tools",
                 description: "Live board basis, forward contracts, and a clear view of carry create margin where others see noise."
               },
               {
                 icon: Truck,
-                title: "On-Farm Pickup & Logistics", 
+                title: "On Farm Pickup and Logistics", 
                 description: "Our fleet and rail network move grain on schedule, cutting wait times and shrink."
               },
               {
