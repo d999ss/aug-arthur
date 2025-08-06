@@ -129,7 +129,7 @@ export function Header() {
               href="/" 
               className="flex items-center group"
             >
-              <span className="text-xl font-bold tracking-tight text-foreground transition-colors duration-200 group-hover:text-primary font-[var(--font-styrene-a)]">
+              <span className="text-xl font-bold tracking-tight text-foreground font-[var(--font-styrene-a)]">
                 Arthur Companies
               </span>
             </Link>
