@@ -118,7 +118,7 @@
     font-size: var(--font-size-lead);
     font-weight: 400;
     line-height: var(--line-height-body);
-    color: hsl(var(--color-muted));
+    color: hsl(var(--color-foreground));
   }
   
   .text-body {
