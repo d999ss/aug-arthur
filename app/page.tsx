@@ -26,7 +26,7 @@ export default function HomePage() {
               Arthur: Where Innovation Grows,{" "}
               <span className="text-serif-display text-primary italic">From the Ground Up.</span>
             </h1>
-            <p className="text-body-large mb-12 max-w-3xl">
+            <p className="text-subheading mb-12 max-w-3xl">
               100 years in the field and we're just getting started.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
