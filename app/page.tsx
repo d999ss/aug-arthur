@@ -117,7 +117,7 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="flex justify-center lg:order-2"
             >
-              <PlaceholderMedia type=\"image\" size=\"xl\" />
+              <PlaceholderMedia type="image" size="xl" />
             </motion.div>
 
             <motion.div
@@ -175,7 +175,7 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="flex justify-center"
             >
-              <PlaceholderMedia type=\"video\" size=\"xl\" />
+              <PlaceholderMedia type="video" size="xl" />
             </motion.div>
           </div>
         </div>
