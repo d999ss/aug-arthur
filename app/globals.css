@@ -39,36 +39,36 @@
 
 @layer base {
   :root {
-    /* Anthropic's refined color palette */
-    --background: 48 25% 98%;       /* Warm cream #fcfcf4 */
+    /* Anthropic's exact color palette */
+    --background: 0 0% 100%;        /* Pure white #ffffff */
     --foreground: 0 0% 9%;          /* Deep charcoal #171717 */
     
-    /* Primary - Anthropic's coral */
-    --primary: 19 61% 58%;          /* #dc7454 */
-    --primary-foreground: 48 25% 98%;
+    /* Primary - Anthropic's exact coral */
+    --primary: 19 47% 64%;          /* #cc785c - Anthropic's selection color */
+    --primary-foreground: 0 0% 100%;
     
-    /* Refined neutrals */
-    --secondary: 48 8% 95%;         /* Light warm gray */
+    /* Refined neutrals - Anthropic style */
+    --secondary: 210 11% 96%;       /* Light slate #f8f9fa */
     --secondary-foreground: 0 0% 9%;
-    --muted: 48 6% 92%;             /* Subtle background */
+    --muted: 210 11% 93%;           /* Subtle cloud background #eef0f2 */
     --muted-foreground: 0 0% 45%;   /* #737373 */
     
     /* Card colors */
-    --card: 48 25% 98%;
+    --card: 0 0% 100%;
     --card-foreground: 0 0% 9%;
-    --popover: 48 25% 98%;
+    --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
     
-    /* Accent - soft blue */
-    --accent: 215 87% 51%;
-    --accent-foreground: 48 25% 98%;
+    /* Accent - subtle slate */
+    --accent: 210 11% 93%;
+    --accent-foreground: 0 0% 9%;
     
     /* System colors */
     --destructive: 0 72% 51%;
-    --destructive-foreground: 48 25% 98%;
-    --border: 48 8% 88%;
-    --input: 48 8% 88%;
-    --ring: 19 61% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 11% 90%;          /* Subtle slate border #e2e5e8 */
+    --input: 210 11% 90%;
+    --ring: 19 47% 64%;             /* Match primary */
     --radius: 8px;
   }
 
@@ -155,9 +155,9 @@
     letter-spacing: -0.008em;
   }
   
-  /* Selection styling */
+  /* Selection styling - Anthropic exact */
   ::selection {
-    background: hsl(var(--primary) / 0.15);
+    background: rgba(204, 120, 92, 0.5); /* Anthropic's exact selection color */
     color: hsl(var(--foreground));
   }
 }
