@@ -20,12 +20,10 @@ export default function PrecisionAgriculturePage() {
                 <Globe className="h-10 w-10 text-primary" />
               </div>
               <h1 className="text-display mb-8 text-balance">
-                Precision agriculture for{" "}
-                <span className="text-serif-large text-primary italic">optimal efficiency.</span>
+                Precision Agriculture
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">
-                GPS-guided equipment, variable rate application, and cutting-edge precision 
-                farming technologies to maximize your field efficiency.
+                Technology-driven farming solutions. Harness the power of precision agriculture technology to optimize inputs, maximize yields, and improve profitability across every acre.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="/contact" className="btn-primary">
@@ -63,22 +61,22 @@ export default function PrecisionAgriculturePage() {
               {
                 icon: Satellite,
                 title: "GPS Guidance",
-                description: "Sub-inch accuracy GPS systems for precise field operations and reduced overlap."
+                description: "GPS-guided equipment for precise planting, application, and harvesting operations."
               },
               {
                 icon: MapPin,
                 title: "Variable Rate",
-                description: "Customized application rates based on soil conditions and yield potential."
-              },
-              {
-                icon: BarChart3,
-                title: "Yield Mapping", 
-                description: "Detailed harvest data collection and analysis for informed decision making."
+                description: "Variable rate application technology to optimize seed, fertilizer, and chemical inputs."
               },
               {
                 icon: Globe,
                 title: "Remote Sensing",
-                description: "Satellite and drone imagery for crop monitoring and problem identification."
+                description: "Satellite and drone imagery for crop monitoring and field mapping."
+              },
+              {
+                icon: BarChart3,
+                title: "Data Analytics",
+                description: "Advanced data analytics to turn field data into actionable insights."
               }
             ].map((service, index) => {
               const Icon = service.icon

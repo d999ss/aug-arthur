@@ -20,12 +20,10 @@ export default function SoilHealthPage() {
                 <Beaker className="h-10 w-10 text-primary" />
               </div>
               <h1 className="text-display mb-8 text-balance">
-                Soil health & nutrition for{" "}
-                <span className="text-serif-large text-primary italic">sustainable growth.</span>
+                Soil Health & Nutrition
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">
-                Advanced soil health monitoring and precision nutrition management 
-                programs to build the foundation for productive agriculture.
+                Building healthy soils for sustainable productivity. Healthy soils are the foundation of productive agriculture. Our comprehensive soil health programs help you build and maintain soil fertility for long-term success.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="/contact" className="btn-primary">
@@ -64,22 +62,22 @@ export default function SoilHealthPage() {
               {
                 icon: Beaker,
                 title: "Soil Testing",
-                description: "Comprehensive soil analysis including pH, nutrients, organic matter, and biological activity."
+                description: "Advanced soil testing and analysis to understand your soil's unique characteristics and needs."
               },
               {
                 icon: TrendingUp,
-                title: "Nutrient Planning",
-                description: "Customized fertilizer recommendations based on soil test results and crop requirements."
+                title: "Nutrient Management",
+                description: "Precision nutrient management plans that optimize fertilizer efficiency and crop uptake."
               },
               {
                 icon: Leaf,
-                title: "Biological Health",
-                description: "Soil biology assessment and recommendations to enhance microbial activity."
+                title: "Organic Matter",
+                description: "Strategies to build and maintain soil organic matter for improved water retention and nutrient cycling."
               },
               {
                 icon: BarChart3,
-                title: "Monitoring",
-                description: "Long-term soil health tracking to measure improvement over time."
+                title: "Cover Crops",
+                description: "Cover crop recommendations and management to enhance soil health and reduce erosion."
               }
             ].map((service, index) => {
               const Icon = service.icon

@@ -19,15 +19,13 @@ export default function ContactPage() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="text-display mb-8 text-balance">
-                Let's grow{" "}
-                <span className="text-serif-large text-primary italic">together.</span>
+                Contact Us
               </h1>
               <p className="text-body-large mb-6 max-w-2xl mx-auto">
-                Get in touch with our team for agricultural services, partnerships, or career opportunities.
+                Get in touch with our team
               </p>
               <p className="text-body mb-12 max-w-2xl mx-auto">
-                Whether you're a farmer looking for solutions, a partner exploring opportunities, 
-                or someone interested in joining our team—we're here to help.
+                Whether you're a farmer looking for services, a partner exploring opportunities, or someone interested in joining our team, we're here to help. Reach out to us today.
               </p>
             </motion.div>
           </div>
@@ -58,7 +56,7 @@ export default function ContactPage() {
             >
               {/* Corporate Contact */}
               <div className="p-8 card-refined">
-                <h3 className="text-title mb-6">Corporate headquarters</h3>
+                <h3 className="text-title mb-6">Corporate Headquarters</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">

@@ -20,12 +20,10 @@ export default function AgronomyPage() {
                 <Sprout className="h-10 w-10 text-primary" />
               </div>
               <h1 className="text-display mb-8 text-balance">
-                Expert agronomy services for{" "}
-                <span className="text-serif-large text-primary italic">maximum yield.</span>
+                Agronomy Excellence
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">
-                Local expertise and cutting-edge crop management solutions to optimize 
-                your farm's productivity and profitability.
+                Local expertise, proven results. Our certified crop advisors combine local knowledge with cutting-edge technology to help you make informed decisions that maximize productivity and profitability.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="/contact" className="btn-primary">
@@ -63,23 +61,23 @@ export default function AgronomyPage() {
             {[
               {
                 icon: Users,
-                title: "Crop Consulting",
-                description: "Personalized crop management recommendations based on your specific fields and goals."
+                title: "Crop Planning",
+                description: "Strategic crop planning and rotation recommendations based on your specific fields and goals."
               },
               {
                 icon: BarChart3,
-                title: "Yield Analysis", 
-                description: "Detailed yield mapping and analysis to identify opportunities for improvement."
+                title: "Soil Testing", 
+                description: "Comprehensive soil analysis and nutrient recommendations for optimal crop performance."
               },
               {
                 icon: Sprout,
-                title: "Seed Selection",
-                description: "Expert guidance on variety selection based on local conditions and market demands."
+                title: "Pest Management",
+                description: "Integrated pest management solutions to protect your crops while minimizing environmental impact."
               },
               {
                 icon: MapPin,
-                title: "Field Scouting",
-                description: "Regular field monitoring for pests, diseases, and nutrient deficiencies."
+                title: "Yield Monitoring",
+                description: "Season-long crop monitoring and yield optimization strategies."
               }
             ].map((service, index) => {
               const Icon = service.icon

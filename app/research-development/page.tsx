@@ -17,16 +17,13 @@ export default function ResearchDevelopmentPage() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="text-display mb-8 text-balance">
-                Research & development for{" "}
-                <span className="text-serif-large text-primary italic">agricultural innovation.</span>
+                Research & Development
               </h1>
               <p className="text-body-large mb-8 max-w-2xl mx-auto">
-                Advancing agriculture through cutting-edge research and strategic investment
+                Advancing agriculture through innovation
               </p>
               <p className="text-body mb-12 max-w-3xl mx-auto text-muted-foreground">
-                Arthur Companies drives agricultural innovation through scientific discovery 
-                and entrepreneurial vision, combining research excellence with strategic 
-                venture investments to shape the future of farming.
+                Our R&D initiatives focus on solving agriculture's most pressing challenges through scientific innovation, technology development, and strategic partnerships.
               </p>
               
               {/* Quick Navigation */}
@@ -93,15 +90,15 @@ export default function ResearchDevelopmentPage() {
               {[
                 {
                   title: "Crop Science",
-                  description: "Advanced genetics, breeding, and biotechnology research"
+                  description: "Advanced research in plant genetics, breeding, and biotechnology to develop next-generation crop varieties"
                 },
                 {
-                  title: "Technology Innovation", 
-                  description: "Precision agriculture and digital farming solutions"
+                  title: "Digital Agriculture", 
+                  description: "Development of digital tools and platforms to enhance farm management and decision-making processes"
                 },
                 {
-                  title: "Sustainability",
-                  description: "Environmental stewardship and sustainable practices"
+                  title: "Sustainable Systems",
+                  description: "Research into sustainable farming practices and technologies that balance productivity with environmental stewardship"
                 }
               ].map((category, index) => (
                 <motion.div

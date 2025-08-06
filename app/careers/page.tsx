@@ -74,11 +74,10 @@ export default function CareersPage() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h1 className="text-display mb-8 text-balance">
-                Grow your{" "}
-                <span className="text-serif-large text-primary italic">career.</span>
+                Careers
               </h1>
               <p className="text-body-large mb-6 max-w-2xl mx-auto">
-                Join our team of agricultural professionals dedicated to cultivating innovation and excellence.
+                Join our team of agricultural professionals. We offer competitive benefits, professional development opportunities, and a collaborative work environment.
               </p>
               <p className="text-body mb-12 max-w-2xl mx-auto">
                 We offer competitive benefits, professional development opportunities, and a collaborative work environment 

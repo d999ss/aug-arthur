@@ -20,12 +20,10 @@ export default function SpecialtyCropsPage() {
                 <Sprout className="h-10 w-10 text-primary" />
               </div>
               <h1 className="text-display mb-8 text-balance">
-                Specialty crops for{" "}
-                <span className="text-serif-large text-primary italic">premium markets.</span>
+                Specialty Crops
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">
-                Identity-preserved grains and specialty crop programs that connect 
-                you with premium markets for higher returns.
+                Identity-preserved and premium programs. Specialized crop programs that deliver premium value through identity preservation, traceability, and quality specifications for discerning end users.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="/contact" className="btn-primary">
@@ -63,23 +61,23 @@ export default function SpecialtyCropsPage() {
             {[
               {
                 icon: Award,
-                title: "Premium Markets",
-                description: "Direct connections to premium end-users paying above-market prices."
+                title: "Identity Preserved",
+                description: "Identity preserved corn and soybean programs with full traceability from field to delivery."
               },
               {
                 icon: Shield,
-                title: "Identity Preservation",
-                description: "Complete traceability and segregation from field to final destination."
+                title: "Food Grade",
+                description: "Food grade soybeans meeting strict quality specifications for human consumption."
               },
               {
                 icon: BarChart3,
-                title: "Quality Testing",
-                description: "Comprehensive testing to verify quality specifications and standards."
+                title: "Sustainable Barley",
+                description: "Sustainable barley programs for brewing and malting industries."
               },
               {
                 icon: Sprout,
-                title: "Agronomic Support",
-                description: "Expert guidance to help you successfully grow specialty varieties."
+                title: "Contract Production",
+                description: "Custom contract production programs for specific market requirements."
               }
             ].map((service, index) => {
               const Icon = service.icon
