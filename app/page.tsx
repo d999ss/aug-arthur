@@ -225,28 +225,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="section-y-large bg-secondary/20">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <blockquote className="text-serif text-display text-center mb-8">
-                "Arthur is the kind of company that shows up when it matters. We count on them every year, and every year they deliver."
-              </blockquote>
-              <div className="text-center">
-                <div className="text-body-medium font-medium mb-1">Mike Johnson</div>
-                <div className="text-small text-muted-foreground">Wheat & Soybean Farmer</div>
-                <div className="text-small text-muted-foreground">Cass County</div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Weather & Market Dashboard */}
       <section className="section-y bg-muted/20">
