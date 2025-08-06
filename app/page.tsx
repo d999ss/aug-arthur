@@ -20,13 +20,13 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-4xl"
+            className="max-w-5xl"
           >
             <h1 className="text-display mb-8 text-balance">
               Arthur: Where Innovation Grows,{" "}
               <span className="text-serif-large text-primary italic">From the Ground Up.</span>
             </h1>
-            <p className="text-body-large mb-12 max-w-2xl">
+            <p className="text-body-large mb-12 max-w-3xl">
               100 years in the field and we're just getting started.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -262,7 +262,7 @@ export default function HomePage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-headline mb-4">Real-Time Agricultural Intelligence</h2>
-            <p className="text-body-large max-w-3xl mx-auto text-muted-foreground">
+            <p className="text-body-large max-w-4xl mx-auto text-muted-foreground">
               Make informed decisions with live market data and precision weather forecasting
             </p>
           </div>

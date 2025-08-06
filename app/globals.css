@@ -142,9 +142,11 @@
 }
 
 @layer components {
-  /* Container */
+  /* Container - Anthropic style with responsive margins */
   .container {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto;
+    padding-left: clamp(2rem, 1.0816rem + 3.9184vw, 5rem);
+    padding-right: clamp(2rem, 1.0816rem + 3.9184vw, 5rem);
   }
   
   /* Refined typography classes */
