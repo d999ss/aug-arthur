@@ -161,7 +161,7 @@ export function Header() {
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 w-[520px] border border-border/20 rounded-xl shadow-lg p-6 mt-1"
-                      style={{ backgroundColor: '#f8f9fa' }}
+                      style={{ backgroundColor: '#f0eee7' }}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <div className="grid grid-cols-2 gap-8">
@@ -220,7 +220,7 @@ export function Header() {
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 w-[480px] border border-border/20 rounded-xl shadow-lg p-6 mt-1"
-                      style={{ backgroundColor: '#f8f9fa' }}
+                      style={{ backgroundColor: '#f0eee7' }}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <div className="grid grid-cols-2 gap-8">
