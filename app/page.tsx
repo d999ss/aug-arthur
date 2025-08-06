@@ -2,7 +2,9 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, ChevronRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+import { WeatherDashboard } from '@/components/weather-dashboard'
+import { GrainPricing } from '@/components/grain-pricing'
 
 export default function HomePage() {
   return (
@@ -264,6 +266,31 @@ export default function HomePage() {
                 <div className="text-small text-muted-foreground">Cass County</div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Weather & Market Dashboard */}
+      <section className="section-y bg-secondary/20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-headline mb-4">Real-Time Agricultural Intelligence</h2>
+            <p className="text-body-large max-w-3xl mx-auto text-muted-foreground">
+              Make informed decisions with live market data and precision weather forecasting
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {/* Weather Dashboard */}
+            <div>
+              <WeatherDashboard />
+            </div>
+            
+            {/* Grain Pricing */}
+            <div>
+              <h3 className="text-headline mb-6">Market Prices</h3>
+              <GrainPricing />
+            </div>
           </div>
         </div>
       </section>

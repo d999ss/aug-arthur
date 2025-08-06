@@ -4,6 +4,8 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Providers } from '@/lib/providers'
 import { Toaster } from '@/components/toaster'
+import { styreneA, styreneB, tiempos } from '@/lib/fonts'
+import { StructuredData, organizationSchema } from '@/components/structured-data'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
     description: 'For over a century, Arthur Companies has been at the forefront of sustainable agriculture, partnering with farmers across the Northern Plains.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/api/og',
         width: 1200,
         height: 630,
         alt: 'Arthur Companies',
@@ -77,7 +79,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   }
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${styreneA.variable} ${styreneB.variable} ${tiempos.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -86,6 +88,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <Providers>
+          <StructuredData data={organizationSchema} />
           <div className="relative flex min-h-screen flex-col">
             <Header />
             <main className="flex-1 pt-16 lg:pt-20">

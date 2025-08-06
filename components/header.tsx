@@ -262,13 +262,21 @@ export function Header() {
                 Style Guide
               </Link>
 
-              {/* CTA Button */}
-              <Link 
-                href="/grain" 
-                className="ml-4 btn-primary"
-              >
-                Cash Bids
-              </Link>
+              {/* CTA Buttons */}
+              <div className="flex items-center gap-3 ml-4">
+                <Link 
+                  href="/portal" 
+                  className="btn-secondary"
+                >
+                  Producer Portal
+                </Link>
+                <Link 
+                  href="/grain" 
+                  className="btn-primary"
+                >
+                  Cash Bids
+                </Link>
+              </div>
             </nav>
 
             {/* Mobile Menu Button */}

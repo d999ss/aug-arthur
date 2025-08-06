@@ -3,10 +3,18 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { TrendingUp, Truck, Award, ArrowRight } from 'lucide-react'
+import { GrainPricing } from '@/components/grain-pricing'
 
 export default function GrainPage() {
   return (
     <div className="min-h-screen">
+      {/* Real-Time Grain Pricing */}
+      <section className="section-y bg-secondary/20" id="bids">
+        <div className="container">
+          <GrainPricing />
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="section-y-large">
         <div className="container">
