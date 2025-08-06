@@ -12,17 +12,47 @@ const navigationData = {
       {
         category: "Core Services",
         links: [
-          { href: "/grain", label: "Grain Marketing", description: "Real-time cash bids and strategic marketing" },
-          { href: "/services/agronomy", label: "Agronomy", description: "Expert crop nutrition and soil health guidance" },
-          { href: "/services/precision-agriculture", label: "Precision Agriculture", description: "Data-driven technology solutions" },
+          { 
+            href: "/grain", 
+            label: "Grain Marketing", 
+            description: "Real-time cash bids and strategic marketing",
+            icon: "🌾"
+          },
+          { 
+            href: "/services/agronomy", 
+            label: "Agronomy", 
+            description: "Expert crop nutrition and soil health guidance",
+            icon: "🧪"
+          },
+          { 
+            href: "/services/precision-agriculture", 
+            label: "Precision Agriculture", 
+            description: "Data-driven technology solutions",
+            icon: "🛰️"
+          },
         ]
       },
       {
         category: "Specialized Solutions", 
         links: [
-          { href: "/services/specialty-crops", label: "Specialty Crops", description: "Identity-preserved grain handling" },
-          { href: "/services/wholesale-fertilizer", label: "Wholesale Fertilizer", description: "Comprehensive nutrient programs" },
-          { href: "/services/soil-health", label: "Soil Health", description: "Sustainable farming practices" },
+          { 
+            href: "/services/specialty-crops", 
+            label: "Specialty Crops", 
+            description: "Identity-preserved grain handling",
+            icon: "🌿"
+          },
+          { 
+            href: "/services/wholesale-fertilizer", 
+            label: "Wholesale Fertilizer", 
+            description: "Comprehensive nutrient programs",
+            icon: "⚗️"
+          },
+          { 
+            href: "/services/soil-health", 
+            label: "Soil Health", 
+            description: "Sustainable farming practices",
+            icon: "🌱"
+          },
         ]
       }
     ]
@@ -33,16 +63,41 @@ const navigationData = {
       {
         category: "Innovation",
         links: [
-          { href: "/research-development", label: "R&D Overview", description: "Our research initiatives" },
-          { href: "/research/crop-genetics", label: "Crop Genetics", description: "Advanced genetic research" },
-          { href: "/research/sustainability", label: "Sustainability", description: "Environmental stewardship" },
+          { 
+            href: "/research-development", 
+            label: "R&D Overview", 
+            description: "Our research initiatives",
+            icon: "🔬"
+          },
+          { 
+            href: "/research/crop-genetics", 
+            label: "Crop Genetics", 
+            description: "Advanced genetic research",
+            icon: "🧬"
+          },
+          { 
+            href: "/research/sustainability", 
+            label: "Sustainability", 
+            description: "Environmental stewardship",
+            icon: "🌍"
+          },
         ]
       },
       {
         category: "Technology",
         links: [
-          { href: "/research/data-science", label: "Data Science", description: "Agricultural data analytics" },
-          { href: "/research/precision-agriculture", label: "Precision Tech", description: "Cutting-edge farming technology" },
+          { 
+            href: "/research/data-science", 
+            label: "Data Science", 
+            description: "Agricultural data analytics",
+            icon: "📊"
+          },
+          { 
+            href: "/research/precision-agriculture", 
+            label: "Precision Tech", 
+            description: "Cutting-edge farming technology",
+            icon: "🤖"
+          },
         ]
       }
     ]
@@ -113,11 +168,16 @@ export function Header() {
                                   className="block group"
                                   onClick={() => setActiveDropdown(null)}
                                 >
-                                  <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                                    {link.label}
-                                  </div>
-                                  <div className="text-xs text-muted-foreground mt-1">
-                                    {link.description}
+                                  <div className="flex items-start gap-3">
+                                    <div className="text-lg mt-0.5 opacity-80">{link.icon}</div>
+                                    <div className="flex-1">
+                                      <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                                        {link.label}
+                                      </div>
+                                      <div className="text-xs text-muted-foreground mt-1">
+                                        {link.description}
+                                      </div>
+                                    </div>
                                   </div>
                                 </Link>
                               ))}
@@ -166,11 +226,16 @@ export function Header() {
                                   className="block group"
                                   onClick={() => setActiveDropdown(null)}
                                 >
-                                  <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                                    {link.label}
-                                  </div>
-                                  <div className="text-xs text-muted-foreground mt-1">
-                                    {link.description}
+                                  <div className="flex items-start gap-3">
+                                    <div className="text-lg mt-0.5 opacity-80">{link.icon}</div>
+                                    <div className="flex-1">
+                                      <div className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                                        {link.label}
+                                      </div>
+                                      <div className="text-xs text-muted-foreground mt-1">
+                                        {link.description}
+                                      </div>
+                                    </div>
                                   </div>
                                 </Link>
                               ))}
@@ -271,11 +336,16 @@ export function Header() {
                                     onClick={toggleMenu}
                                     className="block"
                                   >
-                                    <div className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                                      {link.label}
-                                    </div>
-                                    <div className="text-xs text-muted-foreground">
-                                      {link.description}
+                                    <div className="flex items-start gap-3">
+                                      <div className="text-base mt-0.5 opacity-80">{link.icon}</div>
+                                      <div className="flex-1">
+                                        <div className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                                          {link.label}
+                                        </div>
+                                        <div className="text-xs text-muted-foreground">
+                                          {link.description}
+                                        </div>
+                                      </div>
                                     </div>
                                   </Link>
                                 ))}
@@ -320,11 +390,16 @@ export function Header() {
                                     onClick={toggleMenu}
                                     className="block"
                                   >
-                                    <div className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                                      {link.label}
-                                    </div>
-                                    <div className="text-xs text-muted-foreground">
-                                      {link.description}
+                                    <div className="flex items-start gap-3">
+                                      <div className="text-base mt-0.5 opacity-80">{link.icon}</div>
+                                      <div className="flex-1">
+                                        <div className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                                          {link.label}
+                                        </div>
+                                        <div className="text-xs text-muted-foreground">
+                                          {link.description}
+                                        </div>
+                                      </div>
                                     </div>
                                   </Link>
                                 ))}
