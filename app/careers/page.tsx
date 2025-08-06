@@ -1,8 +1,8 @@
 'use client';
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, DollarSign, GraduationCap, Clock, Award, Users, AlertCircle } from 'lucide-react';
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Heart, DollarSign, GraduationCap, Clock, Award, Users, AlertCircle, ArrowRight } from 'lucide-react';
 
 import { trpc } from '@/lib/trpc/client';
 
@@ -31,24 +31,32 @@ export default function CareersPage() {
     const jobs = careersData?.data || [];
 
     return (
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {jobs.map((job) => (
-          <Card key={job.title} className="border-0 shadow-lg">
-            <CardContent className="p-6">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">{job.title}</h3>
-                  <p className="text-green-600 font-medium">{job.department}</p>
-                </div>
-                <div className="text-right text-sm text-gray-500">
-                  <p>{job.location}</p>
-                  <p className="font-medium">{job.salary}</p>
-                </div>
+      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        {jobs.map((job, index) => (
+          <motion.div
+            key={job.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className="p-8 card-refined hover-lift"
+          >
+            <div className="flex justify-between items-start mb-6">
+              <div>
+                <h3 className="text-title mb-2">{job.title}</h3>
+                <p className="text-primary text-body-medium">{job.department}</p>
               </div>
-              <p className="text-gray-600 mb-4">{job.description}</p>
-              <Button className="w-full bg-green-600 hover:bg-green-700">Apply Now</Button>
-            </CardContent>
-          </Card>
+              <div className="text-right text-small text-muted-foreground">
+                <p>{job.location}</p>
+                <p className="font-medium">{job.salary}</p>
+              </div>
+            </div>
+            <p className="text-body text-muted-foreground mb-6">{job.description}</p>
+            <Link href="#apply" className="btn-primary w-full justify-center">
+              Apply Now
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </motion.div>
         ))}
       </div>
     );
@@ -57,16 +65,26 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20 lg:py-32">
-        <div className="container mx-auto px-4">
+      <section className="section-y-large">
+        <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Careers</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-6">
-              Join our team of agricultural professionals
-            </p>
-            <p className="text-lg text-gray-600">
-              We offer competitive benefits, professional development opportunities, and a collaborative work environment.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h1 className="text-display mb-8 text-balance">
+                Grow your{" "}
+                <span className="text-serif-large text-primary italic">career.</span>
+              </h1>
+              <p className="text-body-large mb-6 max-w-2xl mx-auto">
+                Join our team of agricultural professionals dedicated to cultivating innovation and excellence.
+              </p>
+              <p className="text-body mb-12 max-w-2xl mx-auto">
+                We offer competitive benefits, professional development opportunities, and a collaborative work environment 
+                where your contributions make a real impact.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
