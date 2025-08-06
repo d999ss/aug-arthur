@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown, X, Menu } from "lucide-react"
+import { FuturesTicker, FuturesHeaderBanner } from './futures-ticker'
 
 const navigationData = {
   services: {
@@ -116,6 +117,9 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Futures Banner */}
+      <FuturesHeaderBanner />
+      
       {/* Main Navigation */}
       <div className="bg-background/80 backdrop-blur-md border-b border-border/10">
         <div className="container h-20">
@@ -262,8 +266,13 @@ export function Header() {
                 Style Guide
               </Link>
 
+              {/* Futures Ticker */}
+              <div className="mx-4">
+                <FuturesTicker />
+              </div>
+
               {/* CTA Buttons */}
-              <div className="flex items-center gap-3 ml-4">
+              <div className="flex items-center gap-3">
                 <Link 
                   href="/portal" 
                   className="btn-secondary"
