@@ -317,42 +317,20 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <TestimonialGrid testimonials={[
-            {
-              quote: "Arthur's team understands farming because they live it. Their market insights and timely payments have been game-changers for our operation.",
-              author: "Mike Johnson",
-              title: "Farm Owner",
-              company: "Johnson Family Farms"
-            },
-            {
-              quote: "The precision ag tools and agronomic support from Arthur helped us increase our yields by 15% while reducing input costs.",
-              author: "Sarah Peterson",
-              title: "Operations Manager", 
-              company: "Peterson Grain Co."
-            },
-            {
-              quote: "When market volatility hit, Arthur's risk management strategies protected our margins. They're true partners in our success.",
-              author: "Tom Anderson",
-              title: "Producer",
-              company: "Anderson Acres"
-            }
-          ]} />
-
-          {/* Featured Quote */}
+          {/* Single testimonial from actual copy */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-12"
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
           >
             <PullQuote
               variant="large"
-              quote="Arthur Companies doesn't just buy our grain—they invest in our future. Their research initiatives and sustainable farming programs are shaping the next generation of agriculture."
-              author="Linda Schmidt"
-              title="Third-generation farmer"
-              company="Schmidt Heritage Farm"
-              className="max-w-4xl mx-auto"
+              quote="Arthur is the kind of company that shows up when it matters. We count on them every year, and every year they deliver."
+              author="Mike Johnson"
+              title="Wheat & Soybean Farmer"
+              company="Cass County"
             />
           </motion.div>
         </div>

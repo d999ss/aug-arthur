@@ -21,10 +21,10 @@ export function PullQuote({
   className = '' 
 }: PullQuoteProps) {
   const baseClasses = variant === 'large' 
-    ? 'p-8 lg:p-12'
+    ? 'py-16 px-8 lg:px-16'
     : variant === 'centered'
-    ? 'p-6 text-center'
-    : 'p-6'
+    ? 'py-12 px-6 text-center'
+    : 'py-8 px-6'
 
   return (
     <motion.div
@@ -33,50 +33,36 @@ export function PullQuote({
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       className={`
-        relative bg-card rounded-2xl shadow-lg border border-border/20 
+        relative bg-card rounded-3xl border border-border/10
         ${baseClasses} ${className}
       `}
     >
-      {/* Quote Icon */}
-      <div className={`
-        w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6
-        ${variant === 'centered' ? 'mx-auto' : ''}
-      `}>
-        <Quote className="h-6 w-6 text-primary" />
-      </div>
-
-      {/* Quote Text */}
+      {/* Quote Text - Anthropic Style */}
       <blockquote className={`
-        text-serif-large text-card-foreground mb-6 italic leading-relaxed
-        ${variant === 'large' ? 'text-2xl lg:text-3xl' : 'text-xl'}
+        text-serif-large text-card-foreground leading-relaxed mb-8
+        ${variant === 'large' 
+          ? 'text-3xl lg:text-4xl font-light' 
+          : 'text-2xl lg:text-3xl font-light'
+        }
+        ${variant === 'centered' ? 'text-center' : ''}
       `}>
         "{quote}"
       </blockquote>
 
-      {/* Attribution */}
+      {/* Attribution - Simple & Clean */}
       <div className={`
-        flex items-center gap-4 
-        ${variant === 'centered' ? 'justify-center' : ''}
+        ${variant === 'centered' ? 'text-center' : ''}
       `}>
-        {/* Avatar placeholder */}
-        <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-          <span className="text-lg font-semibold text-primary">
-            {author.charAt(0)}
-          </span>
-        </div>
-        
-        <div>
-          <p className="text-body-medium font-semibold text-card-foreground">
-            {author}
+        <p className="text-body font-medium text-card-foreground mb-1">
+          {author}
+        </p>
+        {(title || company) && (
+          <p className="text-body text-muted-foreground">
+            {title && title}
+            {title && company && ', '}
+            {company && company}
           </p>
-          {(title || company) && (
-            <p className="text-small text-muted-foreground">
-              {title && title}
-              {title && company && ', '}
-              {company && company}
-            </p>
-          )}
-        </div>
+        )}
       </div>
     </motion.div>
   )
