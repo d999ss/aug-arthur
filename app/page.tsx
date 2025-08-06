@@ -23,11 +23,11 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="text-display mb-4 text-balance">
                 Arthur: Where Innovation Grows,{" "}
                 <span className="text-serif-display text-primary italic">From the Ground Up.</span>
               </h1>
-              <p className="text-subheading mb-12 max-w-3xl">
+              <p className="text-subheading mb-10 max-w-3xl">
                 100 years in the field and we're just getting started.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
