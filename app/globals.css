@@ -22,8 +22,8 @@
     --background: 48 17% 92%;       /* Light warm tan #f0eee7 */
     --foreground: 0 0% 9%;          /* Dark text #171717 */
     
-    /* Primary - Darker yellow */
-    --primary: 45 85% 35%;          /* #d4aa00 - Dark yellow */
+    /* Primary - Bright yellow */
+    --primary: 47 93% 52%;          /* #F5C518 - Bright yellow */
     --primary-foreground: 0 0% 100%;
     
     /* Light cards against dark background - Anthropic style */
