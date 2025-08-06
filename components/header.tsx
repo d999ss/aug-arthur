@@ -129,7 +129,7 @@ export function Header() {
               href="/" 
               className="flex items-center group"
             >
-              <span className="text-h3" style={{ fontFamily: 'var(--font-styrene-a), -apple-system, sans-serif', fontWeight: 500 }}>
+              <span className="text-xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-styrene-a), -apple-system, sans-serif' }}>
                 Arthur Companies
               </span>
             </Link>
