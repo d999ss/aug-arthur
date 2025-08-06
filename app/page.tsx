@@ -52,7 +52,6 @@ export default function HomePage() {
                 alt="Arthur Companies agricultural operations"
                 width={600}
                 height={400}
-                className="rounded-2xl shadow-lg"
                 priority
               />
             </motion.div>
