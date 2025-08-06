@@ -28,7 +28,7 @@ export default function HomePage() {
                 <span className="text-serif-display text-primary italic">From the Ground Up.</span>
               </h1>
               <p className="text-subheading mb-10 max-w-3xl">
-                100 years in the field and we're just getting started.
+                Over one hundred years in the field.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/grain" className="btn-primary">
