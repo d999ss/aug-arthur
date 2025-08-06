@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
 import { WeatherDashboard } from '@/components/weather-dashboard'
@@ -46,10 +47,13 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="flex justify-center lg:justify-end"
             >
-              <img 
+              <Image 
                 src="/58729f4f-b276-4441-b780-54154ba0b12b.png"
                 alt="Arthur Companies agricultural operations"
-                className="max-w-full h-auto rounded-2xl shadow-lg"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg"
+                priority
               />
             </motion.div>
           </div>
