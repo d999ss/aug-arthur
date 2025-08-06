@@ -1,92 +1,125 @@
+"use client"
+
 import type { Metadata } from 'next';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { motion } from "framer-motion";
 
-import { Card, CardContent } from '@/components/ui/card';
 import { ContactForm } from '@/components/contact-form';
-
-export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Get in touch with Arthur Companies. Contact our team for agricultural services, partnerships, or career opportunities.',
-};
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20 lg:py-32">
-        <div className="container mx-auto px-4">
+      <section className="section-y-large">
+        <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8">Get in touch with our team</p>
-            <p className="text-lg text-gray-600 mb-8">
-              Whether you're a farmer looking for services, a partner exploring opportunities, or someone interested in
-              joining our team, we're here to help. Reach out to us today.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h1 className="text-display mb-8 text-balance">
+                Let's grow{" "}
+                <span className="text-serif-large text-primary italic">together.</span>
+              </h1>
+              <p className="text-body-large mb-6 max-w-2xl mx-auto">
+                Get in touch with our team for agricultural services, partnerships, or career opportunities.
+              </p>
+              <p className="text-body mb-12 max-w-2xl mx-auto">
+                Whether you're a farmer looking for solutions, a partner exploring opportunities, 
+                or someone interested in joining our team—we're here to help.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+      <section className="section-y-large bg-secondary/20">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <ContactForm />
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <ContactForm />
+            </motion.div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
               {/* Corporate Contact */}
-              <Card className="border-0 shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Corporate Headquarters</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium">Arthur Companies</p>
-                        <p className="text-gray-600">100 Innovation Drive, Arthur, ND 58006</p>
-                      </div>
+              <div className="p-8 card-refined">
+                <h3 className="text-title mb-6">Corporate headquarters</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 text-green-600 flex-shrink-0" />
-                      <p className="text-gray-600">(701) 967-8200</p>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Mail className="h-5 w-5 text-green-600 flex-shrink-0" />
-                      <p className="text-gray-600">info@arthurcompanies.com</p>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Clock className="h-5 w-5 text-green-600 flex-shrink-0" />
-                      <p className="text-gray-600">Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    <div>
+                      <p className="text-body-medium">Arthur Companies</p>
+                      <p className="text-body text-muted-foreground">100 Innovation Drive, Arthur, ND 58006</p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-5 w-5 text-primary" />
+                    </div>
+                    <p className="text-body">(701) 967-8200</p>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-5 w-5 text-primary" />
+                    </div>
+                    <p className="text-body">info@arthurcompanies.com</p>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-5 w-5 text-primary" />
+                    </div>
+                    <p className="text-body">Mon-Fri: 8:00 AM - 5:00 PM</p>
+                  </div>
+                </div>
+              </div>
 
               {/* Key Locations */}
-              <Card className="border-0 shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Locations</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-medium text-gray-900">Arthur Elevator</h4>
-                      <p className="text-sm text-gray-600">100 Innovation Drive, Arthur, ND 58006</p>
-                      <p className="text-sm text-gray-600">(701) 967-8200</p>
+              <div className="p-8 card-refined">
+                <h3 className="text-title mb-6">Key locations</h3>
+                <div className="space-y-6">
+                  {[
+                    {
+                      name: "Arthur Elevator",
+                      address: "100 Innovation Drive, Arthur, ND 58006",
+                      phone: "(701) 967-8200"
+                    },
+                    {
+                      name: "Carrington Facility", 
+                      address: "1010 Hwy 281 N, Carrington, ND 58421",
+                      phone: "(701) 652-2232"
+                    },
+                    {
+                      name: "Harvey Terminal",
+                      address: "600 Lincoln Ave, Harvey, ND 58341", 
+                      phone: "(701) 324-4633"
+                    }
+                  ].map((location, index) => (
+                    <div key={location.name} className="pb-4 border-b border-border/30 last:border-0 last:pb-0">
+                      <h4 className="text-body-medium mb-2">{location.name}</h4>
+                      <p className="text-small text-muted-foreground mb-1">{location.address}</p>
+                      <p className="text-small text-muted-foreground">{location.phone}</p>
                     </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Carrington Facility</h4>
-                      <p className="text-sm text-gray-600">1010 Hwy 281 N, Carrington, ND 58421</p>
-                      <p className="text-sm text-gray-600">(701) 652-2232</p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Harvey Terminal</h4>
-                      <p className="text-sm text-gray-600">600 Lincoln Ave, Harvey, ND 58341</p>
-                      <p className="text-sm text-gray-600">(701) 324-4633</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
