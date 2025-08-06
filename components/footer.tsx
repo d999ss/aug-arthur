@@ -1,93 +1,120 @@
 import Link from "next/link"
 
-interface FooterProps {
-  className?: string
-}
-
-interface FooterLink {
-  href: string
-  label: string
-}
-
-interface FooterSection {
-  title: string
-  links: FooterLink[]
-}
-
-export function Footer({ className = "" }: FooterProps) {
-  const footerSections: FooterSection[] = [
-    {
-      title: "Company",
-      links: [
-        { href: "/about", label: "About" },
-        { href: "/careers", label: "Careers" },
-        { href: "/locations", label: "Locations" },
-        { href: "/about/newsroom", label: "Newsroom" },
-      ]
-    },
-    {
-      title: "Services",
-      links: [
-        { href: "/grain", label: "Grain" },
-        { href: "/products-services", label: "Products & Services" },
-        { href: "/research-development", label: "Research & Development" },
-        { href: "/grower-insights", label: "Grower Insights" },
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { href: "/contact", label: "Contact" },
-        { href: "/legal/privacy", label: "Privacy" },
-        { href: "/legal/terms", label: "Terms" },
-        { href: "/legal/accessibility", label: "Accessibility" },
-      ]
-    }
-  ]
-
+export function Footer() {
   return (
-    <footer className={`bg-background border-t border-border/20 ${className}`}>
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="space-y-4">
-            <Link href="/" className="text-2xl font-semibold text-foreground">
-              Arthur Companies
+    <footer className="border-t border-border/10 bg-background">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="inline-block mb-4">
+              <span className="text-xl font-medium text-foreground">Arthur</span>
             </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Family owned since 1906. Delivering performance you can measure and people you can trust across North Dakota and beyond.
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Cultivating prosperity across the Northern Plains since 1906.
             </p>
           </div>
 
-          {footerSections.map((section) => (
-            <div key={section.title} className="space-y-4">
-              <h3 className="text-sm font-medium text-foreground">{section.title}</h3>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <Link 
-                      href={link.href} 
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-sm font-medium text-foreground mb-4">Company</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Locations
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-sm font-medium text-foreground mb-4">Services</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/grain" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Grain Marketing
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/agronomy" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Agronomy
+                </Link>
+              </li>
+              <li>
+                <Link href="/research-development" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Research
+                </Link>
+              </li>
+              <li>
+                <Link href="/grower-insights" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Grower Insights
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-sm font-medium text-foreground mb-4">Resources</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/grain" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Cash Bids
+                </Link>
+              </li>
+              <li>
+                <Link href="/about/newsroom" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Newsroom
+                </Link>
+              </li>
+              <li>
+                <Link href="/legal/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/legal/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className="border-t border-border/20 pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">
-              © 2024 Arthur Companies. All rights reserved.
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-border/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Arthur Companies. All rights reserved.
             </p>
-            <Link 
-              href="/grain" 
-              className="text-primary hover:text-primary/80 transition-colors duration-200 text-sm font-medium"
-            >
-              View Cash Bids
-            </Link>
+            <div className="flex items-center space-x-6">
+              <Link href="/legal/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                Privacy
+              </Link>
+              <Link href="/legal/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                Terms
+              </Link>
+              <Link href="/legal/accessibility" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                Accessibility
+              </Link>
+            </div>
           </div>
         </div>
       </div>

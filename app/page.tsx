@@ -2,139 +2,109 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, ChevronRight } from 'lucide-react'
-
-// Anthropic-style minimal animations
-const fadeIn = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5, ease: "easeOut" }
-}
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Anthropic-style Hero - Minimal and Clean */}
-      <section className="relative pt-32 pb-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 20 }}
+    <div className="min-h-screen">
+      {/* Hero Section - Anthropic Style */}
+      <section className="relative min-h-screen flex items-center">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/20 to-background" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-4xl"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium leading-tight tracking-tight text-foreground mb-6">
-              Agricultural excellence,
-              <span className="text-primary block">redefined.</span>
+            <h1 className="text-display mb-8">
+              Agricultural innovation
+              <span className="block text-primary">since 1906.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-              For over a century, Arthur Companies has been pioneering sustainable farming solutions across the Northern Plains.
+            <p className="text-body-large text-muted-foreground mb-12 max-w-2xl">
+              For over a century, Arthur Companies has been at the forefront of sustainable 
+              agriculture, partnering with farmers across the Northern Plains to cultivate 
+              prosperity and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/grain">
-                <Button 
-                  size="lg" 
-                  className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-6 text-base font-medium"
-                >
-                  View Cash Bids
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+              <Link 
+                href="/grain"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-foreground text-background hover:bg-foreground/90 transition-all duration-200 text-sm font-medium"
+              >
+                View Cash Bids
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-              <Link href="/about">
-                <Button 
-                  size="lg" 
-                  variant="ghost" 
-                  className="text-foreground hover:bg-muted rounded-full px-8 py-6 text-base font-medium"
-                >
-                  Learn More
-                </Button>
+              <Link 
+                href="/about"
+                className="inline-flex items-center px-6 py-3 rounded-lg border border-border hover:bg-muted transition-all duration-200 text-sm font-medium"
+              >
+                Learn Our Story
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Key Metrics - Anthropic Style */}
-      <section className="py-24 px-6 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
+      {/* Stats Section - Clean Grid */}
+      <section className="py-24 bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-12"
-            variants={stagger}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16"
           >
-            {[
-              { value: "117", label: "Years of Excellence", suffix: "+" },
-              { value: "500", label: "Thousand Acres Served", suffix: "K+" },
-              { value: "15", label: "Locations", suffix: "+" }
-            ].map((stat) => (
-              <motion.div 
-                key={stat.label}
-                className="text-center"
-                variants={fadeIn}
-              >
-                <div className="text-5xl md:text-6xl font-medium text-primary mb-2">
-                  {stat.value}{stat.suffix}
-                </div>
-                <div className="text-base text-muted-foreground">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+            <div>
+              <div className="text-5xl lg:text-6xl font-medium text-primary mb-2">117+</div>
+              <div className="text-base text-muted-foreground">Years of Excellence</div>
+            </div>
+            <div>
+              <div className="text-5xl lg:text-6xl font-medium text-primary mb-2">500K+</div>
+              <div className="text-base text-muted-foreground">Acres Served</div>
+            </div>
+            <div>
+              <div className="text-5xl lg:text-6xl font-medium text-primary mb-2">15+</div>
+              <div className="text-base text-muted-foreground">Locations</div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Grid - Clean Anthropic Layout */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="mb-16"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+      {/* Services Grid - Anthropic Style */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">
-              Our Services
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              Comprehensive agricultural solutions tailored to modern farming needs.
+            <h2 className="text-headline mb-6">Our Services</h2>
+            <p className="text-body-large text-muted-foreground max-w-3xl">
+              Comprehensive agricultural solutions that combine traditional wisdom with 
+              cutting-edge technology to help farmers thrive.
             </p>
           </motion.div>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={stagger}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 title: "Grain Marketing",
-                description: "Real-time cash bids and strategic marketing solutions for optimal returns.",
+                description: "Real-time cash bids and strategic marketing solutions for optimal grain returns.",
                 link: "/grain"
               },
               {
                 title: "Agronomy Services",
-                description: "Expert guidance on crop nutrition, soil health, and precision agriculture.",
+                description: "Expert guidance on crop nutrition, soil health, and sustainable farming practices.",
                 link: "/services/agronomy"
               },
               {
                 title: "Research & Development",
-                description: "Cutting-edge agricultural research driving tomorrow's farming innovations.",
+                description: "Pioneering agricultural research driving tomorrow's farming innovations.",
                 link: "/research-development"
               },
               {
@@ -144,80 +114,86 @@ export default function HomePage() {
               },
               {
                 title: "Precision Agriculture",
-                description: "Data-driven insights and technology solutions for maximum efficiency.",
+                description: "Data-driven insights and technology solutions for maximum field efficiency.",
                 link: "/services/precision-agriculture"
               },
               {
                 title: "Wholesale Fertilizer",
-                description: "Comprehensive nutrient programs backed by agronomic expertise.",
+                description: "Comprehensive nutrient programs backed by decades of agronomic expertise.",
                 link: "/services/wholesale-fertilizer"
               }
-            ].map((service) => (
-              <motion.div key={service.title} variants={fadeIn}>
-                <Link href={service.link}>
-                  <Card className="h-full border-0 shadow-none hover:shadow-lg transition-shadow duration-300 group cursor-pointer">
-                    <CardContent className="p-8">
-                      <h3 className="text-xl font-medium mb-3 group-hover:text-primary transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-4">
-                        {service.description}
-                      </p>
-                      <div className="flex items-center text-primary">
-                        <span className="text-sm font-medium">Learn more</span>
-                        <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </CardContent>
-                  </Card>
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Link 
+                  href={service.link}
+                  className="group block p-8 rounded-xl border border-border/50 hover:border-border hover:shadow-lg transition-all duration-200"
+                >
+                  <h3 className="text-xl font-medium mb-3 group-hover:text-primary transition-colors duration-200">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="flex items-center text-primary text-sm font-medium">
+                    Learn more
+                    <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                  </div>
                 </Link>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Featured Content - Anthropic Style */}
-      <section className="py-24 px-6 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
+      {/* Feature Section - Anthropic Style */}
+      <section className="py-24 bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-medium mb-6">
+              <h2 className="text-headline mb-8">
                 Building the future of agriculture
               </h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                At Arthur Companies, we combine century-old wisdom with cutting-edge technology to deliver 
-                solutions that help farmers thrive in an ever-changing world.
+              <p className="text-body-large text-muted-foreground mb-6">
+                At Arthur Companies, we believe in the power of partnership. Our century-long 
+                commitment to farmers has taught us that success grows from understanding—understanding 
+                the land, the seasons, and most importantly, the people we serve.
               </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Our commitment to innovation, sustainability, and community partnership drives everything 
-                we do, from grain marketing to precision agriculture services.
+              <p className="text-body text-muted-foreground mb-8">
+                From grain marketing to precision agriculture, we combine time-tested wisdom 
+                with innovative solutions to help our partners navigate an ever-changing 
+                agricultural landscape.
               </p>
-              <Link href="/about">
-                <Button 
-                  variant="outline" 
-                  className="rounded-full border-foreground/20 hover:border-foreground/40"
-                >
-                  Our Story
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+              <Link 
+                href="/about"
+                className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors duration-200"
+              >
+                Discover our story
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </motion.div>
             
             <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
             >
-              <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/30 rounded-3xl flex items-center justify-center">
-                <div className="text-6xl font-medium text-primary/60">
-                  Since 1906
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/10 via-accent/10 to-primary/10 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-6xl lg:text-7xl font-medium text-primary/60 mb-4">1906</div>
+                  <div className="text-lg text-muted-foreground">Founded in North Dakota</div>
                 </div>
               </div>
             </motion.div>
@@ -225,79 +201,90 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Values Section - Minimal */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+      {/* Values Section - Minimal Grid */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">
-              Our Values
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The principles that guide our work and relationships.
+            <h2 className="text-headline mb-6">Our Values</h2>
+            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+              The principles that have guided our work for over a century.
             </p>
           </motion.div>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            variants={stagger}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {[
-              { title: "Integrity", description: "Doing what's right, always" },
-              { title: "Service", description: "Putting customers first" },
-              { title: "Innovation", description: "Embracing new solutions" },
-              { title: "Excellence", description: "Quality in everything" }
-            ].map((value) => (
-              <motion.div 
+              { 
+                title: "Integrity", 
+                description: "Doing what's right, even when no one is watching." 
+              },
+              { 
+                title: "Service", 
+                description: "Putting our farmers and communities first, always." 
+              },
+              { 
+                title: "Innovation", 
+                description: "Embracing new ideas while honoring tradition." 
+              },
+              { 
+                title: "Excellence", 
+                description: "Striving for quality in everything we do." 
+              }
+            ].map((value, index) => (
+              <motion.div
                 key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-                variants={fadeIn}
               >
-                <h3 className="text-xl font-medium mb-2">{value.title}</h3>
-                <p className="text-muted-foreground">{value.description}</p>
+                <h3 className="text-xl font-medium mb-3">{value.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {value.description}
+                </p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section - Anthropic Style */}
-      <section className="py-24 px-6 bg-foreground text-background">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-medium mb-6">
-            Ready to grow with Arthur?
-          </h2>
-          <p className="text-xl mb-10 opacity-90">
-            Join thousands of farmers who trust us with their success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button 
-                size="lg" 
-                className="bg-background text-foreground hover:bg-background/90 rounded-full px-8 py-6"
+      <section className="py-24 bg-foreground text-background">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-headline mb-6 text-background">
+              Ready to grow with Arthur?
+            </h2>
+            <p className="text-body-large mb-12 opacity-90">
+              Join thousands of farmers who trust us with their success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-            <Link href="/grower-insights">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-background/20 text-background hover:bg-background/10 rounded-full px-8 py-6"
+              </Link>
+              <Link 
+                href="/grower-insights"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
               >
                 Download App
-              </Button>
-            </Link>
-          </div>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
