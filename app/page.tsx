@@ -24,7 +24,7 @@ export default function HomePage() {
           >
             <h1 className="text-display mb-8 text-balance">
               Arthur: Where Innovation Grows,{" "}
-              <span className="text-serif-large text-primary italic">From the Ground Up.</span>
+              <span className="text-serif-display text-primary italic">From the Ground Up.</span>
             </h1>
             <p className="text-body-large mb-12 max-w-3xl">
               100 years in the field and we're just getting started.

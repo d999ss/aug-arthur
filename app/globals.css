@@ -229,6 +229,14 @@
     letter-spacing: 0;
   }
   
+  .text-serif-display {
+    font-family: var(--font-tiempos), Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: clamp(3rem, 5vw + 1rem, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: 0;
+  }
+  
   /* Buttons - Anthropic style */
   .btn-primary {
     @apply inline-flex items-center justify-center px-4 py-2.5 rounded-lg;
