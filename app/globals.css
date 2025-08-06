@@ -142,11 +142,11 @@
 }
 
 @layer components {
-  /* Container - Anthropic style with responsive margins */
+  /* Container - Anthropic exact 32px margins */
   .container {
     @apply max-w-7xl mx-auto;
-    padding-left: clamp(2rem, 1.0816rem + 3.9184vw, 5rem);
-    padding-right: clamp(2rem, 1.0816rem + 3.9184vw, 5rem);
+    padding-left: 2rem;   /* 32px - Anthropic exact */
+    padding-right: 2rem;  /* 32px - Anthropic exact */
   }
   
   /* Refined typography classes */
