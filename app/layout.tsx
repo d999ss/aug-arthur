@@ -12,7 +12,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: '#2a241f', // Dark tan background
+  themeColor: '#f0eee7', // Light warm tan background
 }
 
 export const metadata: Metadata = {
