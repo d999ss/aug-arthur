@@ -5,6 +5,8 @@ import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
 import { WeatherDashboard } from '@/components/weather-dashboard'
 import { GrainPricing } from '@/components/grain-pricing'
+import { PullQuote, TestimonialGrid } from '@/components/pull-quote'
+import { PlaceholderMedia, RoundedImage } from '@/components/rounded-media'
 
 export default function HomePage() {
   return (
@@ -96,21 +98,16 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="flex justify-center"
             >
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/8 via-accent/5 to-primary/8 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-serif text-6xl lg:text-7xl font-normal text-primary/70 mb-4">🌾</div>
-                  <div className="text-small text-muted-foreground">Grain Marketing Excellence</div>
-                </div>
-              </div>
+              <PlaceholderMedia type="image" size="xl" />
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* For Partners Section */}
-      <section className="section-y-large bg-secondary/20">
+      <section className="section-y-large bg-muted/30">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -118,14 +115,9 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative lg:order-2"
+              className="flex justify-center lg:order-2"
             >
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/8 via-accent/5 to-primary/8 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-serif text-6xl lg:text-7xl font-normal text-primary/70 mb-4">🤝</div>
-                  <div className="text-small text-muted-foreground">Partnership & Trust</div>
-                </div>
-              </div>
+              <PlaceholderMedia type=\"image\" size=\"xl\" />
             </motion.div>
 
             <motion.div
@@ -181,14 +173,9 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="flex justify-center"
             >
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/8 via-accent/5 to-primary/8 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-serif text-6xl lg:text-7xl font-normal text-primary/70 mb-4">1906</div>
-                  <div className="text-small text-muted-foreground">Founded in North Dakota</div>
-                </div>
-              </div>
+              <PlaceholderMedia type=\"video\" size=\"xl\" />
             </motion.div>
           </div>
         </div>
@@ -271,7 +258,7 @@ export default function HomePage() {
       </section>
 
       {/* Weather & Market Dashboard */}
-      <section className="section-y bg-secondary/20">
+      <section className="section-y bg-muted/20">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-headline mb-4">Real-Time Agricultural Intelligence</h2>
@@ -292,6 +279,63 @@ export default function HomePage() {
               <GrainPricing />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Producer Testimonials */}
+      <section className="section-y-large">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-headline mb-4">What Our Growers Say</h2>
+            <p className="text-body-large max-w-3xl mx-auto text-muted-foreground">
+              Hear from the farmers who trust Arthur Companies with their livelihood
+            </p>
+          </motion.div>
+
+          <TestimonialGrid testimonials={[
+            {
+              quote: "Arthur's team understands farming because they live it. Their market insights and timely payments have been game-changers for our operation.",
+              author: "Mike Johnson",
+              title: "Farm Owner",
+              company: "Johnson Family Farms"
+            },
+            {
+              quote: "The precision ag tools and agronomic support from Arthur helped us increase our yields by 15% while reducing input costs.",
+              author: "Sarah Peterson",
+              title: "Operations Manager", 
+              company: "Peterson Grain Co."
+            },
+            {
+              quote: "When market volatility hit, Arthur's risk management strategies protected our margins. They're true partners in our success.",
+              author: "Tom Anderson",
+              title: "Producer",
+              company: "Anderson Acres"
+            }
+          ]} />
+
+          {/* Featured Quote */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-12"
+          >
+            <PullQuote
+              variant="large"
+              quote="Arthur Companies doesn't just buy our grain—they invest in our future. Their research initiatives and sustainable farming programs are shaping the next generation of agriculture."
+              author="Linda Schmidt"
+              title="Third-generation farmer"
+              company="Schmidt Heritage Farm"
+              className="max-w-4xl mx-auto"
+            />
+          </motion.div>
         </div>
       </section>
 
