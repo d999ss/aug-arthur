@@ -16,8 +16,8 @@ export function Header() {
             href="/" 
             className="flex items-center space-x-2 group"
           >
-            <span className="text-xl lg:text-2xl font-medium tracking-tight text-foreground transition-colors duration-200 group-hover:text-primary">
-              Arthur
+            <span className="text-lg lg:text-xl font-medium tracking-tight text-foreground transition-colors duration-200 group-hover:text-primary">
+              Arthur Companies
             </span>
           </Link>
 

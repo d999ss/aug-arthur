@@ -1,5 +1,6 @@
-/* Anthropic-Inspired Design System */
-/* Font declarations */
+/* Anthropic-Inspired Design System - Refined */
+
+/* Font declarations - Fixed paths */
 @font-face {
   font-family: 'Styrene A';
   src: url('/__styreneA_403256-normal-500-100.ttf') format('truetype');
@@ -26,7 +27,7 @@
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: url('/Tiempos Text Regular-normal-400-100.ttf') format('truetype');
+  src: url('/Tiempos%20Text%20Regular-normal-400-100.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -38,67 +39,59 @@
 
 @layer base {
   :root {
-    /* Anthropic-inspired warm, muted color palette */
-    --background: 40 25% 98%;       /* Warm off-white */
-    --foreground: 240 10% 12%;      /* Deep charcoal */
+    /* Anthropic's refined color palette */
+    --background: 48 25% 98%;       /* Warm cream #fcfcf4 */
+    --foreground: 0 0% 9%;          /* Deep charcoal #171717 */
     
-    /* Primary colors - warm coral/terracotta */
-    --primary: 15 70% 58%;          /* Warm coral */
-    --primary-foreground: 40 25% 98%;
+    /* Primary - Anthropic's coral */
+    --primary: 19 61% 58%;          /* #dc7454 */
+    --primary-foreground: 48 25% 98%;
     
-    /* Secondary colors */
-    --secondary: 40 12% 94%;        /* Light warm gray */
-    --secondary-foreground: 240 10% 12%;
+    /* Refined neutrals */
+    --secondary: 48 8% 95%;         /* Light warm gray */
+    --secondary-foreground: 0 0% 9%;
+    --muted: 48 6% 92%;             /* Subtle background */
+    --muted-foreground: 0 0% 45%;   /* #737373 */
     
-    /* Muted tones */
-    --muted: 40 8% 90%;             /* Muted warm gray */
-    --muted-foreground: 240 5% 40%; /* Softer text */
+    /* Card colors */
+    --card: 48 25% 98%;
+    --card-foreground: 0 0% 9%;
+    --popover: 48 25% 98%;
+    --popover-foreground: 0 0% 9%;
     
-    /* Card styling */
-    --card: 40 25% 98%;
-    --card-foreground: 240 10% 12%;
-    
-    /* Popover styling */
-    --popover: 40 25% 98%;
-    --popover-foreground: 240 10% 12%;
-    
-    /* Accent colors */
-    --accent: 200 80% 55%;          /* Soft blue accent */
-    --accent-foreground: 40 25% 98%;
+    /* Accent - soft blue */
+    --accent: 215 87% 51%;
+    --accent-foreground: 48 25% 98%;
     
     /* System colors */
     --destructive: 0 72% 51%;
-    --destructive-foreground: 40 25% 98%;
-    
-    /* Borders and inputs */
-    --border: 40 8% 88%;
-    --input: 40 8% 88%;
-    --ring: 15 70% 58%;
-    
-    /* Border radius */
-    --radius: 0.5rem;
+    --destructive-foreground: 48 25% 98%;
+    --border: 48 8% 88%;
+    --input: 48 8% 88%;
+    --ring: 19 61% 58%;
+    --radius: 8px;
   }
 
   .dark {
-    --background: 240 10% 8%;
-    --foreground: 40 25% 96%;
-    --primary: 15 70% 58%;
-    --primary-foreground: 240 10% 8%;
-    --secondary: 240 8% 15%;
-    --secondary-foreground: 40 25% 96%;
-    --muted: 240 6% 20%;
-    --muted-foreground: 40 10% 65%;
-    --card: 240 10% 8%;
-    --card-foreground: 40 25% 96%;
-    --popover: 240 10% 8%;
-    --popover-foreground: 40 25% 96%;
-    --accent: 200 80% 55%;
-    --accent-foreground: 240 10% 8%;
+    --background: 0 0% 5%;
+    --foreground: 48 25% 96%;
+    --primary: 19 61% 58%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 48 25% 96%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --card: 0 0% 5%;
+    --card-foreground: 48 25% 96%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 48 25% 96%;
+    --accent: 215 87% 51%;
+    --accent-foreground: 0 0% 5%;
     --destructive: 0 62% 45%;
-    --destructive-foreground: 40 25% 96%;
-    --border: 240 6% 20%;
-    --input: 240 6% 20%;
-    --ring: 15 70% 58%;
+    --destructive-foreground: 48 25% 96%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 19 61% 58%;
   }
 }
 
@@ -114,61 +107,57 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 400;
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    line-height: 1.5;
+    letter-spacing: -0.008em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    line-height: 1.6;
-    letter-spacing: -0.011em;
   }
   
-  /* Typography - Anthropic style */
+  /* Anthropic-inspired typography hierarchy */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 500;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
     color: hsl(var(--foreground));
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
   }
   
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.5rem, 4vw + 1rem, 3.5rem);
+    letter-spacing: -0.035em;
     line-height: 1.05;
   }
   
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-    letter-spacing: -0.025em;
+    font-size: clamp(2rem, 3vw + 0.5rem, 2.75rem);
+    letter-spacing: -0.03em;
     line-height: 1.1;
   }
   
   h3 {
-    @apply text-2xl md:text-3xl lg:text-4xl;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
     letter-spacing: -0.02em;
     line-height: 1.15;
   }
   
   h4 {
-    @apply text-xl md:text-2xl lg:text-3xl;
+    font-size: clamp(1.25rem, 1.5vw + 0.25rem, 1.5rem);
+    letter-spacing: -0.015em;
     line-height: 1.2;
   }
   
   p {
-    line-height: 1.7;
-    letter-spacing: -0.011em;
+    line-height: 1.6;
+    letter-spacing: -0.008em;
   }
   
-  /* Links */
-  a {
-    @apply transition-colors duration-200;
-  }
-  
-  /* Selection */
+  /* Selection styling */
   ::selection {
-    background: hsl(var(--primary) / 0.2);
+    background: hsl(var(--primary) / 0.15);
     color: hsl(var(--foreground));
   }
 }
@@ -176,97 +165,134 @@
 @layer components {
   /* Container */
   .container {
-    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  /* Section spacing */
-  .section-padding {
-    @apply py-20 lg:py-28 xl:py-32;
-  }
-  
-  /* Anthropic-style button */
-  .btn-anthropic {
-    @apply inline-flex items-center justify-center;
-    @apply px-6 py-3 rounded-lg;
-    @apply text-sm font-medium;
-    @apply transition-all duration-200;
-    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
-    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  }
-  
-  .btn-primary {
-    @apply btn-anthropic;
-    @apply bg-foreground text-background;
-    @apply hover:bg-foreground/90;
-    @apply focus:ring-foreground;
-  }
-  
-  .btn-secondary {
-    @apply btn-anthropic;
-    @apply bg-transparent text-foreground;
-    @apply border border-border;
-    @apply hover:bg-muted;
-    @apply focus:ring-muted-foreground;
-  }
-  
-  /* Anthropic-style card */
-  .card-anthropic {
-    @apply rounded-xl bg-card;
-    @apply border border-border/50;
-    @apply transition-all duration-200;
-    @apply hover:shadow-lg hover:border-border;
-  }
-  
-  /* Text styles */
+  /* Refined typography classes */
   .text-display {
-    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 500;
-    @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
-    line-height: 1;
+    font-size: clamp(3rem, 5vw + 1rem, 4.5rem);
+    line-height: 0.95;
     letter-spacing: -0.04em;
+    color: hsl(var(--foreground));
   }
   
   .text-headline {
-    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 500;
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    font-size: clamp(2rem, 3vw + 0.5rem, 2.75rem);
     line-height: 1.1;
     letter-spacing: -0.03em;
+    color: hsl(var(--foreground));
   }
   
   .text-title {
-    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Styrene A', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 500;
-    @apply text-2xl md:text-3xl;
+    font-size: clamp(1.25rem, 2vw + 0.25rem, 1.75rem);
     line-height: 1.2;
     letter-spacing: -0.02em;
+    color: hsl(var(--foreground));
   }
   
   .text-body-large {
-    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    @apply text-lg md:text-xl;
-    line-height: 1.6;
-    letter-spacing: -0.011em;
+    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.125rem, 1vw + 0.5rem, 1.25rem);
+    line-height: 1.5;
+    letter-spacing: -0.008em;
+    color: hsl(var(--muted-foreground));
   }
   
   .text-body {
-    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    @apply text-base;
-    line-height: 1.7;
-    letter-spacing: -0.011em;
+    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: -0.008em;
+    color: hsl(var(--muted-foreground));
   }
   
+  .text-body-medium {
+    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+    color: hsl(var(--foreground));
+  }
+  
+  .text-small {
+    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+    color: hsl(var(--muted-foreground));
+  }
+  
+  /* Serif for special emphasis */
   .text-serif {
     font-family: 'Tiempos Text', Georgia, 'Times New Roman', serif;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.6;
+    letter-spacing: 0;
   }
   
-  /* Grid layouts */
-  .grid-anthropic {
-    @apply grid gap-8 lg:gap-12;
+  .text-serif-large {
+    font-family: 'Tiempos Text', Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+  
+  /* Buttons - Anthropic style */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2.5 rounded-lg;
+    @apply text-sm font-medium;
+    @apply bg-foreground text-background;
+    @apply hover:bg-foreground/90;
+    @apply transition-all duration-200 ease-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2.5 rounded-lg;
+    @apply text-sm font-medium;
+    @apply bg-transparent text-foreground border border-border;
+    @apply hover:bg-muted;
+    @apply transition-all duration-200 ease-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    font-family: 'Styrene B', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+  }
+  
+  /* Cards - refined */
+  .card-refined {
+    @apply rounded-xl bg-card border border-border/30;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:border-border hover:shadow-sm;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Section spacing - more refined */
+  .section-y {
+    @apply py-16 lg:py-20;
+  }
+  
+  .section-y-large {
+    @apply py-20 lg:py-24;
+  }
+  
+  /* Grid spacing */
+  .grid-refined {
+    @apply grid gap-6 lg:gap-8;
   }
   
   /* Fade animations */
@@ -275,24 +301,20 @@
   }
   
   .fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
+    animation: fadeUp 0.8s ease-out forwards;
   }
   
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   
   @keyframes fadeUp {
-    from {
+    from { 
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(24px);
     }
-    to {
+    to { 
       opacity: 1;
       transform: translateY(0);
     }
@@ -300,52 +322,36 @@
 }
 
 @layer utilities {
-  /* Focus states */
+  /* Focus utilities */
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
   
-  /* Transitions */
+  /* Transition utilities */
   .transition-smooth {
     @apply transition-all duration-300 ease-out;
   }
   
-  .transition-fast {
-    @apply transition-all duration-200 ease-out;
-  }
-  
-  /* Hover effects */
-  .hover-lift {
-    @apply hover:-translate-y-1 transition-transform duration-200;
-  }
-  
-  .hover-grow {
-    @apply hover:scale-105 transition-transform duration-200;
-  }
-  
-  /* Text balance */
+  /* Text utilities */
   .text-balance {
     text-wrap: balance;
   }
   
-  /* Anthropic-style shadows */
-  .shadow-soft {
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  /* Spacing utilities */
+  .space-y-refined > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1.5rem;
   }
   
-  .shadow-medium {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
-  }
-  
-  .shadow-large {
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+  /* Hover effects */
+  .hover-lift {
+    @apply hover:-translate-y-0.5 transition-transform duration-200 ease-out;
   }
 }
 
-/* Custom scrollbar - minimal like Anthropic */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -354,14 +360,14 @@
 
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--muted-foreground) / 0.2);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--muted-foreground) / 0.3);
 }
 
-/* Performance optimizations */
+/* Performance optimization */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -370,13 +376,5 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* Print styles */
-@media print {
-  body {
-    color: black;
-    background: white;
   }
 }
