@@ -60,8 +60,8 @@ export default function StyleGuidePage() {
             >
               <div className="w-full h-24 bg-primary rounded-lg mb-4"></div>
               <h3 className="text-title mb-2">Primary</h3>
-              <p className="text-body mb-2">Anthropic's coral</p>
-              <code className="text-small bg-muted px-2 py-1 rounded">#cc785c</code>
+              <p className="text-body mb-2">Dark yellow</p>
+              <code className="text-small bg-muted px-2 py-1 rounded">#d4aa00</code>
               <p className="text-small text-muted-foreground mt-2">
                 Used for buttons, links, icons, and emphasis
               </p>

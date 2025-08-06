@@ -43,8 +43,8 @@
     --background: 0 0% 100%;        /* Pure white #ffffff */
     --foreground: 0 0% 9%;          /* Deep charcoal #171717 */
     
-    /* Primary - Anthropic's exact coral */
-    --primary: 19 47% 64%;          /* #cc785c - Anthropic's selection color */
+    /* Primary - Darker yellow */
+    --primary: 45 85% 35%;          /* #d4aa00 - Dark yellow */
     --primary-foreground: 0 0% 100%;
     
     /* Refined neutrals - Anthropic style */

@@ -20,9 +20,9 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Arthur Companies Brand Colors (Anthropic-inspired)
+        // Arthur Companies Brand Colors
         brand: {
-          primary: "#cc785c", // Coral - Anthropic's primary
+          primary: "#d4aa00", // Dark yellow
           secondary: "#f8f9fa", // Light slate
           accent: "#eef0f2", // Subtle cloud
           neutral: "#374151", // Gray-700 - Professional
@@ -113,7 +113,7 @@ const config: Config = {
         "slide-in": "slide-in 0.3s ease-out",
       },
       boxShadow: {
-        "brand": "0 4px 6px -1px rgba(204, 120, 92, 0.1), 0 2px 4px -1px rgba(204, 120, 92, 0.06)",
+        "brand": "0 4px 6px -1px rgba(212, 170, 0, 0.1), 0 2px 4px -1px rgba(212, 170, 0, 0.06)",
       },
     },
   },
