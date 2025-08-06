@@ -105,6 +105,9 @@ export function Footer() {
               © {new Date().getFullYear()} Arthur Companies. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
+              <Link href="/style-guide" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                Style Guide
+              </Link>
               <Link href="/legal/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
                 Privacy
               </Link>
