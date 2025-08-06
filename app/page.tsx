@@ -16,6 +16,19 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center -mt-16 lg:-mt-20">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20" />
         
+        {/* Robinhood-style lighting effect */}
+        <div 
+          className="absolute top-1/2 left-1/4 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          style={{
+            background: `radial-gradient(50% 50% at 50% 50%, 
+              hsla(45, 85%, 55%, 0.15) 0%, 
+              hsla(45, 85%, 60%, 0.08) 30%, 
+              hsla(45, 85%, 65%, 0.04) 60%, 
+              transparent 100%)`,
+            filter: 'blur(40px)',
+          }}
+        />
+        
         <div className="relative z-10 container py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -61,7 +74,18 @@ export default function HomePage() {
 
 
       {/* For Growers Section */}
-      <section className="section-y-large">
+      <section className="section-y-large relative">
+        {/* Lighting effect at section transition */}
+        <div 
+          className="absolute -top-32 left-1/2 w-[1000px] h-[400px] -translate-x-1/2 pointer-events-none"
+          style={{
+            background: `radial-gradient(ellipse at center, 
+              hsla(45, 85%, 55%, 0.08) 0%, 
+              hsla(45, 85%, 60%, 0.04) 40%, 
+              transparent 70%)`,
+            filter: 'blur(60px)',
+          }}
+        />
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -150,7 +174,18 @@ export default function HomePage() {
       </section>
 
       {/* Quote Section - Prominent Display */}
-      <section className="section-y-large bg-muted/10">
+      <section className="section-y-large bg-muted/10 relative overflow-hidden">
+        {/* Ambient glow effect */}
+        <div 
+          className="absolute top-1/2 right-0 w-[600px] h-[600px] -translate-y-1/2 translate-x-1/4 pointer-events-none"
+          style={{
+            background: `radial-gradient(circle at center, 
+              hsla(45, 85%, 55%, 0.12) 0%, 
+              hsla(45, 85%, 60%, 0.06) 35%, 
+              transparent 70%)`,
+            filter: 'blur(80px)',
+          }}
+        />
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -172,8 +207,29 @@ export default function HomePage() {
       </section>
 
       {/* Values Section */}
-      <section className="section-y-large">
-        <div className="container">
+      <section className="section-y-large relative">
+        {/* Dual lighting effects for depth */}
+        <div 
+          className="absolute top-20 left-0 w-[500px] h-[500px] -translate-x-1/2 pointer-events-none"
+          style={{
+            background: `radial-gradient(circle at center, 
+              hsla(45, 85%, 55%, 0.1) 0%, 
+              hsla(45, 85%, 65%, 0.05) 40%, 
+              transparent 70%)`,
+            filter: 'blur(100px)',
+          }}
+        />
+        <div 
+          className="absolute bottom-20 right-0 w-[500px] h-[500px] translate-x-1/2 pointer-events-none"
+          style={{
+            background: `radial-gradient(circle at center, 
+              hsla(45, 85%, 55%, 0.1) 0%, 
+              hsla(45, 85%, 65%, 0.05) 40%, 
+              transparent 70%)`,
+            filter: 'blur(100px)',
+          }}
+        />
+        <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
