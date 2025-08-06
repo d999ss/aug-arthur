@@ -4,7 +4,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Providers } from '@/lib/providers'
 import { Toaster } from '@/components/toaster'
-import { styreneA, styreneB, tiempos } from '@/lib/fonts'
+import { styreneA, styreneB, tiempos, garamond } from '@/lib/fonts'
 import { StructuredData, organizationSchema } from '@/components/structured-data'
 
 export const viewport: Viewport = {
@@ -79,7 +79,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   }
 
   return (
-    <html lang="en" suppressHydrationWarning className={`${styreneA.variable} ${styreneB.variable} ${tiempos.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${styreneA.variable} ${styreneB.variable} ${tiempos.variable} ${garamond.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />

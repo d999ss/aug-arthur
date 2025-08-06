@@ -23,9 +23,9 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-display mb-2 text-balance">
+              <h1 className="text-garamond-display mb-2 text-balance">
                 Arthur: Where Innovation Grows,{" "}
-                <span className="text-serif-display text-primary italic">From the Ground Up.</span>
+                <span className="text-primary italic">From the Ground Up.</span>
               </h1>
               <p className="text-subheading mb-10 max-w-3xl">
                 Over one hundred years in the field.

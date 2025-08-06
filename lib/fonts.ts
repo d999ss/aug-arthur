@@ -30,3 +30,10 @@ export const tiempos = localFont({
   weight: '400',
   display: 'swap',
 })
+
+export const garamond = localFont({
+  src: '../public/itc-garamond-std.otf',
+  variable: '--font-garamond',
+  weight: '400',
+  display: 'swap',
+})
