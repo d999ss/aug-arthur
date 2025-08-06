@@ -48,7 +48,7 @@ export default function HomePage() {
               className="flex justify-center lg:justify-end"
             >
               <Image 
-                src="/58729f4f-b276-4441-b780-54154ba0b12b.png"
+                src="/2025, 02_08_11 PM.png"
                 alt="Arthur Companies agricultural operations"
                 width={600}
                 height={400}
