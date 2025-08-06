@@ -86,7 +86,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className="min-h-screen bg-background font-sans antialiased">
+      <body className="min-h-screen font-sans antialiased" style={{ backgroundColor: 'hsl(48 17% 92%)' }}>
         <Providers>
           <StructuredData data={organizationSchema} />
           <div className="relative flex min-h-screen flex-col">
