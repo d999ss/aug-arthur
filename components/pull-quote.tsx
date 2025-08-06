@@ -39,13 +39,15 @@ export function PullQuote({
     >
       {/* Quote Text - Exact Anthropic Style */}
       <blockquote className={`
-        font-normal text-card-foreground leading-relaxed mb-6
+        font-normal text-foreground leading-relaxed mb-6
         ${variant === 'large' 
-          ? 'text-2xl lg:text-3xl' 
+          ? 'text-3xl lg:text-4xl font-light' 
           : 'text-xl lg:text-2xl'
         }
         ${variant === 'centered' ? 'text-center' : ''}
-      `}>
+      `}
+        style={{ fontFamily: 'var(--font-garamond), Georgia, serif' }}
+      >
         "{quote}"
       </blockquote>
 

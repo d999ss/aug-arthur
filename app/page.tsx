@@ -150,10 +150,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section className="section-y-large">
+      {/* Quote Section - Prominent Display */}
+      <section className="section-y-large bg-muted/10">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
