@@ -101,7 +101,7 @@ export function FuturesTicker() {
   )
 }
 
-// Header banner version - scrolling ticker
+// Header banner version - animated scrolling ticker
 export function FuturesHeaderBanner() {
   const [tickerData, setTickerData] = useState<FuturesTickerData[]>([])
 
@@ -117,14 +117,17 @@ export function FuturesHeaderBanner() {
 
   if (tickerData.length === 0) return null
 
+  // Create multiple copies for seamless scrolling
+  const tickerItems = [...tickerData, ...tickerData, ...tickerData]
+
   return (
-    <div className="bg-foreground text-background border-b border-background/10">
-      <div className="container h-8 flex items-center justify-center">
-        <div className="flex items-center gap-6">
-          {tickerData.map((data, index) => {
+    <div className="bg-foreground text-background border-b border-background/10 overflow-hidden">
+      <div className="h-8 flex items-center">
+        <div className="flex items-center animate-ticker whitespace-nowrap">
+          {tickerItems.map((data, index) => {
             const isPositive = data.change >= 0
             return (
-              <div key={data.symbol} className="flex items-center gap-2">
+              <div key={`${data.symbol}-${index}`} className="flex items-center gap-2 mx-8">
                 <span className="text-xs font-medium text-background/90">
                   {data.label}
                 </span>
@@ -136,12 +139,14 @@ export function FuturesHeaderBanner() {
                 }`}>
                   {isPositive ? '+' : ''}{data.change}
                 </span>
+                <span className="text-xs text-background/50">•</span>
               </div>
             )
           })}
-          <div className="flex items-center gap-1 ml-4">
+          <div className="flex items-center gap-1 mx-8">
             <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-xs text-background/70">LIVE</span>
+            <span className="text-xs text-background/70">LIVE MARKETS</span>
+            <span className="text-xs text-background/50">•</span>
           </div>
         </div>
       </div>
