@@ -19,13 +19,11 @@ export default function HomePage() {
             className="max-w-4xl"
           >
             <h1 className="text-display mb-8 text-balance">
-              Agricultural excellence{" "}
-              <span className="text-serif-large text-primary italic">since 1906.</span>
+              Arthur: Where innovation grows,{" "}
+              <span className="text-serif-large text-primary italic">from the ground up.</span>
             </h1>
             <p className="text-body-large mb-12 max-w-2xl">
-              For over a century, Arthur Companies has cultivated prosperity across the 
-              Northern Plains, combining time-honored wisdom with innovative solutions 
-              for modern agriculture.
+              100 years in the field and we're just getting started.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/grain" className="btn-primary">
@@ -33,7 +31,7 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
               <Link href="/about" className="btn-secondary">
-                Our Story
+                About Arthur
               </Link>
             </div>
           </motion.div>
@@ -66,86 +64,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* For Growers Section */}
       <section className="section-y-large">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-16"
-          >
-            <h2 className="text-headline mb-6">Our Services</h2>
-            <p className="text-body-large max-w-3xl">
-              Comprehensive agricultural solutions that bridge traditional farming 
-              wisdom with cutting-edge technology.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-refined">
-            {[
-              {
-                title: "Grain Marketing",
-                description: "Real-time cash bids and strategic marketing solutions for optimal returns on your harvest.",
-                link: "/grain"
-              },
-              {
-                title: "Agronomy Services", 
-                description: "Expert guidance on crop nutrition, soil health, and sustainable farming practices.",
-                link: "/services/agronomy"
-              },
-              {
-                title: "Research & Development",
-                description: "Pioneering agricultural research that drives tomorrow's farming innovations.",
-                link: "/research-development"
-              },
-              {
-                title: "Specialty Crops",
-                description: "Premium contracts and specialized handling for identity-preserved grains.",
-                link: "/services/specialty-crops"
-              },
-              {
-                title: "Precision Agriculture",
-                description: "Data-driven insights and technology solutions for maximum field efficiency.",
-                link: "/services/precision-agriculture"
-              },
-              {
-                title: "Wholesale Fertilizer",
-                description: "Comprehensive nutrient programs backed by agronomic expertise.",
-                link: "/services/wholesale-fertilizer"
-              }
-            ].map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Link 
-                  href={service.link}
-                  className="group block p-6 card-refined hover-lift"
-                >
-                  <h3 className="text-title mb-3 group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-body mb-4">
-                    {service.description}
-                  </p>
-                  <div className="flex items-center text-primary text-small font-medium">
-                    Learn more
-                    <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Section with Serif */}
-      <section className="section-y-large bg-secondary/20">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -154,28 +74,108 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-headline mb-8">
-                Building the future of agriculture
-              </h2>
+              <h2 className="text-headline mb-8">For growers</h2>
+              <p className="text-body mb-8">
+                You know your acres. We know the market. Our team shows up, answers the phone, and competes to earn your business whether you're hauling to an Arthur elevator, planning for next year with our agronomy experts, or growing under contract for specialty end-users.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/grain" className="btn-primary">
+                  Grain
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link href="/products-services" className="btn-secondary">
+                  Products & Services
+                </Link>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/8 via-accent/5 to-primary/8 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-serif text-6xl lg:text-7xl font-normal text-primary/70 mb-4">🌾</div>
+                  <div className="text-small text-muted-foreground">Grain Marketing Excellence</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* For Partners Section */}
+      <section className="section-y-large bg-secondary/20">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative lg:order-2"
+            >
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/8 via-accent/5 to-primary/8 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-serif text-6xl lg:text-7xl font-normal text-primary/70 mb-4">🤝</div>
+                  <div className="text-small text-muted-foreground">Partnership & Trust</div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:order-1"
+            >
+              <h2 className="text-headline mb-8">For partners</h2>
+              <p className="text-body mb-8">
+                Arthur is a growing agribusiness platform trusted by processors, suppliers, and our industry-leading peers. Our businesses span grain origination, crop inputs, research, logistics, and specialty ingredients—all supported by a culture of integrity and execution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/products-services" className="btn-primary">
+                  Products & Services
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link href="/research-development" className="btn-secondary">
+                  Innovation
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Are Section */}
+      <section className="section-y-large">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-headline mb-8">Who we are</h2>
               <div className="text-serif text-body-large mb-6 text-muted-foreground italic">
-                "Success in farming comes not from fighting nature, 
-                but from understanding and working with it."
+                "Arthur delivers performance you can measure and people you can trust."
               </div>
               <p className="text-body mb-6">
-                At Arthur Companies, we believe in the power of partnership. Our century-long 
-                journey has taught us that true agricultural success grows from understanding—
-                understanding the land, the seasons, and most importantly, the people we serve.
+                Every day, farmers across the Northern Plains rely on Arthur for more than just market access and inputs. They count on us for straight answers, honest service, and solutions that work.
               </p>
               <p className="text-body mb-8">
-                From grain marketing to precision agriculture, we combine generational wisdom 
-                with innovative technology to help our partners thrive in an ever-evolving 
-                agricultural landscape.
+                From local agronomy centers to leading-edge research, Arthur combines the grit of a century-long legacy with a vision for what agriculture can be. Since 1906, we've built relationships that last—from a single elevator in Arthur, ND, to a multi-state operation supporting thousands of acres.
               </p>
               <Link 
                 href="/about"
                 className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
               >
-                <span className="text-body-medium">Discover our story</span>
+                <span className="text-body-medium">About Us</span>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </motion.div>
@@ -208,29 +208,29 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-headline mb-6">Our Values</h2>
+            <h2 className="text-headline mb-6">Company values</h2>
             <p className="text-body-large max-w-2xl mx-auto">
               The principles that have guided our work for over a century.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {[
               { 
                 title: "Integrity", 
-                description: "Doing what's right, even when no one is watching."
+                description: "We do what we say we'll do—no excuses. We do the right thing. We do what we say we will do. We treat others the way we would like to be treated. We embody trust and teamwork."
               },
               { 
                 title: "Service", 
-                description: "Putting our farmers and communities first, always."
+                description: "We care for the land, our communities, and your trust. Provide value in every interaction with producers, partners, and the communities we serve and live in. We serve with a positive attitude and adapt to meet needs and exceed expectations."
               },
               { 
-                title: "Innovation", 
-                description: "Embracing new ideas while honoring tradition."
+                title: "Pioneering", 
+                description: "From new genetics to digital tools, we're on the leading edge. We are not satisfied with the status quo and are committed to creating new opportunities and higher levels of service."
               },
               { 
                 title: "Excellence", 
-                description: "Pursuing quality in everything we do."
+                description: "We invest in people, platforms, and partnerships for the long haul. If it is worth doing, we do it right the first time and strive for excellence in all we do. We have an ownership mindset and take accountability in our words and actions."
               }
             ].map((value, index) => (
               <motion.div
@@ -239,7 +239,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                className="p-6 card-refined"
               >
                 <h3 className="text-title mb-3">{value.title}</h3>
                 <p className="text-body">
