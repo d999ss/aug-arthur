@@ -150,37 +150,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Who We Are Section */}
+      {/* Quote Section */}
       <section className="section-y-large">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
-              <h2 className="text-headline mb-8">Who We Are</h2>
-              <p className="text-body mb-8">
-                Every day, farmers across the Northern Plains rely on Arthur for more than just market access and inputs. They count on us for straight answers, honest service, and solutions that work. From local agronomy centers to leading-edge research, Arthur combines the grit of a century-long legacy with a vision for what agriculture can be. Since 1906, we've built relationships that last—from a single elevator in Arthur, ND, to a multi-state operation supporting thousands of acres.
-              </p>
-              <Link 
-                href="/about"
-                className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
-              >
-                <span className="text-body-medium">About Us</span>
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="flex justify-center"
-            >
-              <PlaceholderMedia type="video" size="xl" />
+              <PullQuote
+                variant="large"
+                quote="Arthur is the kind of company that shows up when it matters. We count on them every year, and every year they deliver."
+                author="Mike Johnson"
+                title="Wheat & Soybean Farmer"
+                company="Cass County"
+              />
             </motion.div>
           </div>
         </div>
