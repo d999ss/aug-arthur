@@ -141,6 +141,14 @@
     font-family: var(--font-tiempos), Georgia, serif;
     font-style: italic;
   }
+  
+  /* Logo styling */
+  .text-logo {
+    font-family: var(--font-styrene-a), -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
 
   /* 4. LAYOUT CLASSES
      ================= */
