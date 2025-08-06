@@ -46,6 +46,7 @@ export default function HomePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="flex justify-center lg:justify-end"
+              style={{ transform: 'translateY(-10%)' }}
             >
               <Image 
                 src="/2025, 02_08_11 PM.png"
