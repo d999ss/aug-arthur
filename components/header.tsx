@@ -129,7 +129,12 @@ export function Header() {
               href="/" 
               className="flex items-center group"
             >
-              <span className="text-logo">
+              <span style={{ 
+                fontFamily: 'var(--font-styrene-a), -apple-system, BlinkMacSystemFont, sans-serif',
+                fontSize: '1.25rem',
+                fontWeight: '700',
+                letterSpacing: '-0.025em'
+              }}>
                 Arthur Companies
               </span>
             </Link>

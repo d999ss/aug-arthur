@@ -39,7 +39,13 @@ export default function HomePage() {
               <h1 className="text-hero mb-lg text-balance">
                 Arthur: Where Innovation Grows, From the Ground Up.
               </h1>
-              <p className="text-lead mb-xl">
+              <p className="mb-xl" style={{
+                fontFamily: 'var(--font-styrene-b), -apple-system, sans-serif',
+                fontSize: 'clamp(1.125rem, 1.087rem + 0.163vw, 1.25rem)',
+                fontWeight: '400',
+                lineHeight: '1.6',
+                color: 'hsl(0 0% 9%)'
+              }}>
                 Over one hundred years in the field.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
