@@ -91,7 +91,7 @@ export default function LocationsPage() {
                     <h4 className="font-semibold text-gray-900 mb-2">Services</h4>
                     <div className="flex flex-wrap gap-2">
                       {location.services.map((service) => (
-                        <span key={service} className="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                        <span key={service} className="px-3 py-1 bg-secondary/20 text-primary text-xs rounded-full">
                           {service}
                         </span>
                       ))}
@@ -112,7 +112,7 @@ export default function LocationsPage() {
             Contact our main office for assistance or to schedule an appointment at any of our locations.
           </p>
           <Link href="/contact">
-            <Button className="bg-green-600 hover:bg-green-700">Contact Us</Button>
+            <Button className="bg-primary hover:bg-primary/90">Contact Us</Button>
           </Link>
         </div>
       </section>

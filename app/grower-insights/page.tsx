@@ -6,7 +6,7 @@ export default function GrowerInsightsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-teal-100 py-20 lg:py-32">
+      <section className="bg-gradient-to-br from-slate-50 to-gray-100 py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Grower Insights</h1>
@@ -32,7 +32,7 @@ export default function GrowerInsightsPage() {
               
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <BarChart3 className="h-6 w-6 text-emerald-600 mt-1" />
+                  <BarChart3 className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Portfolio Management</h3>
                     <p className="text-gray-600 text-sm">Track and manage your grain marketing positions across multiple commodities and locations.</p>
@@ -40,7 +40,7 @@ export default function GrowerInsightsPage() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <TrendingUp className="h-6 w-6 text-emerald-600 mt-1" />
+                  <TrendingUp className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Price Alerts</h3>
                     <p className="text-gray-600 text-sm">Set custom price alerts and receive notifications when target prices are reached.</p>
@@ -48,7 +48,7 @@ export default function GrowerInsightsPage() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <BarChart3 className="h-6 w-6 text-emerald-600 mt-1" />
+                  <BarChart3 className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Market Analysis</h3>
                     <p className="text-gray-600 text-sm">Access detailed market analysis and forecasting tools to inform your marketing decisions.</p>
@@ -56,7 +56,7 @@ export default function GrowerInsightsPage() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <Database className="h-6 w-6 text-emerald-600 mt-1" />
+                  <Database className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Contract Management</h3>
                     <p className="text-gray-600 text-sm">Manage all your grain contracts in one centralized platform with automated tracking.</p>
@@ -67,7 +67,7 @@ export default function GrowerInsightsPage() {
             
             <div className="bg-gray-100 rounded-lg p-8 text-center">
               <div className="w-full h-64 bg-white rounded-lg shadow-inner flex items-center justify-center">
-                <BarChart3 className="h-24 w-24 text-emerald-600" />
+                <BarChart3 className="h-24 w-24 text-primary" />
               </div>
               <p className="text-gray-600 mt-4">Bushel Balance Dashboard Preview</p>
             </div>
@@ -88,7 +88,7 @@ export default function GrowerInsightsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <DollarSign className="h-8 w-8 text-emerald-600 mb-2" />
+                <DollarSign className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Market Data</CardTitle>
               </CardHeader>
               <CardContent>
@@ -98,7 +98,7 @@ export default function GrowerInsightsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <CloudRain className="h-8 w-8 text-emerald-600 mb-2" />
+                <CloudRain className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Weather</CardTitle>
               </CardHeader>
               <CardContent>
@@ -108,7 +108,7 @@ export default function GrowerInsightsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Sprout className="h-8 w-8 text-emerald-600 mb-2" />
+                <Sprout className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Crop Performance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -118,7 +118,7 @@ export default function GrowerInsightsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Database className="h-8 w-8 text-emerald-600 mb-2" />
+                <Database className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Soil Health</CardTitle>
               </CardHeader>
               <CardContent>
@@ -135,7 +135,7 @@ export default function GrowerInsightsPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <TrendingUp className="h-8 w-8 text-emerald-600 mb-2" />
+                <TrendingUp className="h-8 w-8 text-primary mb-2" />
                 <CardTitle className="text-2xl">Market Insights</CardTitle>
               </CardHeader>
               <CardContent>
@@ -151,7 +151,7 @@ export default function GrowerInsightsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <BarChart3 className="h-8 w-8 text-emerald-600 mb-2" />
+                <BarChart3 className="h-8 w-8 text-primary mb-2" />
                 <CardTitle className="text-2xl">Trial Results</CardTitle>
               </CardHeader>
               <CardContent>
@@ -169,17 +169,17 @@ export default function GrowerInsightsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-emerald-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Optimize Your Grain Marketing?</h2>
           <p className="text-xl mb-8">
             Join thousands of farmers who trust Bushel Balance to manage their grain marketing and maximize their profitability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-emerald-600">
+            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
               Start Free Trial
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-emerald-600">
+            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
               Schedule Demo
             </Button>
           </div>

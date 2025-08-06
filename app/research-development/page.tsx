@@ -337,7 +337,7 @@ export default function ResearchDevelopmentPage() {
                 name: "SeedZ",
                 description: "Digital marketplace connecting seed developers with farmers seeking specific traits",
                 stage: "Seed A",
-                stageColor: "bg-green-100 text-green-800"
+                stageColor: "bg-secondary/20 text-primary"
               },
               {
                 name: "Balcão",
@@ -367,7 +367,7 @@ export default function ResearchDevelopmentPage() {
                 name: "CropTech Analytics",
                 description: "AI-powered crop monitoring and yield prediction platform using satellite imagery",
                 stage: "Seed A",
-                stageColor: "bg-teal-100 text-teal-800"
+                stageColor: "bg-secondary/20 text-primary"
               }
             ].map((company, index) => (
               <motion.div

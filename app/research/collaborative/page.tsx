@@ -7,7 +7,7 @@ export default function CollaborativeResearchPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-cyan-100 py-20 lg:py-32">
+      <section className="bg-gradient-to-br from-blue-50 to-slate-100 py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Users className="h-16 w-16 mx-auto text-blue-600 mb-6" />

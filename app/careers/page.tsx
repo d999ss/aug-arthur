@@ -217,7 +217,7 @@ export default function CareersPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="section-y-large bg-foreground text-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Grow Your Career?</h2>
           <p className="text-xl mb-8">

@@ -7,16 +7,16 @@ export default function GlobalPartnershipsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-50 to-cyan-100 py-20 lg:py-32">
+      <section className="bg-gradient-to-br from-slate-50 to-gray-100 py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Globe className="h-16 w-16 mx-auto text-teal-600 mb-6" />
+            <Globe className="h-16 w-16 mx-auto text-primary mb-6" />
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Global Partnerships</h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
               International venture partnerships and cross-border investments
             </p>
             <Link href="/contact">
-              <Button size="lg" className="bg-teal-600 hover:bg-teal-700">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Explore Global Opportunities
               </Button>
             </Link>
@@ -37,7 +37,7 @@ export default function GlobalPartnershipsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <MapPin className="h-8 w-8 text-teal-600 mb-2" />
+                <MapPin className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>North America</CardTitle>
               </CardHeader>
               <CardContent>
@@ -47,7 +47,7 @@ export default function GlobalPartnershipsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Globe className="h-8 w-8 text-teal-600 mb-2" />
+                <Globe className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>South America</CardTitle>
               </CardHeader>
               <CardContent>
@@ -57,7 +57,7 @@ export default function GlobalPartnershipsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Network className="h-8 w-8 text-teal-600 mb-2" />
+                <Network className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Europe</CardTitle>
               </CardHeader>
               <CardContent>
@@ -67,7 +67,7 @@ export default function GlobalPartnershipsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Handshake className="h-8 w-8 text-teal-600 mb-2" />
+                <Handshake className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Asia-Pacific</CardTitle>
               </CardHeader>
               <CardContent>
@@ -129,7 +129,7 @@ export default function GlobalPartnershipsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-teal-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Expand Your Global Reach</h2>
           <p className="text-xl mb-8">
@@ -137,12 +137,12 @@ export default function GlobalPartnershipsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-teal-600">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
                 Global Partnership Inquiry
               </Button>
             </Link>
             <Link href="/research-development">
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-teal-600">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
                 Back to R&D Hub
               </Button>
             </Link>

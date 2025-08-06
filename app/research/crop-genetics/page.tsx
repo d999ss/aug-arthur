@@ -7,16 +7,16 @@ export default function CropGeneticsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20 lg:py-32">
+      <section className="bg-gradient-to-br from-slate-50 to-gray-100 py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Dna className="h-16 w-16 mx-auto text-green-600 mb-6" />
+            <Dna className="h-16 w-16 mx-auto text-primary mb-6" />
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Crop Genetics & Breeding</h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
               Advanced research in plant genetics, breeding, and biotechnology
             </p>
             <Link href="/contact">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Partner With Our Research Team
               </Button>
             </Link>
@@ -37,7 +37,7 @@ export default function CropGeneticsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Dna className="h-8 w-8 text-green-600 mb-2" />
+                <Dna className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Genetic Mapping</CardTitle>
               </CardHeader>
               <CardContent>
@@ -47,7 +47,7 @@ export default function CropGeneticsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Microscope className="h-8 w-8 text-green-600 mb-2" />
+                <Microscope className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Molecular Breeding</CardTitle>
               </CardHeader>
               <CardContent>
@@ -57,7 +57,7 @@ export default function CropGeneticsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <Sprout className="h-8 w-8 text-green-600 mb-2" />
+                <Sprout className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Trait Development</CardTitle>
               </CardHeader>
               <CardContent>
@@ -67,7 +67,7 @@ export default function CropGeneticsPage() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <BarChart3 className="h-8 w-8 text-green-600 mb-2" />
+                <BarChart3 className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Field Testing</CardTitle>
               </CardHeader>
               <CardContent>
@@ -129,7 +129,7 @@ export default function CropGeneticsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Collaborate on Crop Genetics Research</h2>
           <p className="text-xl mb-8">
@@ -137,12 +137,12 @@ export default function CropGeneticsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-green-600">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
                 Research Partnership
               </Button>
             </Link>
             <Link href="/research-development">
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-green-600">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
                 Back to R&D Hub
               </Button>
             </Link>
