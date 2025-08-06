@@ -42,31 +42,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="section-y bg-secondary/20">
-        <div className="container">
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16"
-          >
-            <div className="text-center">
-              <div className="text-5xl font-medium text-primary mb-3">117</div>
-              <div className="text-small">Years of Excellence</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-medium text-primary mb-3">500K</div>
-              <div className="text-small">Acres Served</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-medium text-primary mb-3">15</div>
-              <div className="text-small">Locations</div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* For Growers Section */}
       <section className="section-y-large">
