@@ -21,8 +21,7 @@ export default function AboutPage() {
                 <span className="text-serif-large text-primary italic">innovation.</span>
               </h1>
               <p className="text-body-large mb-12 max-w-2xl mx-auto">
-                Four generations of agricultural leadership in the Northern Plains, 
-                combining time-honored values with forward-thinking solutions.
+                Three generations of agricultural leadership in the Northern Plains.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href="/about/history" className="btn-primary">
@@ -49,24 +48,24 @@ export default function AboutPage() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16"
           >
             <div className="text-center">
-              <div className="text-5xl font-medium text-primary mb-3">117</div>
-              <div className="text-body-medium mb-2">Years of Excellence</div>
-              <div className="text-small">Serving farmers since 1906</div>
+              <div className="text-5xl font-medium text-primary mb-3">75+</div>
+              <div className="text-body-medium mb-2">Years</div>
+              <div className="text-small">Serving North Dakota farmers since 1948</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-medium text-primary mb-3">15</div>
               <div className="text-body-medium mb-2">Locations</div>
-              <div className="text-small">Strategic presence across the region</div>
+              <div className="text-small">Strategic locations across the region</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-medium text-primary mb-3">500+</div>
-              <div className="text-body-medium mb-2">Team Members</div>
+              <div className="text-body-medium mb-2">Employees</div>
               <div className="text-small">Dedicated agricultural professionals</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-medium text-primary mb-3">500K</div>
-              <div className="text-body-medium mb-2">Acres Served</div>
-              <div className="text-small">Supporting regional agriculture</div>
+              <div className="text-5xl font-medium text-primary mb-3">$2B+</div>
+              <div className="text-body-medium mb-2">Revenue</div>
+              <div className="text-small">Supporting local agricultural economy</div>
             </div>
           </motion.div>
         </div>
@@ -82,18 +81,15 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-headline mb-8">Our company</h2>
+              <h2 className="text-headline mb-8">Our mission</h2>
               <div className="text-serif text-body-large mb-6 text-muted-foreground italic">
-                "Building prosperity through partnership, one harvest at a time."
+                "To deliver innovative agricultural solutions that help farmers and partners thrive while building sustainable communities."
               </div>
               <p className="text-body mb-6">
-                Arthur Companies is a family-owned agricultural business that has been serving the Northern Plains since
-                1906. We combine traditional agricultural expertise with modern technology and innovation to provide
-                comprehensive solutions for farmers, processors, and partners across the agricultural value chain.
+                Our vision is to be the leading agricultural platform in the Northern Plains, known for innovation, integrity, and exceptional service.
               </p>
               <p className="text-body mb-8">
-                Our commitment extends beyond business—we're invested in the communities where we operate, 
-                supporting sustainable practices that ensure agricultural prosperity for generations to come.
+                Arthur Companies is a family-owned agricultural business that has been serving the Northern Plains since 1948. We combine traditional agricultural expertise with modern technology and innovation to provide comprehensive solutions for farmers, processors, and partners across the agricultural value chain.
               </p>
               <Link 
                 href="/about/history"
