@@ -260,24 +260,43 @@ export default function HomePage() {
       {/* Weather & Market Dashboard */}
       <section className="section-y bg-muted/20">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-headline mb-4">Real-Time Agricultural Intelligence</h2>
             <p className="text-body-large max-w-3xl mx-auto text-muted-foreground">
               Make informed decisions with live market data and precision weather forecasting
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            {/* Weather Dashboard */}
-            <div>
+          {/* Weather Dashboard - Full Width */}
+          <div className="mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="p-8 bg-card rounded-2xl shadow-lg"
+            >
               <WeatherDashboard />
-            </div>
-            
-            {/* Grain Pricing */}
-            <div>
-              <h3 className="text-headline mb-6">Market Prices</h3>
+            </motion.div>
+          </div>
+          
+          {/* Market Prices - Focused Section */}
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="p-8 bg-card rounded-2xl shadow-lg"
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-title mb-3">Live Market Prices</h3>
+                <p className="text-body text-muted-foreground max-w-2xl mx-auto">
+                  Real-time grain pricing from Arthur locations across the Northern Plains
+                </p>
+              </div>
               <GrainPricing />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

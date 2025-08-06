@@ -7,6 +7,16 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  
+  body {
+    color: hsl(var(--foreground));
+    background: hsl(var(--background));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
   :root {
     /* Anthropic's warm dark tan palette */
     --background: 28 15% 15%;       /* Dark tan #2a241f */

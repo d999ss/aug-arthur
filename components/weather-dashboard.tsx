@@ -104,13 +104,15 @@ export function WeatherDashboard() {
 
   return (
     <div className="w-full">
-      {/* Header */}
-      <div className="mb-8">
-        <h2 className="text-headline mb-2">Agricultural Weather</h2>
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <MapPin className="h-4 w-4" />
-          <span>{weather.location}</span>
-          <span className="text-xs">• Updated 5 minutes ago</span>
+      {/* Location Info */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <MapPin className="h-4 w-4" />
+            <span className="font-medium">{weather.location}</span>
+            <span className="text-xs">• Updated 5 minutes ago</span>
+          </div>
+          <h3 className="text-title">Agricultural Weather</h3>
         </div>
       </div>
 
