@@ -4,7 +4,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
 import { WeatherDashboard } from '@/components/weather-dashboard'
-import { GrainPricing } from '@/components/grain-pricing'
+import { FuturesPricing } from '@/components/futures-pricing'
 import { PullQuote, TestimonialGrid } from '@/components/pull-quote'
 import { PlaceholderMedia, RoundedImage } from '@/components/rounded-media'
 
@@ -265,12 +265,12 @@ export default function HomePage() {
               className="p-8 bg-card rounded-2xl shadow-lg"
             >
               <div className="text-center mb-8">
-                <h3 className="text-title mb-3">Live Market Prices</h3>
+                <h3 className="text-title mb-3">Futures Market Data</h3>
                 <p className="text-body text-muted-foreground max-w-2xl mx-auto">
-                  Real-time grain pricing from Arthur locations across the Northern Plains
+                  Live futures pricing for corn, soybeans, and wheat contracts
                 </p>
               </div>
-              <GrainPricing />
+              <FuturesPricing />
             </motion.div>
           </div>
         </div>
