@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Menu, X } from 'lucide-react'
 
 interface HeaderProps {
@@ -13,7 +12,7 @@ export function Header({ className = "" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen)
+    setIsMenuOpen(\!isMenuOpen)
   }
 
   const handleLinkClick = () => {
@@ -21,60 +20,55 @@ export function Header({ className = "" }: HeaderProps) {
   }
 
   const navigationLinks = [
-    { href: "/", label: "Home" },
     { href: "/grain", label: "Grain" },
     { href: "/products-services", label: "Products & Services" },
     { href: "/research-development", label: "Research & Development" },
     { href: "/grower-insights", label: "Grower Insights" },
     { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
     { href: "/careers", label: "Careers" },
     { href: "/locations", label: "Locations" },
+    { href: "/contact", label: "Contact" },
   ] as const
 
   return (
-    <header className={`bg-white shadow-sm border-b ${className}`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2" aria-label="Arthur Companies Home">
-            <div className="w-8 h-8 bg-brand-primary rounded" aria-hidden="true"></div>
-            <span className="text-xl font-bold text-gray-900">Arthur Companies</span>
+    <header className={`bg-background border-b border-border/20 ${className}`}>
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
+          <Link href="/" className="text-2xl font-semibold text-foreground hover:text-primary transition-colors duration-200" aria-label="Arthur Companies Home">
+            Arthur Companies
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
-            {navigationLinks.map(({ href, label }) => (
+            {navigationLinks.slice(0, 5).map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="text-gray-700 hover:text-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 rounded-sm px-2 py-1"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm"
               >
                 {label}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/grain">
-              <Button 
-                variant="outline" 
-                size="sm"
-                className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-colors duration-200"
-              >
-                Cash Bids
-              </Button>
+          <div className="hidden lg:flex items-center space-x-6">
+            <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm">
+              Contact
+            </Link>
+            <Link href="/grain" className="text-primary hover:text-primary/80 transition-colors duration-200 font-medium text-sm">
+              Cash Bids
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2"
+            className="lg:hidden p-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
             onClick={handleMenuToggle}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
 
@@ -82,7 +76,7 @@ export function Header({ className = "" }: HeaderProps) {
         {isMenuOpen && (
           <div 
             id="mobile-menu"
-            className="lg:hidden py-4 border-t animate-fade-in"
+            className="lg:hidden py-6 animate-fade-in"
             role="navigation"
             aria-label="Mobile navigation"
           >
@@ -91,21 +85,12 @@ export function Header({ className = "" }: HeaderProps) {
                 <Link
                   key={href}
                   href={href}
-                  className="text-gray-700 hover:text-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 rounded-sm px-2 py-1"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-1"
                   onClick={handleLinkClick}
                 >
                   {label}
                 </Link>
               ))}
-              <Link href="/grain" onClick={handleLinkClick}>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-fit bg-transparent border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-colors duration-200"
-                >
-                  Cash Bids
-                </Button>
-              </Link>
             </nav>
           </div>
         )}
@@ -113,3 +98,4 @@ export function Header({ className = "" }: HeaderProps) {
     </header>
   )
 }
+EOF < /dev/null

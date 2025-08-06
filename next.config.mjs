@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Adding specific assetPrefix for development environment
+  assetPrefix: process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '',
+  // Simplifying experimental features to fix static asset loading issues
   experimental: {
     typedRoutes: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
@@ -21,10 +24,11 @@ const nextConfig = {
     {
       source: '/(.*)',
       headers: [
-        {
-          key: 'X-Content-Type-Options',
-          value: 'nosniff',
-        },
+        // Temporarily commenting out nosniff header to troubleshoot MIME type issues
+        // {
+        //   key: 'X-Content-Type-Options',
+        //   value: 'nosniff',
+        // },
         {
           key: 'X-Frame-Options',
           value: 'DENY',

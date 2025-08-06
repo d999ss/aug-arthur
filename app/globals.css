@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+/* Anthropic's Exact Fonts Only */
+/* No Google Fonts imports - using Anthropic's exact commercial fonts */
 
 @tailwind base;
 @tailwind components;
@@ -6,32 +7,32 @@
 
 @layer base {
   :root {
-    /* Premium Color System - Agricultural Sophistication */
-    --background: 0 0% 100%;
-    --foreground: 223 84% 5%;
-    --card: 0 0% 100%;
-    --card-foreground: 223 84% 5%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 223 84% 5%;
+    /* Anthropic's Exact Color System - From Their CSS */
+    --background: 48 25% 98%;       /* #fcfcf4 - Anthropic's exact cream background */
+    --foreground: 0 0% 9%;          /* #171717 - Deep charcoal text */
+    --card: 48 25% 98%;             /* #fcfcf4 */
+    --card-foreground: 0 0% 9%;     /* #171717 */
+    --popover: 48 25% 98%;          /* #fcfcf4 */
+    --popover-foreground: 0 0% 9%;  /* #171717 */
     
-    /* Sophisticated Green Palette */
-    --primary: 158 64% 52%;        /* Forest Green */
+    /* Anthropic's Signature Orange/Coral */
+    --primary: 19 61% 58%;          /* #dc7454 - EXACT Anthropic coral */
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 158 84% 25%;   /* Deep Forest */
-    --primary-light: 158 44% 95%;  /* Light Green Background */
+    --primary-dark: 19 60% 40%;     /* Darker coral */
+    --primary-light: 19 50% 95%;    /* Light coral background */
     
-    /* Neutral Sophistication */
-    --secondary: 210 20% 98%;      /* Warm White */
-    --secondary-foreground: 223 84% 5%;
-    --muted: 210 15% 95%;          /* Sophisticated Light Gray */
-    --muted-foreground: 215 25% 27%; /* Rich Dark Gray */
+    /* Anthropic's Refined Neutral System */
+    --secondary: 48 8% 94%;         /* Slightly darker cream */
+    --secondary-foreground: 0 0% 9%;
+    --muted: 48 6% 92%;             /* Muted cream backgrounds */
+    --muted-foreground: 0 0% 35%;   /* #595959 - Muted text like Anthropic */
     
-    /* Accent Colors */
-    --accent: 43 96% 56%;          /* Golden Yellow for highlights */
-    --accent-foreground: 223 84% 5%;
-    --accent-blue: 210 100% 56%;   /* Premium Blue */
-    --accent-purple: 262 83% 58%;  /* Premium Purple */
-    --accent-orange: 25 95% 53%;   /* Premium Orange */
+    /* Accent Colors - Anthropic Style */
+    --accent: 22 65% 57%;          /* Match primary peach */
+    --accent-foreground: 0 0% 100%;
+    --accent-blue: 215 87% 51%;    /* Anthropic's blue accent */
+    --accent-slate: 215 25% 27%;   /* Anthropic's slate */
+    --accent-neutral: 210 40% 96%; /* Anthropic's neutral accent */
     
     /* System Colors */
     --destructive: 0 72% 51%;
@@ -46,10 +47,42 @@
     --ring: 158 64% 52%;
     --radius: 0.75rem;             /* More sophisticated radius */
     
-    /* Typography Scale */
-    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    /* Anthropic's Exact Font Stack */
+    /* Styrene A – Medium (500 weight) - Display/Headlines */
+    --font-display: 'Styrene A', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Styrene B – Regular (400 weight) & Medium (500 weight) - Body text */
+    --font-sans: 'Styrene B', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-body: 'Styrene B', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Tiempos Text Regular – Regular (400 weight) - Serif text */
+    --font-serif: 'Tiempos Text', Georgia, 'Times New Roman', Times, serif;
+    
+    /* No monospace font specified - using system default */
+    --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    
+    /* Anthropic Font Sizes - Fluid Typography */
+    --text-xs: clamp(0.75rem, 2vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 2vw, 1rem);
+    --text-base: clamp(1rem, 2.5vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 2.5vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 2.5vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 4vw, 1.875rem);
+    --text-3xl: clamp(1.875rem, 5vw, 2.25rem);
+    --text-4xl: clamp(2.25rem, 6vw, 3rem);
+    --text-5xl: clamp(3rem, 8vw, 4rem);
+    --text-6xl: clamp(4rem, 10vw, 5rem);
+    
+    /* Anthropic Spacing System */
+    --spacing-xs: clamp(0.5rem, 2vw, 0.75rem);
+    --spacing-sm: clamp(0.75rem, 2vw, 1rem);
+    --spacing-md: clamp(1rem, 3vw, 1.5rem);
+    --spacing-lg: clamp(1.5rem, 4vw, 2rem);
+    --spacing-xl: clamp(2rem, 6vw, 3rem);
+    --spacing-2xl: clamp(3rem, 8vw, 4rem);
+    --spacing-3xl: clamp(4rem, 10vw, 6rem);
+    --spacing-4xl: clamp(6rem, 12vw, 8rem);
+    --spacing-5xl: clamp(8rem, 15vw, 12rem);
     
     /* Spacing Scale */
     --space-xs: 0.25rem;
@@ -317,6 +350,12 @@
   outline-offset: 2px;
 }
 
+/* Background Pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -333,4 +372,348 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* === WORLD-CLASS DESIGN SYSTEM === */
+/* Exceeding Anthropic's level of sophistication */
+
+/* Anthropic-Inspired Gradient System */
+.gradient-hero {
+  background: linear-gradient(135deg, 
+    hsl(0 0% 100%) 0%, 
+    hsl(22 65% 98%) 30%,
+    hsl(210 40% 98%) 60%,
+    hsl(0 0% 100%) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(from 0deg at 50% 50%, 
+    hsl(22 65% 57% / 0.05) 0deg, 
+    transparent 60deg, 
+    hsl(215 87% 51% / 0.05) 120deg, 
+    transparent 180deg,
+    hsl(22 65% 57% / 0.05) 240deg,
+    transparent 300deg,
+    hsl(215 87% 51% / 0.05) 360deg
+  );
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, 
+    hsl(22 65% 57%) 0%, 
+    hsl(22 75% 45%) 100%
+  );
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, 
+    hsl(22 65% 57%) 0%, 
+    hsl(215 87% 51%) 25%,
+    hsl(0 0% 9%) 50%,
+    hsl(215 87% 51%) 75%,
+    hsl(22 75% 45%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+/* World-Class Glass Morphism */
+.glass-card {
+  background: linear-gradient(135deg, 
+    hsl(0 0% 100% / 0.9) 0%,
+    hsl(0 0% 100% / 0.6) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid hsl(0 0% 100% / 0.2);
+  box-shadow: 
+    0 32px 64px -12px hsl(158 64% 52% / 0.4),
+    0 16px 24px -4px hsl(158 64% 52% / 0.15),
+    inset 0 1px 0 hsl(0 0% 100% / 0.6);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.glass-card:hover {
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 40px 80px -12px hsl(158 64% 52% / 0.5),
+    0 20px 30px -4px hsl(158 64% 52% / 0.2),
+    inset 0 1px 0 hsl(0 0% 100% / 0.8);
+}
+
+/* Premium Card System */
+.card-premium {
+  background: linear-gradient(145deg, 
+    hsl(0 0% 100% / 0.98) 0%,
+    hsl(0 0% 100% / 0.92) 100%
+  );
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  border: 1px solid hsl(158 64% 52% / 0.1);
+  box-shadow: 
+    0 25px 50px -12px hsl(158 64% 52% / 0.25),
+    0 10px 20px -4px hsl(158 64% 52% / 0.1),
+    inset 0 1px 0 hsl(0 0% 100% / 0.8),
+    inset 0 -1px 0 hsl(158 64% 52% / 0.05);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.4), transparent);
+  transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-premium:hover::before {
+  left: 100%;
+}
+
+.card-premium:hover {
+  transform: translateY(-8px) rotateX(2deg);
+  box-shadow: 
+    0 35px 70px -12px hsl(158 64% 52% / 0.35),
+    0 15px 25px -4px hsl(158 64% 52% / 0.15),
+    0 0 40px hsl(158 64% 52% / 0.15),
+    inset 0 1px 0 hsl(0 0% 100% / 0.9);
+}
+
+.card-feature {
+  background: linear-gradient(145deg, 
+    hsl(0 0% 100% / 0.95) 0%,
+    hsl(0 0% 100% / 0.9) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid hsl(158 64% 52% / 0.08);
+  box-shadow: 
+    0 10px 30px -5px hsl(158 64% 52% / 0.15),
+    0 4px 12px -2px hsl(158 64% 52% / 0.08);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-feature::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    hsl(158 64% 52% / 0.08) 0%, 
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-feature:hover::after {
+  opacity: 1;
+}
+
+.card-feature:hover {
+  transform: translateY(-12px) rotateX(5deg) rotateY(-2deg);
+  box-shadow: 
+    0 20px 40px -8px hsl(158 64% 52% / 0.25),
+    0 8px 16px -4px hsl(158 64% 52% / 0.12),
+    0 0 30px hsl(158 64% 52% / 0.2);
+}
+
+/* Premium Button System */
+.btn-primary {
+  background: linear-gradient(135deg, 
+    hsl(158 64% 52%) 0%, 
+    hsl(158 84% 25%) 100%
+  );
+  border: none;
+  box-shadow: 
+    0 4px 12px hsl(158 64% 52% / 0.4),
+    inset 0 1px 0 hsl(0 0% 100% / 0.3),
+    inset 0 -1px 0 hsl(158 84% 25% / 0.5);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.3), transparent);
+  transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 8px 20px hsl(158 64% 52% / 0.5),
+    0 0 20px hsl(158 64% 52% / 0.5),
+    inset 0 1px 0 hsl(0 0% 100% / 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Advanced Shadow System */
+.shadow-glow {
+  box-shadow: 
+    0 0 20px hsl(158 64% 52% / 0.5),
+    0 8px 16px hsl(158 64% 52% / 0.2);
+}
+
+.shadow-premium {
+  box-shadow: 
+    0 32px 64px -12px hsl(158 64% 52% / 0.4),
+    0 16px 24px -4px hsl(158 64% 52% / 0.15),
+    inset 0 1px 0 hsl(0 0% 100% / 0.6);
+}
+
+.shadow-3xl {
+  box-shadow: 
+    0 35px 60px -12px hsl(158 64% 52% / 0.35);
+}
+
+/* Anthropic's Exact Typography Classes */
+.text-display {
+  font-family: var(--font-display); /* Styrene A – Medium (500) */
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 500; /* Exact Anthropic weight */
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: hsl(var(--foreground));
+  text-rendering: optimizeLegibility;
+}
+
+.text-headline {
+  font-family: var(--font-display); /* Styrene A – Medium (500) */
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 500; /* Exact Anthropic weight */
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+  text-rendering: optimizeLegibility;
+}
+
+.text-body {
+  font-family: var(--font-body); /* Styrene B – Regular (400) */
+  font-weight: 400; /* Exact Anthropic weight */
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+}
+
+.text-body-medium {
+  font-family: var(--font-body); /* Styrene B – Medium (500) */
+  font-weight: 500; /* Exact Anthropic weight */
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+}
+
+.text-serif {
+  font-family: var(--font-serif); /* Tiempos Text Regular – Regular (400) */
+  font-weight: 400; /* Exact Anthropic weight */
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Advanced Animation System */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(158 64% 52% / 0.4); }
+  50% { box-shadow: 0 0 30px hsl(158 64% 52% / 0.8), 0 0 40px hsl(158 64% 52% / 0.4); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes liquid {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-liquid {
+  animation: liquid 8s ease-in-out infinite;
+}
+
+/* 3D Perspective System */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Premium Background Patterns */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(hsl(158 64% 52% / 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(158 64% 52% / 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, hsl(158 64% 52% / 0.15) 1px, transparent 1px);
+  background-size: 15px 15px;
+}
+
+/* Premium Blur Effects */
+.backdrop-blur-premium {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
 }

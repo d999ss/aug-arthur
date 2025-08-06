@@ -1,6 +1,4 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Download } from 'lucide-react'
 
 interface FooterProps {
   className?: string
@@ -22,63 +20,53 @@ export function Footer({ className = "" }: FooterProps) {
       title: "Company",
       links: [
         { href: "/about", label: "About" },
-        { href: "/about/history", label: "History" },
-        { href: "/about/leadership", label: "Leadership" },
-        { href: "/about/newsroom", label: "Newsroom" },
         { href: "/careers", label: "Careers" },
         { href: "/locations", label: "Locations" },
+        { href: "/about/newsroom", label: "Newsroom" },
       ]
     },
     {
       title: "Services",
       links: [
-        { href: "/products-services#on-farm", label: "On the Farm" },
-        { href: "/products-services#off-farm", label: "Off the Farm" },
+        { href: "/grain", label: "Grain" },
+        { href: "/products-services", label: "Products & Services" },
         { href: "/research-development", label: "Research & Development" },
-        { href: "/grain", label: "Cash Bids" },
+        { href: "/grower-insights", label: "Grower Insights" },
       ]
     },
     {
       title: "Resources",
       links: [
-        { href: "/grower-insights", label: "Grower Insights" },
-        { href: "/research-development", label: "Innovation" },
-        { href: "/about/newsroom", label: "Newsroom" },
-        { href: "/contact", label: "Contact Us" },
+        { href: "/contact", label: "Contact" },
+        { href: "/legal/privacy", label: "Privacy" },
+        { href: "/legal/terms", label: "Terms" },
+        { href: "/legal/accessibility", label: "Accessibility" },
       ]
     }
   ]
 
-  const legalLinks: FooterLink[] = [
-    { href: "/legal/privacy", label: "Privacy Policy" },
-    { href: "/legal/terms", label: "Terms of Use" },
-    { href: "/legal/accessibility", label: "Accessibility" },
-  ]
-
   return (
-    <footer className={`bg-gray-900 text-white ${className}`}>
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-6 h-6 bg-brand-primary rounded" aria-hidden="true"></div>
-              <span className="text-lg font-bold">Arthur Companies</span>
-            </div>
-            <p className="text-gray-400 text-sm mb-4">Family owned since 1906</p>
-            <p className="text-gray-400 text-sm">
-              Delivering performance you can measure and people you can trust across North Dakota and beyond.
+    <footer className={`bg-background border-t border-border/20 ${className}`}>
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="space-y-4">
+            <Link href="/" className="text-2xl font-semibold text-foreground">
+              Arthur Companies
+            </Link>
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+              Family owned since 1906. Delivering performance you can measure and people you can trust across North Dakota and beyond.
             </p>
           </div>
 
           {footerSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-2 text-sm">
+            <div key={section.title} className="space-y-4">
+              <h3 className="text-sm font-medium text-foreground">{section.title}</h3>
+              <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link 
                       href={link.href} 
-                      className="text-gray-400 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
+                      className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm"
                     >
                       {link.label}
                     </Link>
@@ -89,37 +77,21 @@ export function Footer({ className = "" }: FooterProps) {
           ))}
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-col sm:flex-row gap-4 mb-4 md:mb-0">
-              <Link href="/grower-insights">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent hover:border-brand-primary hover:text-brand-primary transition-colors duration-200"
-                >
-                  <Download className="mr-2 h-4 w-4" aria-hidden="true" />
-                  Download Bushel App
-                </Button>
-              </Link>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-400">
-              <span>© 2024 Arthur Companies. All rights reserved.</span>
-              <div className="flex gap-4">
-                {legalLinks.map((link) => (
-                  <Link 
-                    key={link.href}
-                    href={link.href} 
-                    className="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+        <div className="border-t border-border/20 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-muted-foreground text-sm">
+              © 2024 Arthur Companies. All rights reserved.
+            </p>
+            <Link 
+              href="/grain" 
+              className="text-primary hover:text-primary/80 transition-colors duration-200 text-sm font-medium"
+            >
+              View Cash Bids
+            </Link>
           </div>
         </div>
       </div>
     </footer>
   )
 }
+EOF < /dev/null
