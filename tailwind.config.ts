@@ -22,7 +22,7 @@ const config: Config = {
       colors: {
         // Arthur Companies Brand Colors
         brand: {
-          primary: "#F5C518", // Bright yellow
+          primary: "#E6B800", // Dark golden yellow
           secondary: "#f8f9fa", // Light slate
           accent: "#eef0f2", // Subtle cloud
           neutral: "#374151", // Gray-700 - Professional
@@ -113,7 +113,7 @@ const config: Config = {
         "slide-in": "slide-in 0.3s ease-out",
       },
       boxShadow: {
-        "brand": "0 4px 6px -1px rgba(245, 197, 24, 0.1), 0 2px 4px -1px rgba(245, 197, 24, 0.06)",
+        "brand": "0 4px 6px -1px rgba(230, 184, 0, 0.1), 0 2px 4px -1px rgba(230, 184, 0, 0.06)",
       },
     },
   },
