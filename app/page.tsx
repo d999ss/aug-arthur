@@ -207,38 +207,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quote Section - Light */}
-      <section className="section-lg relative overflow-hidden" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
-        {/* Ambient glow effect */}
-        <div 
-          className="absolute top-1/2 right-0 w-[800px] h-[800px] -translate-y-1/2 translate-x-1/4 pointer-events-none"
-          style={{
-            background: `radial-gradient(circle at center, 
-              hsla(45, 85%, 55%, 0.15) 0%, 
-              hsla(45, 85%, 60%, 0.08) 35%, 
-              transparent 70%)`,
-            filter: 'blur(100px)',
-          }}
-        />
-        <div className="container">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <PullQuote
-                variant="large"
-                quote="Arthur is the kind of company that shows up when it matters. We count on them every year, and every year they deliver."
-                author="Mike Johnson"
-                title="Wheat & Soybean Farmer"
-                company="Cass County"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Values Section - Dark */}
       <section 
