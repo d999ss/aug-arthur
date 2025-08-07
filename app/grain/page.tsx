@@ -9,14 +9,14 @@ export default function GrainPage() {
   return (
     <div className="min-h-screen">
       {/* Real-Time Grain Pricing */}
-      <section className="section-y bg-secondary/20" id="bids">
+      <section className="section bg-muted" id="bids">
         <div className="container">
           <GrainPricing />
         </div>
       </section>
 
       {/* Hero Section */}
-      <section className="section-y-large">
+      <section className="section">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -24,22 +24,22 @@ export default function GrainPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="text-hero mb-lg text-balance">
                 Grain Marketing, Grounded in{" "}
-                <span className="text-serif-large text-primary italic">Trust</span>
+                <span className="text-serif text-primary">Trust</span>
               </h1>
-              <p className="text-body-large mb-6 max-w-3xl mx-auto">
+              <p className="text-body mb-md max-w-3xl mx-auto">
                 At Arthur, we deliver grain marketing services that combine local knowledge with market insight.
               </p>
-              <p className="text-body mb-12 max-w-2xl mx-auto">
+              <p className="text-body mb-xl max-w-2xl mx-auto">
                 Our facilities are built for speed, our team is built for service, and our approach is built around your success.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="#bids" className="btn-primary">
+                <Link href="#bids" className="btn btn-primary">
                   View Local Bids
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/contact" className="btn-secondary">
+                <Link href="/contact" className="btn btn-secondary">
                   Contact Our Merchandisers
                 </Link>
               </div>
@@ -49,7 +49,7 @@ export default function GrainPage() {
       </section>
 
       {/* Services */}
-      <section className="section-y-large bg-secondary/20">
+      <section className="section bg-muted">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -58,8 +58,8 @@ export default function GrainPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-headline mb-6">Our Grain Services</h2>
-            <p className="text-body-large max-w-2xl mx-auto">
+            <h2 className="text-headline mb-md">Our Grain Services</h2>
+            <p className="text-body max-w-2xl mx-auto">
               Comprehensive grain marketing solutions that maximize your returns 
               through local expertise and market intelligence.
             </p>
@@ -89,13 +89,13 @@ export default function GrainPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-8 card-refined hover-lift"
+                className="text-center p-8 card"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <service.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-title mb-4">{service.title}</h3>
-                <p className="text-body text-muted-foreground">
+                <h3 className="text-headline mb-md">{service.title}</h3>
+                <p className="text-body text-muted">
                   {service.description}
                 </p>
               </motion.div>
@@ -105,7 +105,7 @@ export default function GrainPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-y-large bg-foreground text-background" id="bids">
+      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -114,26 +114,28 @@ export default function GrainPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-headline mb-6 text-background">
+              <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>
                 Ready to market your grain?
               </h2>
-              <div className="text-serif text-body-large mb-6 opacity-90 italic">
+              <div className="text-serif text-body mb-md" style={{ color: 'hsl(var(--color-background) / 0.9)' }}>
                 "The best time to market grain is when you have a plan—and a partner you trust."
               </div>
-              <p className="text-body-large mb-12 opacity-90">
+              <p className="text-body mb-xl" style={{ color: 'hsl(var(--color-background) / 0.9)' }}>
                 Get competitive bids and expert guidance from our grain marketing team.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link 
                   href="#current-bids"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
+                  className="btn btn-primary"
+                  style={{ backgroundColor: 'hsl(var(--color-background))', color: 'hsl(var(--color-foreground))' }}
                 >
                   View Current Bids
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
+                  className="btn btn-secondary"
+                  style={{ backgroundColor: 'transparent', color: 'hsl(var(--color-background))', borderColor: 'hsl(var(--color-background) / 0.3)' }}
                 >
                   Contact Merchandiser
                 </Link>
