@@ -2,14 +2,14 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }} className="border-t border-border/20">
-      <div className="container section-lg">
+    <footer style={{ background: 'hsl(0 0% 3%)', color: 'hsl(var(--color-background))' }} className="border-t border-border/20">
+      <div className="container" style={{ paddingTop: '8rem', paddingBottom: '8rem' }}>
         {/* Main Footer Grid - Anthropic Style */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
           {/* Company */}
           <div>
             <h3 className="text-small font-medium mb-md">Company</h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <Link href="/about" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 About
               </Link>
@@ -28,7 +28,7 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-small font-medium mb-md">Services</h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <Link href="/grain" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Grain Marketing
               </Link>
@@ -47,7 +47,7 @@ export function Footer() {
           {/* Research */}
           <div>
             <h3 className="text-small font-medium mb-md">Research</h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <Link href="/research-development" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 R&D Overview
               </Link>
@@ -63,7 +63,7 @@ export function Footer() {
           {/* Resources */}
           <div>
             <h3 className="text-small font-medium mb-md">Resources</h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <Link href="/grain" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Cash Bids
               </Link>
@@ -82,7 +82,7 @@ export function Footer() {
           {/* Legal */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-small font-medium mb-md">Legal</h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <Link href="/legal/terms" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Terms
               </Link>
@@ -110,7 +110,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-6 border-t border-background/20">
+        <div className="pt-12 mt-8 border-t border-background/20">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <p className="text-xs text-background/70">
               © {new Date().getFullYear()} Arthur Companies. All rights reserved.
