@@ -8,7 +8,7 @@ export default function AgronomyPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-y-large">
+      <section className="section">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -19,18 +19,18 @@ export default function AgronomyPage() {
               <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full mx-auto mb-8 flex items-center justify-center">
                 <Sprout className="h-10 w-10 text-primary" />
               </div>
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="text-hero mb-lg text-balance">
                 Agronomy Excellence
               </h1>
-              <p className="text-body-large mb-12 max-w-2xl mx-auto">
+              <p className="text-body mb-xl max-w-2xl mx-auto">
                 Local expertise, proven results. Our certified crop advisors combine local knowledge with cutting-edge technology to help you make informed decisions that maximize productivity and profitability.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/contact" className="btn-primary">
+                <Link href="/contact" className="btn btn-primary">
                   Contact Our Agronomists
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/locations" className="btn-secondary">
+                <Link href="/locations" className="btn btn-secondary">
                   Find Your Local Expert
                 </Link>
               </div>
@@ -40,7 +40,7 @@ export default function AgronomyPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="section-y bg-secondary/20">
+      <section className="section bg-muted">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -49,15 +49,15 @@ export default function AgronomyPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-headline mb-6">Comprehensive agronomy solutions</h2>
-            <p className="text-body-large max-w-3xl mx-auto">
+            <h2 className="text-headline mb-md">Comprehensive agronomy solutions</h2>
+            <p className="text-body max-w-3xl mx-auto">
               Our certified agronomists combine decades of local experience with cutting-edge 
               technology to help you make informed decisions that maximize your farm's 
               productivity and profitability.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-refined">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Users,
@@ -88,13 +88,13 @@ export default function AgronomyPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-6 card-refined hover-lift"
+                  className="p-6 card"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-title mb-3">{service.title}</h3>
-                  <p className="text-body text-muted-foreground">
+                  <h3 className="text-headline mb-3">{service.title}</h3>
+                  <p className="text-body text-muted">
                     {service.description}
                   </p>
                 </motion.div>
@@ -105,7 +105,7 @@ export default function AgronomyPage() {
       </section>
 
       {/* Detailed Services */}
-      <section className="section-y-large">
+      <section className="section">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -115,8 +115,8 @@ export default function AgronomyPage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-headline mb-6">Our agronomy services</h2>
-              <div className="text-serif text-body-large text-muted-foreground italic">
+              <h2 className="text-headline mb-md">Our agronomy services</h2>
+              <div className="text-serif text-body text-muted">
                 "Precision in every decision, excellence in every field."
               </div>
             </motion.div>
@@ -160,10 +160,10 @@ export default function AgronomyPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-8 card-refined hover-lift"
+                  className="p-8 card"
                 >
-                  <h3 className="text-title mb-4">{service.title}</h3>
-                  <p className="text-body mb-6 text-muted-foreground">
+                  <h3 className="text-headline mb-md">{service.title}</h3>
+                  <p className="text-body mb-md text-muted">
                     {service.description}
                   </p>
                   <ul className="text-body space-y-2">
@@ -182,7 +182,7 @@ export default function AgronomyPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-y-large bg-foreground text-background">
+      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -191,24 +191,26 @@ export default function AgronomyPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-headline mb-6 text-background">
+              <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>
                 Ready to maximize your yield?
               </h2>
-              <p className="text-body-large mb-12 opacity-90">
+              <p className="text-body mb-xl" style={{ color: 'hsl(var(--color-background) / 0.9)' }}>
                 Connect with our agronomy team to develop a customized crop management 
                 plan for your operation.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
+                  className="btn btn-primary"
+                  style={{ backgroundColor: 'hsl(var(--color-background))', color: 'hsl(var(--color-foreground))' }}
                 >
                   Schedule Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <Link 
                   href="/locations"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
+                  className="btn btn-secondary"
+                  style={{ backgroundColor: 'transparent', color: 'hsl(var(--color-background))', borderColor: 'hsl(var(--color-background) / 0.3)' }}
                 >
                   Find Your Local Agronomist
                 </Link>
