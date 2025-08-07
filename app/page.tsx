@@ -362,7 +362,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 card-refined"
+                className="p-6 card"
               >
                 <h3 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>{value.title}</h3>
                 <p className="text-body" style={{ color: 'hsl(var(--color-background))' }}>

@@ -263,24 +263,19 @@
   .bg-card { background: hsl(var(--color-card)); }
   .bg-dark { background: hsl(var(--color-foreground)); color: hsl(var(--color-background)); }
   
-  /* Dark section button overrides */
-  .bg-dark .btn-primary {
-    background: hsl(var(--color-background));
-    color: hsl(var(--color-foreground));
+  /* Dark section overrides for cards and components */
+  section[style*="hsl(0 0% 2%)"] .card,
+  section[style*="hsl(0 0% 3%)"] .card,
+  section[style*="hsl(0 0% 4%)"] .card {
+    background: hsl(0 0% 8%);
+    border-color: hsl(var(--color-background) / 0.2);
   }
   
-  .bg-dark .btn-primary:hover {
-    background: hsl(var(--color-background) / 0.9);
-  }
-  
-  .bg-dark .btn-secondary {
-    background: transparent;
-    color: hsl(var(--color-background));
-    border: 1px solid hsl(var(--color-background) / 0.3);
-  }
-  
-  .bg-dark .btn-secondary:hover {
-    background: hsl(var(--color-background) / 0.1);
+  section[style*="hsl(0 0% 2%)"] .card:hover,
+  section[style*="hsl(0 0% 3%)"] .card:hover,
+  section[style*="hsl(0 0% 4%)"] .card:hover {
+    border-color: hsl(var(--color-background) / 0.4);
+    box-shadow: 0 4px 12px hsl(0 0% 0% / 0.3);
   }
 }
 
