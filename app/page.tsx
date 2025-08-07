@@ -339,12 +339,32 @@ export default function HomePage() {
       </section>
 
 
-      {/* Weather & Market Dashboard - Light */}
-      <section className="section">
+      {/* Weather & Market Dashboard - Dark */}
+      <section 
+        className="section relative" 
+        style={{ 
+          background: `linear-gradient(180deg, 
+            hsl(var(--color-background)) 0%, 
+            hsl(0 0% 7%) 20%, 
+            hsl(0 0% 4%) 50%, 
+            hsl(0 0% 7%) 80%, 
+            hsl(var(--color-background)) 100%)`,
+          color: 'hsl(var(--color-background))'
+        }}
+      >
+        {/* Market-themed texture overlay */}
+        <div 
+          className="absolute inset-0 opacity-20 animate-noise"
+          style={{
+            background: `radial-gradient(circle at 25% 60%, rgba(230, 184, 0, 0.06) 0%, transparent 40%), 
+                        radial-gradient(circle at 75% 20%, rgba(230, 184, 0, 0.04) 0%, transparent 50%),
+                        repeating-linear-gradient(75deg, transparent, transparent 1px, rgba(255,255,255,0.012) 1px, rgba(255,255,255,0.012) 2px)`
+          }}
+        />
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-headline mb-md">Real-Time Agricultural Intelligence</h2>
-            <p className="text-body content-width mx-auto text-muted">
+            <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>Real-Time Agricultural Intelligence</h2>
+            <p className="text-body content-width mx-auto" style={{ color: 'hsl(var(--color-background) / 0.8)' }}>
               Make informed decisions with live market data and precision weather forecasting
             </p>
           </div>
@@ -372,8 +392,8 @@ export default function HomePage() {
               className="p-8 bg-card rounded-2xl shadow-lg"
             >
               <div className="text-center mb-8">
-                <h3 className="text-headline mb-md">Futures Market Data</h3>
-                <p className="text-body text-muted content-width mx-auto">
+                <h3 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>Futures Market Data</h3>
+                <p className="text-body content-width mx-auto" style={{ color: 'hsl(var(--color-background) / 0.8)' }}>
                   Live futures pricing for corn, soybeans, and wheat contracts
                 </p>
               </div>
