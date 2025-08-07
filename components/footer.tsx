@@ -2,14 +2,25 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer style={{ background: 'hsl(0 0% 3%)', color: 'hsl(var(--color-background))' }} className="border-t border-border/20">
-      <div className="container" style={{ paddingTop: '12rem', paddingBottom: '12rem' }}>
+    <footer style={{ 
+      background: 'hsl(0 0% 3%)', 
+      color: 'hsl(var(--color-background))',
+      minHeight: '700px'
+    }} className="border-t border-border/20">
+      <div className="container" style={{ 
+        paddingTop: '10rem', 
+        paddingBottom: '10rem',
+        minHeight: '600px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}>
         {/* Main Footer Grid - Anthropic Style */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-20" style={{ minHeight: '300px' }}>
           {/* Company */}
           <div>
             <h3 className="text-small font-medium mb-md">Company</h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Link href="/about" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 About
               </Link>
@@ -28,7 +39,7 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-small font-medium mb-md">Services</h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Link href="/grain" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Grain Marketing
               </Link>
@@ -47,7 +58,7 @@ export function Footer() {
           {/* Research */}
           <div>
             <h3 className="text-small font-medium mb-md">Research</h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Link href="/research-development" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 R&D Overview
               </Link>
@@ -63,7 +74,7 @@ export function Footer() {
           {/* Resources */}
           <div>
             <h3 className="text-small font-medium mb-md">Resources</h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Link href="/grain" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Cash Bids
               </Link>
@@ -82,7 +93,7 @@ export function Footer() {
           {/* Legal */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-small font-medium mb-md">Legal</h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Link href="/legal/terms" className="text-small hover:opacity-100 opacity-70 transition-colors block">
                 Terms
               </Link>
