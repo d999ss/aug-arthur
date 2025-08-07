@@ -121,7 +121,7 @@ export function FuturesHeaderBanner() {
   const tickerItems = [...tickerData, ...tickerData, ...tickerData]
 
   return (
-    <div style={{ background: 'hsl(0 0% 9%)', color: 'hsl(var(--color-background))', borderBottom: '1px solid hsl(var(--color-background) / 0.1)' }} className="overflow-hidden">
+    <div style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))', borderBottom: '1px solid hsl(var(--color-background) / 0.1)' }} className="overflow-hidden">
       <div className="h-8 flex items-center">
         <div className="flex items-center animate-ticker whitespace-nowrap">
           {tickerItems.map((data, index) => {
