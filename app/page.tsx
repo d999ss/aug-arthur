@@ -17,16 +17,29 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center -mt-16 lg:-mt-20 section-lg">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20" />
         
-        {/* Robinhood-style lighting effect */}
+        {/* Enhanced Robinhood-style lighting effect */}
         <div 
-          className="absolute top-1/2 left-1/4 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          className="absolute top-1/2 left-1/4 w-[1200px] h-[1200px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           style={{
             background: `radial-gradient(50% 50% at 50% 50%, 
-              hsla(45, 85%, 55%, 0.15) 0%, 
-              hsla(45, 85%, 60%, 0.08) 30%, 
-              hsla(45, 85%, 65%, 0.04) 60%, 
+              hsla(45, 85%, 55%, 0.3) 0%, 
+              hsla(45, 85%, 60%, 0.18) 25%, 
+              hsla(45, 85%, 65%, 0.1) 50%, 
+              hsla(45, 85%, 70%, 0.05) 75%, 
               transparent 100%)`,
-            filter: 'blur(40px)',
+            filter: 'blur(60px)',
+          }}
+        />
+        
+        {/* Additional ambient glow */}
+        <div 
+          className="absolute top-1/3 right-1/4 w-[800px] h-[800px] -translate-y-1/2 pointer-events-none"
+          style={{
+            background: `radial-gradient(circle at center, 
+              hsla(45, 85%, 60%, 0.2) 0%, 
+              hsla(45, 85%, 65%, 0.1) 40%, 
+              transparent 70%)`,
+            filter: 'blur(80px)',
           }}
         />
         
@@ -55,7 +68,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              className="flex justify-center lg:justify-end items-center"
+              className="flex justify-center lg:justify-end items-center min-h-full"
             >
               <Image 
                 src="/2025, 02_08_11 PM.png"
