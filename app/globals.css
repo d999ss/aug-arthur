@@ -330,6 +330,35 @@
   .animate-ticker {
     animation: ticker 60s linear infinite;
   }
+
+  /* Floating animation for lighting effects */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(-5px) rotate(-1deg); }
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  /* Sophisticated noise animation */
+  @keyframes noise {
+    0%, 100% { transform: translate(0px, 0px); }
+    10% { transform: translate(-1px, -1px); }
+    20% { transform: translate(1px, -2px); }
+    30% { transform: translate(-1px, 0px); }
+    40% { transform: translate(1px, 2px); }
+    50% { transform: translate(-1px, 1px); }
+    60% { transform: translate(1px, 0px); }
+    70% { transform: translate(-1px, -1px); }
+    80% { transform: translate(1px, -1px); }
+    90% { transform: translate(-1px, 2px); }
+  }
+
+  .animate-noise {
+    animation: noise 2s ease-in-out infinite;
+  }
 }
 
 @layer utilities {
