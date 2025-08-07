@@ -3,9 +3,9 @@ import Link from "next/link"
 export function Footer() {
   return (
     <footer style={{ background: 'hsl(0 0% 3%)', color: 'hsl(var(--color-background))' }} className="border-t border-border/20">
-      <div className="container" style={{ paddingTop: '8rem', paddingBottom: '8rem' }}>
+      <div className="container" style={{ paddingTop: '12rem', paddingBottom: '12rem' }}>
         {/* Main Footer Grid - Anthropic Style */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 mb-16">
           {/* Company */}
           <div>
             <h3 className="text-small font-medium mb-md">Company</h3>
