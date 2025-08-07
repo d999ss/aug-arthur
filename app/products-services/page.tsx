@@ -8,7 +8,7 @@ export default function ProductsServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-large">
+      <section className="section bg-muted">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -77,13 +77,13 @@ export default function ProductsServicesPage() {
             <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full mx-auto mb-6 flex items-center justify-center">
               <Users className="h-8 w-8 text-primary" />
             </div>
-            <h2 className="text-headline mb-6">On the Farm</h2>
+            <h2 className="text-headline mb-md">On the Farm</h2>
             <p className="text-body max-w-3xl mx-auto">
               Complete agricultural solutions for your operation. From precision agronomy to custom application, we provide the tools and expertise to maximize your yield potential and profitability.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-refined">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Sprout,
@@ -121,15 +121,15 @@ export default function ProductsServicesPage() {
                 >
                   <Link 
                     href={service.link}
-                    className="group block p-6 card-refined hover-lift"
+                    className="group block p-6 card"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-title mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-headline mb-3 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-body mb-4 text-muted-foreground">
+                    <p className="text-body mb-4 text-muted">
                       {service.description}
                     </p>
                     <div className="flex items-center text-primary text-small font-medium">
@@ -145,7 +145,7 @@ export default function ProductsServicesPage() {
       </section>
 
       {/* Off the Farm Section */}
-      <section id="off-farm" className="section-large">
+      <section id="off-farm" className="section bg-muted">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,13 +157,13 @@ export default function ProductsServicesPage() {
             <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full mx-auto mb-6 flex items-center justify-center">
               <Building2 className="h-8 w-8 text-primary" />
             </div>
-            <h2 className="text-headline mb-6">Off the Farm</h2>
+            <h2 className="text-headline mb-md">Off the Farm</h2>
             <p className="text-body max-w-3xl mx-auto">
               Value-added processing and manufacturing. From grain processing to specialty ingredients, we add value at every step of the supply chain to deliver premium products to global markets.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-refined">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Factory,
@@ -201,15 +201,15 @@ export default function ProductsServicesPage() {
                 >
                   <Link 
                     href={service.link}
-                    className="group block p-6 card-refined hover-lift"
+                    className="group block p-6 card"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-title mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-headline mb-3 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-body mb-4 text-muted-foreground">
+                    <p className="text-body mb-4 text-muted">
                       {service.description}
                     </p>
                     <div className="flex items-center text-primary text-small font-medium">
@@ -225,7 +225,7 @@ export default function ProductsServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-large bg-foreground text-background">
+      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -234,23 +234,25 @@ export default function ProductsServicesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-headline mb-6 text-background">
+              <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>
                 Ready to Partner with Arthur?
               </h2>
-              <p className="text-body mb-12 opacity-90">
+              <p className="text-body mb-xl" style={{ color: 'hsl(var(--color-background) / 0.9)' }}>
                 Whether you're looking to market grain, source inputs, or explore value-added opportunities, our team is ready to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
+                  className="btn btn-primary"
+                  style={{ backgroundColor: 'hsl(var(--color-background))', color: 'hsl(var(--color-foreground))' }}
                 >
                   Contact Our Team
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <Link 
                   href="/grain"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
+                  className="btn btn-secondary"
+                  style={{ backgroundColor: 'transparent', color: 'hsl(var(--color-background))', borderColor: 'hsl(var(--color-background) / 0.3)' }}
                 >
                   View Cash Bids
                 </Link>
