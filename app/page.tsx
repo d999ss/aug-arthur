@@ -449,7 +449,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-headline text-serif text-center">
+              <p className="text-headline text-center">
                 Arthur delivers performance you can measure and people you can trust.
               </p>
             </motion.div>
