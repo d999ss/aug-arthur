@@ -15,6 +15,12 @@ const navigationData = {
         category: "Core Services",
         links: [
           { 
+            href: "/products-services", 
+            label: "Products & Services", 
+            description: "Complete agricultural solutions overview",
+            icon: "🏭"
+          },
+          { 
             href: "/grain", 
             label: "Grain Marketing", 
             description: "Real-time cash bids and strategic marketing",
