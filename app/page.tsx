@@ -85,7 +85,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* For Growers Section */}
+      {/* For Growers Section - Light */}
       <section className="section relative">
         {/* Lighting effect at section transition */}
         <div 
@@ -146,8 +146,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* For Partners Section */}
-      <section className="section bg-muted">
+      {/* For Partners Section - Dark */}
+      <section className="section bg-dark">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -173,8 +173,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="lg:order-1"
             >
-              <h2 className="text-headline mb-md">For Partners</h2>
-              <p className="text-body mb-lg">
+              <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>For Partners</h2>
+              <p className="text-body mb-lg" style={{ color: 'hsl(var(--color-background))' }}>
                 Arthur is a growing agribusiness platform trusted by processors, suppliers, and our industry-leading peers. Our businesses span grain origination, crop inputs, research, logistics, and specialty ingredients—all supported by a culture of integrity and execution.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -191,8 +191,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quote Section - Prominent Display */}
-      <section className="section bg-muted relative overflow-hidden">
+      {/* Quote Section - Light */}
+      <section className="section relative overflow-hidden">
         {/* Ambient glow effect */}
         <div 
           className="absolute top-1/2 right-0 w-[600px] h-[600px] -translate-y-1/2 translate-x-1/4 pointer-events-none"
@@ -224,8 +224,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="section relative">
+      {/* Values Section - Dark */}
+      <section className="section bg-dark relative">
         {/* Dual lighting effects for depth */}
         <div 
           className="absolute top-20 left-0 w-[500px] h-[500px] -translate-x-1/2 pointer-events-none"
@@ -255,8 +255,8 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-headline mb-md">Company Values</h2>
-            <p className="text-body content-width mx-auto">
+            <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>Company Values</h2>
+            <p className="text-body content-width mx-auto" style={{ color: 'hsl(var(--color-background))' }}>
               The principles that have guided our work for over a century.
             </p>
           </motion.div>
@@ -288,8 +288,8 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="p-6 card-refined"
               >
-                <h3 className="text-headline mb-md">{value.title}</h3>
-                <p className="text-body">
+                <h3 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>{value.title}</h3>
+                <p className="text-body" style={{ color: 'hsl(var(--color-background))' }}>
                   {value.description}
                 </p>
               </motion.div>
@@ -299,8 +299,8 @@ export default function HomePage() {
       </section>
 
 
-      {/* Weather & Market Dashboard */}
-      <section className="section bg-muted">
+      {/* Weather & Market Dashboard - Light */}
+      <section className="section">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-headline mb-md">Real-Time Agricultural Intelligence</h2>
@@ -344,8 +344,8 @@ export default function HomePage() {
       </section>
 
 
-      {/* App Download Section */}
-      <section className="section">
+      {/* App Download Section - Dark */}
+      <section className="section bg-dark">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -354,8 +354,8 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-headline mb-md">Arthur Co. Cash Bids</h2>
-              <p className="text-body mb-xl">
+              <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>Arthur Co. Cash Bids</h2>
+              <p className="text-body mb-xl" style={{ color: 'hsl(var(--color-background))' }}>
                 Free Real-time harvest information for growers, by Arthur Companies.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -378,8 +378,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Closing Statement */}
-      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
+      {/* Closing Statement - Light */}
+      <section className="section">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -388,7 +388,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-headline text-serif text-center" style={{ color: 'hsl(var(--color-background))' }}>
+              <p className="text-headline text-serif text-center">
                 Arthur delivers performance you can measure and people you can trust.
               </p>
             </motion.div>
