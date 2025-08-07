@@ -48,7 +48,7 @@ export default function HomePage() {
                 color: '#171717 !important',
                 marginBottom: '3rem'
               }}>
-                Over one hundred years in the field.
+                100 years in the field and we're just getting started.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/grain" className="btn btn-primary">
