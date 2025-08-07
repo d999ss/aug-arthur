@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Refined Anthropic Style with Image */}
-      <section className="relative min-h-screen flex items-center -mt-16 lg:-mt-20 section-lg">
+      <section className="relative min-h-screen flex items-center justify-center -mt-16 lg:-mt-20">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20" />
         
         {/* Enhanced Robinhood-style lighting effect with subtle animation */}
@@ -45,8 +45,8 @@ export default function HomePage() {
           }}
         />
         
-        <div className="relative z-10 container py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.3 }}
-              className="flex justify-center lg:justify-end items-center min-h-full"
+              className="flex justify-center lg:justify-end items-center"
             >
               <Image 
                 src="/2025, 02_08_11 PM.png"
@@ -78,6 +78,7 @@ export default function HomePage() {
                 width={600}
                 height={400}
                 priority
+                className="object-contain"
               />
             </motion.div>
           </div>
