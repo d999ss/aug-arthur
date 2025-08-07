@@ -17,9 +17,9 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center -mt-16 lg:-mt-20 section-lg">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20" />
         
-        {/* Enhanced Robinhood-style lighting effect */}
+        {/* Enhanced Robinhood-style lighting effect with subtle animation */}
         <div 
-          className="absolute top-1/2 left-1/4 w-[1200px] h-[1200px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          className="absolute top-1/2 left-1/4 w-[1200px] h-[1200px] -translate-x-1/2 -translate-y-1/2 pointer-events-none animate-float"
           style={{
             background: `radial-gradient(50% 50% at 50% 50%, 
               hsla(45, 85%, 55%, 0.3) 0%, 
@@ -28,27 +28,29 @@ export default function HomePage() {
               hsla(45, 85%, 70%, 0.05) 75%, 
               transparent 100%)`,
             filter: 'blur(60px)',
+            animationDelay: '0s'
           }}
         />
         
-        {/* Additional ambient glow */}
+        {/* Additional ambient glow with offset animation */}
         <div 
-          className="absolute top-1/3 right-1/4 w-[800px] h-[800px] -translate-y-1/2 pointer-events-none"
+          className="absolute top-1/3 right-1/4 w-[800px] h-[800px] -translate-y-1/2 pointer-events-none animate-float"
           style={{
             background: `radial-gradient(circle at center, 
               hsla(45, 85%, 60%, 0.2) 0%, 
               hsla(45, 85%, 65%, 0.1) 40%, 
               transparent 70%)`,
             filter: 'blur(80px)',
+            animationDelay: '3s'
           }}
         />
         
         <div className="relative z-10 container py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               <h1 className="text-hero mb-lg text-balance">
                 Arthur: Where Innovation Grows, From the Ground Up.
@@ -65,9 +67,9 @@ export default function HomePage() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              initial={{ opacity: 0, x: 50, scale: 0.95 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.3 }}
               className="flex justify-center lg:justify-end items-center min-h-full"
             >
               <Image 

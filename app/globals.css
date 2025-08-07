@@ -68,6 +68,18 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  /* Enhanced smooth scrolling */
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  /* Subtle scroll animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
   body {
     font-family: var(--font-styrene-b), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: var(--font-size-body);
@@ -283,8 +295,8 @@
   opacity: 0.5;
 }
 
-/* 8. ANIMATIONS
-   ============= */
+/* 8. ANIMATIONS & SCROLL EFFECTS
+   ============================== */
 
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(10px); }
@@ -293,4 +305,38 @@
 
 .animate-fade-in {
   animation: fade-in 0.6s ease-out forwards;
+}
+
+/* Parallax scroll effects */
+.parallax-slow {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.1s ease-out;
+}
+
+.parallax-medium {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.15s ease-out;
+}
+
+/* Subtle floating animation for lighting effects */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Smooth reveal animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
