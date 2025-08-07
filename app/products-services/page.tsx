@@ -8,7 +8,7 @@ export default function ProductsServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-y-large">
+      <section className="section-large">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -16,10 +16,10 @@ export default function ProductsServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="text-hero mb-8 text-balance">
                 Products & Services
               </h1>
-              <p className="text-body-large mb-6 max-w-2xl mx-auto">
+              <p className="text-body mb-6 max-w-2xl mx-auto">
                 From field to market, we deliver solutions that drive success.
               </p>
               <p className="text-body mb-12 max-w-3xl mx-auto text-muted-foreground">
@@ -28,11 +28,11 @@ export default function ProductsServicesPage() {
               
               {/* Quick Navigation */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
-                <a href="#on-farm" className="btn-primary">
+                <a href="#on-farm" className="btn btn-primary">
                   <Users className="mr-2 h-4 w-4" />
                   On the Farm
                 </a>
-                <a href="#off-farm" className="btn-secondary">
+                <a href="#off-farm" className="btn btn-secondary">
                   <Building2 className="mr-2 h-4 w-4" />
                   Off the Farm
                 </a>
@@ -40,21 +40,21 @@ export default function ProductsServicesPage() {
               
               {/* Value Proposition */}
               <div className="grid md:grid-cols-2 gap-8 text-left">
-                <div className="p-6 card-refined">
+                <div className="p-6 card">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-title mb-3">For Growers</h3>
-                  <p className="text-body text-muted-foreground">
+                  <h3 className="text-headline mb-3">For Growers</h3>
+                  <p className="text-body text-muted">
                     Complete agricultural solutions to help you grow more, manage risk, and maximize profitability.
                   </p>
                 </div>
-                <div className="p-6 card-refined">
+                <div className="p-6 card">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center">
                     <Building2 className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-title mb-3">For Partners</h3>
-                  <p className="text-body text-muted-foreground">
+                  <h3 className="text-headline mb-3">For Partners</h3>
+                  <p className="text-body text-muted">
                     Value-added processing, manufacturing, and trading services that connect quality crops to global markets.
                   </p>
                 </div>
@@ -65,7 +65,7 @@ export default function ProductsServicesPage() {
       </section>
 
       {/* On the Farm Section */}
-      <section id="on-farm" className="section-y-large bg-secondary/20">
+      <section id="on-farm" className="section-large bg-secondary/20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ export default function ProductsServicesPage() {
               <Users className="h-8 w-8 text-primary" />
             </div>
             <h2 className="text-headline mb-6">On the Farm</h2>
-            <p className="text-body-large max-w-3xl mx-auto">
+            <p className="text-body max-w-3xl mx-auto">
               Complete agricultural solutions for your operation. From precision agronomy to custom application, we provide the tools and expertise to maximize your yield potential and profitability.
             </p>
           </motion.div>
@@ -145,7 +145,7 @@ export default function ProductsServicesPage() {
       </section>
 
       {/* Off the Farm Section */}
-      <section id="off-farm" className="section-y-large">
+      <section id="off-farm" className="section-large">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,7 +158,7 @@ export default function ProductsServicesPage() {
               <Building2 className="h-8 w-8 text-primary" />
             </div>
             <h2 className="text-headline mb-6">Off the Farm</h2>
-            <p className="text-body-large max-w-3xl mx-auto">
+            <p className="text-body max-w-3xl mx-auto">
               Value-added processing and manufacturing. From grain processing to specialty ingredients, we add value at every step of the supply chain to deliver premium products to global markets.
             </p>
           </motion.div>
@@ -225,7 +225,7 @@ export default function ProductsServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-y-large bg-foreground text-background">
+      <section className="section-large bg-foreground text-background">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -237,7 +237,7 @@ export default function ProductsServicesPage() {
               <h2 className="text-headline mb-6 text-background">
                 Ready to Partner with Arthur?
               </h2>
-              <p className="text-body-large mb-12 opacity-90">
+              <p className="text-body mb-12 opacity-90">
                 Whether you're looking to market grain, source inputs, or explore value-added opportunities, our team is ready to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">

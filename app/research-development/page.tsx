@@ -8,7 +8,7 @@ export default function ResearchDevelopmentPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-y-large">
+      <section className="section-large">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -16,23 +16,23 @@ export default function ResearchDevelopmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="text-hero mb-8 text-balance">
                 Research & Development
               </h1>
-              <p className="text-body-large mb-8 max-w-2xl mx-auto">
+              <p className="text-body mb-8 max-w-2xl mx-auto">
                 Advancing agriculture through innovation
               </p>
-              <p className="text-body mb-12 max-w-3xl mx-auto text-muted-foreground">
+              <p className="text-body mb-12 max-w-3xl mx-auto text-muted">
                 Our R&D initiatives focus on solving agriculture's most pressing challenges through scientific innovation, technology development, and strategic partnerships.
               </p>
               
               {/* Quick Navigation */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
-                <a href="#research" className="btn-primary">
+                <a href="#research" className="btn btn-primary">
                   <FlaskConical className="mr-2 h-4 w-4" />
                   Research
                 </a>
-                <a href="#venture" className="btn-secondary">
+                <a href="#venture" className="btn btn-secondary">
                   <Rocket className="mr-2 h-4 w-4" />
                   Venture
                 </a>
@@ -40,22 +40,22 @@ export default function ResearchDevelopmentPage() {
               
               {/* Value Proposition */}
               <div className="grid md:grid-cols-2 gap-8 text-left">
-                <div className="p-6 card-refined">
+                <div className="p-6 card">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center">
                     <FlaskConical className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-title mb-3">Research Excellence</h3>
-                  <p className="text-body text-muted-foreground">
+                  <h3 className="text-headline mb-3">Research Excellence</h3>
+                  <p className="text-body text-muted">
                     Leading-edge agricultural research in crop genetics, soil science, 
                     precision agriculture, and sustainable farming practices.
                   </p>
                 </div>
-                <div className="p-6 card-refined">
+                <div className="p-6 card">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center">
                     <Rocket className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-title mb-3">Strategic Investment</h3>
-                  <p className="text-body text-muted-foreground">
+                  <h3 className="text-headline mb-3">Strategic Investment</h3>
+                  <p className="text-body text-muted">
                     Venture capital and strategic partnerships with innovative agtech 
                     companies transforming the agricultural landscape.
                   </p>
@@ -67,7 +67,7 @@ export default function ResearchDevelopmentPage() {
       </section>
 
       {/* Research Section */}
-      <section id="research" className="section-y-large bg-secondary/20">
+      <section id="research" className="section-large bg-secondary/20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export default function ResearchDevelopmentPage() {
               <FlaskConical className="h-8 w-8 text-primary" />
             </div>
             <h2 className="text-headline mb-6">Research</h2>
-            <p className="text-body-large max-w-3xl mx-auto mb-12">
+            <p className="text-body max-w-3xl mx-auto mb-12">
               Our research division conducts cutting-edge agricultural science to solve 
               industry challenges and unlock new opportunities for sustainable farming.
             </p>
@@ -110,7 +110,7 @@ export default function ResearchDevelopmentPage() {
                   className="p-4 bg-background rounded-xl"
                 >
                   <h4 className="text-body-medium font-semibold mb-2">{category.title}</h4>
-                  <p className="text-small text-muted-foreground">{category.description}</p>
+                  <p className="text-small text-muted">{category.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -167,15 +167,15 @@ export default function ResearchDevelopmentPage() {
                 >
                   <Link 
                     href={service.link}
-                    className="group block p-6 card-refined hover-lift"
+                    className="group block p-6 card hover-lift"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-title mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-headline mb-3 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-body mb-4 text-muted-foreground">
+                    <p className="text-body mb-4 text-muted">
                       {service.description}
                     </p>
                     <div className="flex items-center text-primary text-small font-medium">
@@ -191,7 +191,7 @@ export default function ResearchDevelopmentPage() {
       </section>
 
       {/* Venture Section */}
-      <section id="venture" className="section-y-large">
+      <section id="venture" className="section-large">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -204,7 +204,7 @@ export default function ResearchDevelopmentPage() {
               <Rocket className="h-8 w-8 text-primary" />
             </div>
             <h2 className="text-headline mb-6">Venture</h2>
-            <p className="text-body-large max-w-3xl mx-auto mb-12">
+            <p className="text-body max-w-3xl mx-auto mb-12">
               Our venture platform invests in and partners with innovative agtech companies 
               that are transforming agriculture through breakthrough technologies and business models.
             </p>
@@ -234,7 +234,7 @@ export default function ResearchDevelopmentPage() {
                   className="p-4 bg-secondary/20 rounded-xl"
                 >
                   <h4 className="text-body-medium font-semibold mb-2">{category.title}</h4>
-                  <p className="text-small text-muted-foreground">{category.description}</p>
+                  <p className="text-small text-muted">{category.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -291,15 +291,15 @@ export default function ResearchDevelopmentPage() {
                 >
                   <Link 
                     href={service.link}
-                    className="group block p-6 card-refined hover-lift"
+                    className="group block p-6 card hover-lift"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-title mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-headline mb-3 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-body mb-4 text-muted-foreground">
+                    <p className="text-body mb-4 text-muted">
                       {service.description}
                     </p>
                     <div className="flex items-center text-primary text-small font-medium">
@@ -315,7 +315,7 @@ export default function ResearchDevelopmentPage() {
       </section>
 
       {/* Portfolio Showcase */}
-      <section className="section-y bg-secondary/20">
+      <section className="section bg-secondary/20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -325,7 +325,7 @@ export default function ResearchDevelopmentPage() {
             className="text-center mb-16"
           >
             <h2 className="text-headline mb-6">Current portfolio companies</h2>
-            <p className="text-body-large max-w-3xl mx-auto">
+            <p className="text-body max-w-3xl mx-auto">
               Our diverse portfolio of innovative companies is transforming agriculture 
               across the value chain.
             </p>
@@ -376,10 +376,10 @@ export default function ResearchDevelopmentPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 card-refined"
+                className="p-6 card"
               >
-                <h3 className="text-title mb-2">{company.name}</h3>
-                <p className="text-body text-muted-foreground mb-3">{company.description}</p>
+                <h3 className="text-headline mb-2">{company.name}</h3>
+                <p className="text-body text-muted mb-3">{company.description}</p>
                 <span className={`px-3 py-1 text-xs rounded-full ${company.stageColor}`}>
                   {company.stage}
                 </span>
@@ -390,7 +390,7 @@ export default function ResearchDevelopmentPage() {
       </section>
 
       {/* Cross-Section Integration */}
-      <section className="section-y-large bg-foreground text-background">
+      <section className="section-large bg-foreground text-background">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -400,7 +400,7 @@ export default function ResearchDevelopmentPage() {
             className="text-center mb-12"
           >
             <h2 className="text-headline mb-6 text-background">Research-driven investment strategy</h2>
-            <p className="text-body-large max-w-3xl mx-auto opacity-90">
+            <p className="text-body max-w-3xl mx-auto opacity-90">
               Our unique approach combines scientific research with strategic investment 
               to accelerate agricultural innovation and create lasting impact.
             </p>
@@ -414,7 +414,7 @@ export default function ResearchDevelopmentPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="p-6 bg-background/10 backdrop-blur-sm rounded-xl"
             >
-              <h3 className="text-title mb-3 text-background">From Lab to Market</h3>
+              <h3 className="text-headline mb-3 text-background">From Lab to Market</h3>
               <p className="text-body opacity-90 mb-6">
                 Our research discoveries inform our investment decisions, ensuring we back 
                 technologies with proven scientific foundations.
@@ -433,7 +433,7 @@ export default function ResearchDevelopmentPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="p-6 bg-background/10 backdrop-blur-sm rounded-xl"
             >
-              <h3 className="text-title mb-3 text-background">Investment to Innovation</h3>
+              <h3 className="text-headline mb-3 text-background">Investment to Innovation</h3>
               <p className="text-body opacity-90 mb-6">
                 Our portfolio companies gain access to our research capabilities, 
                 accelerating their development and market success.
@@ -450,7 +450,7 @@ export default function ResearchDevelopmentPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="section-y-large">
+      <section className="section-large">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -460,16 +460,16 @@ export default function ResearchDevelopmentPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-headline mb-6">Shape the future of agriculture</h2>
-              <p className="text-body-large mb-12 text-muted-foreground">
+              <p className="text-body mb-12 text-muted">
                 Whether you're a researcher, entrepreneur, or investor, join us in advancing 
                 agricultural innovation through cutting-edge research and strategic partnerships.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/contact" className="btn-primary">
+                <Link href="/contact" className="btn btn-primary">
                   Partner With Us
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/contact" className="btn-secondary">
+                <Link href="/contact" className="btn btn-secondary">
                   Submit Proposal
                 </Link>
               </div>
