@@ -146,7 +146,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* For Partners Section - Dark */}
+      {/* For Partners Section - Dark Background */}
       <section 
         className="section relative" 
         style={{ 
