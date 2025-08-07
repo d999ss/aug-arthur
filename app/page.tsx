@@ -147,7 +147,7 @@ export default function HomePage() {
       </section>
 
       {/* For Partners Section - Dark */}
-      <section className="section bg-dark">
+      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -178,11 +178,11 @@ export default function HomePage() {
                 Arthur is a growing agribusiness platform trusted by processors, suppliers, and our industry-leading peers. Our businesses span grain origination, crop inputs, research, logistics, and specialty ingredients—all supported by a culture of integrity and execution.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/products-services" className="btn btn-primary">
+                <Link href="/products-services" className="btn btn-primary" style={{ backgroundColor: 'hsl(var(--color-background))', color: 'hsl(var(--color-foreground))' }}>
                   Products & Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/research-development" className="btn btn-secondary">
+                <Link href="/research-development" className="btn btn-secondary" style={{ backgroundColor: 'transparent', color: 'hsl(var(--color-background))', borderColor: 'hsl(var(--color-background) / 0.3)' }}>
                   Innovation
                 </Link>
               </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
       </section>
 
       {/* Values Section - Dark */}
-      <section className="section bg-dark relative">
+      <section className="section relative" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
         {/* Dual lighting effects for depth */}
         <div 
           className="absolute top-20 left-0 w-[500px] h-[500px] -translate-x-1/2 pointer-events-none"
@@ -345,7 +345,7 @@ export default function HomePage() {
 
 
       {/* App Download Section - Dark */}
-      <section className="section bg-dark">
+      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -362,6 +362,7 @@ export default function HomePage() {
                 <Link 
                   href="#"
                   className="btn btn-primary"
+                  style={{ backgroundColor: 'hsl(var(--color-background))', color: 'hsl(var(--color-foreground))' }}
                 >
                   Download for iOS
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -369,6 +370,7 @@ export default function HomePage() {
                 <Link 
                   href="#"
                   className="btn btn-secondary"
+                  style={{ backgroundColor: 'transparent', color: 'hsl(var(--color-background))', borderColor: 'hsl(var(--color-background) / 0.3)' }}
                 >
                   Download for Android
                 </Link>
