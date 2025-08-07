@@ -98,7 +98,7 @@ export default function HomePage() {
             filter: 'blur(60px)',
           }}
         />
-        <div className="container relative z-20">
+        <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -154,29 +154,6 @@ export default function HomePage() {
           color: 'hsl(var(--color-background))'
         }}
       >
-        {/* Top transition curve */}
-        <div 
-          className="absolute top-0 left-0 right-0 h-32 -mt-1 z-10"
-          style={{
-            backgroundImage: 'url(/Light\\ Curve.png)',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'top center'
-          }}
-        />
-        
-        {/* Bottom transition curve */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 h-32 -mb-1 z-10"
-          style={{
-            backgroundImage: 'url(/Light\\ Curve\\ 2.png)',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'bottom center',
-            transform: 'rotate(180deg)'
-          }}
-        />
-        
         {/* Noise texture overlay */}
         <div 
           className="absolute inset-0 opacity-20 animate-noise"
@@ -186,7 +163,7 @@ export default function HomePage() {
                         repeating-linear-gradient(45deg, transparent, transparent 1px, rgba(255,255,255,0.01) 1px, rgba(255,255,255,0.01) 2px)`
           }}
         />
-        <div className="container relative z-20">
+        <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -242,7 +219,7 @@ export default function HomePage() {
             filter: 'blur(80px)',
           }}
         />
-        <div className="container relative z-20">
+        <div className="container">
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -270,29 +247,6 @@ export default function HomePage() {
           color: 'hsl(var(--color-background))'
         }}
       >
-        {/* Top transition curve */}
-        <div 
-          className="absolute top-0 left-0 right-0 h-32 -mt-1 z-10"
-          style={{
-            backgroundImage: 'url(/Light\\ Curve.png)',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'top center'
-          }}
-        />
-        
-        {/* Bottom transition curve */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 h-32 -mb-1 z-10"
-          style={{
-            backgroundImage: 'url(/Light\\ Curve\\ 2.png)',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'bottom center',
-            transform: 'rotate(180deg)'
-          }}
-        />
-        
         {/* Sophisticated noise overlay */}
         <div 
           className="absolute inset-0 opacity-15 animate-noise"
@@ -383,29 +337,6 @@ export default function HomePage() {
           color: 'hsl(var(--color-background))'
         }}
       >
-        {/* Top transition curve */}
-        <div 
-          className="absolute top-0 left-0 right-0 h-32 -mt-1 z-10"
-          style={{
-            backgroundImage: 'url(/Light\\ Curve.png)',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'top center'
-          }}
-        />
-        
-        {/* Bottom transition curve */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 h-32 -mb-1 z-10"
-          style={{
-            backgroundImage: 'url(/Light\\ Curve\\ 2.png)',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'bottom center',
-            transform: 'rotate(180deg)'
-          }}
-        />
-        
         {/* Market-themed texture overlay */}
         <div 
           className="absolute inset-0 opacity-20 animate-noise"
@@ -415,7 +346,7 @@ export default function HomePage() {
                         repeating-linear-gradient(75deg, transparent, transparent 1px, rgba(255,255,255,0.012) 1px, rgba(255,255,255,0.012) 2px)`
           }}
         />
-        <div className="container relative z-20">
+        <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>Real-Time Agricultural Intelligence</h2>
             <p className="text-body content-width mx-auto" style={{ color: 'hsl(var(--color-background) / 0.8)' }}>
@@ -466,29 +397,6 @@ export default function HomePage() {
           color: 'hsl(var(--color-background))'
         }}
       >
-        {/* Top transition curve */}
-        <div 
-          className="absolute top-0 left-0 right-0 h-32 -mt-1 z-10"
-          style={{
-            backgroundImage: 'url(/Light\\ Curve.png)',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'top center'
-          }}
-        />
-        
-        {/* Bottom transition curve */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 h-32 -mb-1 z-10"
-          style={{
-            backgroundImage: 'url(/Light\\ Curve\\ 2.png)',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'bottom center',
-            transform: 'rotate(180deg)'
-          }}
-        />
-        
         {/* Texture overlay */}
         <div 
           className="absolute inset-0 opacity-25 animate-noise"
@@ -497,7 +405,7 @@ export default function HomePage() {
                         repeating-linear-gradient(60deg, transparent, transparent 1px, rgba(255,255,255,0.01) 1px, rgba(255,255,255,0.01) 2px)`
           }}
         />
-        <div className="container relative z-20">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -533,7 +441,7 @@ export default function HomePage() {
 
       {/* Closing Statement - Light */}
       <section className="section">
-        <div className="container relative z-20">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
