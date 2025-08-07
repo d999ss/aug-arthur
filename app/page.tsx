@@ -292,7 +292,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
             {[
               { 
                 title: "Integrity", 
@@ -317,10 +317,14 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 card"
+                className="p-8 card"
+                style={{ 
+                  background: 'hsl(0 0% 8%)', 
+                  border: '1px solid hsl(var(--color-background) / 0.15)' 
+                }}
               >
                 <h3 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>{value.title}</h3>
-                <p className="text-body" style={{ color: 'hsl(var(--color-background))' }}>
+                <p className="text-body" style={{ color: 'hsl(var(--color-background) / 0.85)' }}>
                   {value.description}
                 </p>
               </motion.div>
