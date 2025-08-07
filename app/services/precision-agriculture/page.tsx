@@ -8,7 +8,7 @@ export default function PrecisionAgriculturePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-y-large">
+      <section className="section">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -19,18 +19,18 @@ export default function PrecisionAgriculturePage() {
               <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full mx-auto mb-8 flex items-center justify-center">
                 <Globe className="h-10 w-10 text-primary" />
               </div>
-              <h1 className="text-display mb-8 text-balance">
+              <h1 className="text-hero mb-lg text-balance">
                 Precision Agriculture
               </h1>
-              <p className="text-body-large mb-12 max-w-2xl mx-auto">
+              <p className="text-body mb-xl max-w-2xl mx-auto">
                 Technology-driven farming solutions. Harness the power of precision agriculture technology to optimize inputs, maximize yields, and improve profitability across every acre.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/contact" className="btn-primary">
+                <Link href="/contact" className="btn btn-primary">
                   Explore Precision Solutions
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="/locations" className="btn-secondary">
+                <Link href="/locations" className="btn btn-secondary">
                   Find Local Expert
                 </Link>
               </div>
@@ -40,7 +40,7 @@ export default function PrecisionAgriculturePage() {
       </section>
 
       {/* Technology Overview */}
-      <section className="section-y bg-secondary/20">
+      <section className="section bg-muted">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -49,14 +49,14 @@ export default function PrecisionAgriculturePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-headline mb-6">Advanced precision technology</h2>
-            <p className="text-body-large max-w-3xl mx-auto">
+            <h2 className="text-headline mb-md">Advanced precision technology</h2>
+            <p className="text-body max-w-3xl mx-auto">
               Harness the power of GPS, satellite imagery, and data analytics to optimize 
               every aspect of your farming operation with precision agriculture technology.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-refined">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Satellite,
@@ -87,13 +87,13 @@ export default function PrecisionAgriculturePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-6 card-refined hover-lift"
+                  className="p-6 card"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-title mb-3">{service.title}</h3>
-                  <p className="text-body text-muted-foreground">
+                  <h3 className="text-headline mb-3">{service.title}</h3>
+                  <p className="text-body text-muted">
                     {service.description}
                   </p>
                 </motion.div>
@@ -104,7 +104,7 @@ export default function PrecisionAgriculturePage() {
       </section>
 
       {/* Services Detail */}
-      <section className="section-y-large">
+      <section className="section">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -114,8 +114,8 @@ export default function PrecisionAgriculturePage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-headline mb-6">Precision agriculture services</h2>
-              <div className="text-serif text-body-large text-muted-foreground italic">
+              <h2 className="text-headline mb-md">Precision agriculture services</h2>
+              <div className="text-serif text-body text-muted">
                 "Technology that transforms farming from art to science."
               </div>
             </motion.div>
@@ -173,10 +173,10 @@ export default function PrecisionAgriculturePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-8 card-refined hover-lift"
+                  className="p-8 card"
                 >
-                  <h3 className="text-title mb-4">{service.title}</h3>
-                  <p className="text-body mb-6 text-muted-foreground">
+                  <h3 className="text-headline mb-md">{service.title}</h3>
+                  <p className="text-body mb-md text-muted">
                     {service.description}
                   </p>
                   {service.sections ? (
@@ -213,7 +213,7 @@ export default function PrecisionAgriculturePage() {
       </section>
 
       {/* CTA */}
-      <section className="section-y-large bg-foreground text-background">
+      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -222,24 +222,26 @@ export default function PrecisionAgriculturePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-headline mb-6 text-background">
+              <h2 className="text-headline mb-md" style={{ color: 'hsl(var(--color-background))' }}>
                 Ready to farm with precision?
               </h2>
-              <p className="text-body-large mb-12 opacity-90">
+              <p className="text-body mb-xl" style={{ color: 'hsl(var(--color-background) / 0.9)' }}>
                 Discover how precision agriculture technology can improve your farm's 
                 efficiency and profitability.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-background text-foreground hover:bg-background/90 transition-all duration-200 text-sm font-medium"
+                  className="btn btn-primary"
+                  style={{ backgroundColor: 'hsl(var(--color-background))', color: 'hsl(var(--color-foreground))' }}
                 >
                   Schedule Demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <Link 
                   href="/locations"
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-background/20 text-background hover:bg-background/10 transition-all duration-200 text-sm font-medium"
+                  className="btn btn-secondary"
+                  style={{ backgroundColor: 'transparent', color: 'hsl(var(--color-background))', borderColor: 'hsl(var(--color-background) / 0.3)' }}
                 >
                   Find Local Expert
                 </Link>
