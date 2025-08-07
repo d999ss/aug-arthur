@@ -21,7 +21,7 @@ export function PullQuote({
   className = '' 
 }: PullQuoteProps) {
   const baseClasses = variant === 'large' 
-    ? 'py-12 px-8 lg:py-16 lg:px-12'
+    ? 'py-16 px-10 lg:py-20 lg:px-16'
     : variant === 'centered'
     ? 'py-8 px-6 text-center'
     : 'py-6 px-6'

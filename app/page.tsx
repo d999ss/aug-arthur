@@ -208,20 +208,20 @@ export default function HomePage() {
       </section>
 
       {/* Quote Section - Light */}
-      <section className="section relative overflow-hidden">
+      <section className="section-lg relative overflow-hidden" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
         {/* Ambient glow effect */}
         <div 
-          className="absolute top-1/2 right-0 w-[600px] h-[600px] -translate-y-1/2 translate-x-1/4 pointer-events-none"
+          className="absolute top-1/2 right-0 w-[800px] h-[800px] -translate-y-1/2 translate-x-1/4 pointer-events-none"
           style={{
             background: `radial-gradient(circle at center, 
-              hsla(45, 85%, 55%, 0.12) 0%, 
-              hsla(45, 85%, 60%, 0.06) 35%, 
+              hsla(45, 85%, 55%, 0.15) 0%, 
+              hsla(45, 85%, 60%, 0.08) 35%, 
               transparent 70%)`,
-            filter: 'blur(80px)',
+            filter: 'blur(100px)',
           }}
         />
         <div className="container">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
