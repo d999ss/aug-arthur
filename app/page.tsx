@@ -147,7 +147,27 @@ export default function HomePage() {
       </section>
 
       {/* For Partners Section - Dark */}
-      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
+      <section 
+        className="section relative" 
+        style={{ 
+          background: `linear-gradient(180deg, 
+            hsl(var(--color-background)) 0%, 
+            hsl(0 0% 8%) 15%, 
+            hsl(0 0% 5%) 50%, 
+            hsl(0 0% 8%) 85%, 
+            hsl(var(--color-background)) 100%)`,
+          color: 'hsl(var(--color-background))'
+        }}
+      >
+        {/* Noise texture overlay */}
+        <div 
+          className="absolute inset-0 opacity-20 animate-noise"
+          style={{
+            background: `radial-gradient(circle at 20% 50%, rgba(230, 184, 0, 0.03) 0%, transparent 30%), 
+                        radial-gradient(circle at 80% 80%, rgba(230, 184, 0, 0.02) 0%, transparent 40%),
+                        repeating-linear-gradient(45deg, transparent, transparent 1px, rgba(255,255,255,0.01) 1px, rgba(255,255,255,0.01) 2px)`
+          }}
+        />
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -225,7 +245,27 @@ export default function HomePage() {
       </section>
 
       {/* Values Section - Dark */}
-      <section className="section relative" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
+      <section 
+        className="section relative" 
+        style={{ 
+          background: `linear-gradient(180deg, 
+            hsl(var(--color-background)) 0%, 
+            hsl(0 0% 8%) 15%, 
+            hsl(0 0% 3%) 50%, 
+            hsl(0 0% 8%) 85%, 
+            hsl(var(--color-background)) 100%)`,
+          color: 'hsl(var(--color-background))'
+        }}
+      >
+        {/* Sophisticated noise overlay */}
+        <div 
+          className="absolute inset-0 opacity-15 animate-noise"
+          style={{
+            background: `radial-gradient(circle at 30% 20%, rgba(230, 184, 0, 0.04) 0%, transparent 40%), 
+                        radial-gradient(circle at 70% 90%, rgba(230, 184, 0, 0.03) 0%, transparent 50%),
+                        repeating-linear-gradient(30deg, transparent, transparent 1px, rgba(255,255,255,0.008) 1px, rgba(255,255,255,0.008) 2px)`
+          }}
+        />
         {/* Dual lighting effects for depth */}
         <div 
           className="absolute top-20 left-0 w-[500px] h-[500px] -translate-x-1/2 pointer-events-none"
@@ -345,7 +385,26 @@ export default function HomePage() {
 
 
       {/* App Download Section - Dark */}
-      <section className="section" style={{ background: 'hsl(var(--color-foreground))', color: 'hsl(var(--color-background))' }}>
+      <section 
+        className="section relative" 
+        style={{ 
+          background: `linear-gradient(180deg, 
+            hsl(var(--color-background)) 0%, 
+            hsl(0 0% 6%) 20%, 
+            hsl(0 0% 2%) 50%, 
+            hsl(0 0% 6%) 80%, 
+            hsl(var(--color-background)) 100%)`,
+          color: 'hsl(var(--color-background))'
+        }}
+      >
+        {/* Texture overlay */}
+        <div 
+          className="absolute inset-0 opacity-25 animate-noise"
+          style={{
+            background: `radial-gradient(circle at 50% 30%, rgba(230, 184, 0, 0.05) 0%, transparent 35%), 
+                        repeating-linear-gradient(60deg, transparent, transparent 1px, rgba(255,255,255,0.01) 1px, rgba(255,255,255,0.01) 2px)`
+          }}
+        />
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
