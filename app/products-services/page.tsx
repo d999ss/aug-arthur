@@ -59,11 +59,27 @@ export default function ProductsServicesPage() {
                 From field to market, we deliver solutions that drive success. Arthur Companies provides comprehensive agricultural services that support farmers, processors, and partners across the supply chain.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="#on-farm" className="btn btn-primary">
+                <Link 
+                  href="#on-farm" 
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium bg-foreground text-background hover:bg-foreground/90 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  style={{ 
+                    fontFamily: 'var(--font-styrene-b), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    fontWeight: '500',
+                    letterSpacing: '-0.005em'
+                  }}
+                >
                   On the Farm
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="#off-farm" className="btn btn-secondary">
+                <Link 
+                  href="#off-farm" 
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium bg-transparent text-foreground border border-border hover:bg-muted transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  style={{ 
+                    fontFamily: 'var(--font-styrene-b), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    fontWeight: '500',
+                    letterSpacing: '-0.005em'
+                  }}
+                >
                   Off the Farm
                 </Link>
               </div>
@@ -135,7 +151,15 @@ export default function ProductsServicesPage() {
               <p className="text-body mb-lg" style={{ color: 'hsl(var(--color-foreground))' }}>
                 Complete agricultural solutions to help you grow more, manage risk, and maximize profitability. From precision agronomy to market access.
               </p>
-              <Link href="#on-farm" className="btn btn-primary">
+              <Link 
+                href="#on-farm" 
+                className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium bg-foreground text-background hover:bg-foreground/90 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                style={{ 
+                  fontFamily: 'var(--font-styrene-b), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                  fontWeight: '500',
+                  letterSpacing: '-0.005em'
+                }}
+              >
                 Explore Services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -160,7 +184,15 @@ export default function ProductsServicesPage() {
               <p className="text-body mb-lg" style={{ color: 'hsl(var(--color-foreground))' }}>
                 Value-added processing, manufacturing, and trading services that connect quality crops to global markets and premium opportunities.
               </p>
-              <Link href="#off-farm" className="btn btn-primary">
+              <Link 
+                href="#off-farm" 
+                className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium bg-foreground text-background hover:bg-foreground/90 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                style={{ 
+                  fontFamily: 'var(--font-styrene-b), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                  fontWeight: '500',
+                  letterSpacing: '-0.005em'
+                }}
+              >
                 Explore Solutions
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -425,16 +457,30 @@ export default function ProductsServicesPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link 
                   href="/contact"
-                  className="btn btn-primary"
-                  style={{ backgroundColor: 'hsl(var(--color-background))', color: 'hsl(var(--color-foreground))' }}
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  style={{ 
+                    backgroundColor: 'hsl(var(--color-background))', 
+                    color: 'hsl(var(--color-foreground))',
+                    fontFamily: 'var(--font-styrene-b), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    fontWeight: '500',
+                    letterSpacing: '-0.005em'
+                  }}
                 >
                   Contact Our Team
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <Link 
                   href="/grain"
-                  className="btn btn-secondary"
-                  style={{ backgroundColor: 'transparent', color: 'hsl(var(--color-background))', borderColor: 'hsl(var(--color-background) / 0.3)' }}
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  style={{ 
+                    backgroundColor: 'transparent', 
+                    color: 'hsl(var(--color-background))', 
+                    borderColor: 'hsl(var(--color-background) / 0.3)',
+                    border: '1px solid',
+                    fontFamily: 'var(--font-styrene-b), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    fontWeight: '500',
+                    letterSpacing: '-0.005em'
+                  }}
                 >
                   View Cash Bids
                 </Link>
