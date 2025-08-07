@@ -121,17 +121,17 @@ export function FuturesHeaderBanner() {
   const tickerItems = [...tickerData, ...tickerData, ...tickerData]
 
   return (
-    <div className="bg-foreground text-background border-b border-background/10 overflow-hidden">
+    <div style={{ background: 'hsl(0 0% 9%)', color: 'hsl(var(--color-background))', borderBottom: '1px solid hsl(var(--color-background) / 0.1)' }} className="overflow-hidden">
       <div className="h-8 flex items-center">
         <div className="flex items-center animate-ticker whitespace-nowrap">
           {tickerItems.map((data, index) => {
             const isPositive = data.change >= 0
             return (
               <div key={`${data.symbol}-${index}`} className="flex items-center gap-2 mx-8">
-                <span className="text-xs font-medium text-background/90">
+                <span className="text-xs font-medium" style={{ color: 'hsl(var(--color-background) / 0.9)' }}>
                   {data.label}
                 </span>
-                <span className="text-xs font-mono text-background">
+                <span className="text-xs font-mono" style={{ color: 'hsl(var(--color-background))' }}>
                   {data.price}
                 </span>
                 <span className={`text-xs font-mono ${
@@ -139,14 +139,14 @@ export function FuturesHeaderBanner() {
                 }`}>
                   {isPositive ? '+' : ''}{data.change}
                 </span>
-                <span className="text-xs text-background/50">•</span>
+                <span className="text-xs" style={{ color: 'hsl(var(--color-background) / 0.5)' }}>•</span>
               </div>
             )
           })}
           <div className="flex items-center gap-1 mx-8">
             <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-xs text-background/70">LIVE MARKETS</span>
-            <span className="text-xs text-background/50">•</span>
+            <span className="text-xs" style={{ color: 'hsl(var(--color-background) / 0.7)' }}>LIVE MARKETS</span>
+            <span className="text-xs" style={{ color: 'hsl(var(--color-background) / 0.5)' }}>•</span>
           </div>
         </div>
       </div>
