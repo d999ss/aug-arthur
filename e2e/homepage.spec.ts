@@ -106,7 +106,7 @@ test.describe('Homepage', () => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          resolve(lastEntry.startTime);
+          resolve(lastEntry?.startTime || 0);
         }).observe({ entryTypes: ['largest-contentful-paint'] });
       });
     });

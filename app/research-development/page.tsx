@@ -166,7 +166,7 @@ export default function ResearchDevelopmentPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Link 
-                    href={service.link}
+                    href={service.link as any}
                     className="group block p-6 card-refined hover-lift"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -290,7 +290,7 @@ export default function ResearchDevelopmentPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Link 
-                    href={service.link}
+                    href={service.link as any}
                     className="group block p-6 card-refined hover-lift"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">

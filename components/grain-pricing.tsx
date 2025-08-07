@@ -64,7 +64,7 @@ const mockPrices: GrainPrice[] = [
 
 export function GrainPricing() {
   const [prices, setPrices] = useState<GrainPrice[]>(mockPrices)
-  const [selectedLocation, setSelectedLocation] = useState('Arthur, ND')
+  const [selectedLocation] = useState('Arthur, ND')
   const [isRefreshing, setIsRefreshing] = useState(false)
   const [lastRefresh, setLastRefresh] = useState(new Date())
 

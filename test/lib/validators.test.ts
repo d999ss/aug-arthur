@@ -27,7 +27,7 @@ describe('validators', () => {
 
       const result = contactFormSchema.safeParse(invalidData);
       expect(result.success).toBe(false);
-      if (!result.success) {
+      if (!result.success && result.error.issues[0]) {
         expect(result.error.issues[0].path).toContain('email');
       }
     });

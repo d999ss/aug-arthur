@@ -1,10 +1,10 @@
 import type { NextRequest } from 'next/server';
 
 export interface Context {
-  req?: NextRequest;
+  req: NextRequest;
 }
 
-export const createContext = ({ req }: { req?: NextRequest }): Context => {
+export const createContext = ({ req }: { req: NextRequest }): Context => {
   return {
     req,
   };

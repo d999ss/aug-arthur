@@ -5,8 +5,8 @@ import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
 import { WeatherDashboard } from '@/components/weather-dashboard'
 import { FuturesPricing } from '@/components/futures-pricing'
-import { PullQuote, TestimonialGrid } from '@/components/pull-quote'
-import { PlaceholderMedia, RoundedImage } from '@/components/rounded-media'
+import { PullQuote } from '@/components/pull-quote'
+import { PlaceholderMedia } from '@/components/rounded-media'
 
 export default function HomePage() {
   return (

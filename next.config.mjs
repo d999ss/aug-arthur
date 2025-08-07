@@ -14,12 +14,8 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year
     // Image optimization enabled for better performance
   },
-  // ESLint will now run during builds to catch issues
+  // ESLint will run during builds to catch issues
   // TypeScript errors will be caught during builds
-  // We'll fix errors before removing this temporarily
-  typescript: {
-    ignoreBuildErrors: true, // TODO: Remove after fixing TS errors
-  },
   headers: async () => [
     {
       source: '/(.*)',

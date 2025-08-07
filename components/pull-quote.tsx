@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Quote } from 'lucide-react'
 
 interface PullQuoteProps {
   quote: string
@@ -83,8 +82,8 @@ export function TestimonialGrid({ testimonials }: {
           <PullQuote
             quote={testimonial.quote}
             author={testimonial.author}
-            title={testimonial.title}
-            company={testimonial.company}
+            title={testimonial.title || ''}
+            company={testimonial.company || ''}
           />
         </motion.div>
       ))}

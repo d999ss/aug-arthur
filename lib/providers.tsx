@@ -5,7 +5,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { httpBatchLink } from '@trpc/client';
 import { useState } from 'react';
 import superjson from 'superjson';
-import { ThemeProvider } from 'next-themes';
 
 import { trpc } from './trpc/client';
 

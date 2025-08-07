@@ -1,6 +1,5 @@
 "use client"
 
-import type { Metadata } from 'next';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { motion } from "framer-motion";
 
@@ -113,7 +112,7 @@ export default function ContactPage() {
                       address: "50 Main St, Page, ND 58064", 
                       phone: "(701) 668-2326"
                     }
-                  ].map((location, index) => (
+                  ].map((location) => (
                     <div key={location.name} className="pb-4 border-b border-border/30 last:border-0 last:pb-0">
                       <h4 className="text-body-medium mb-2">{location.name}</h4>
                       <p className="text-small text-muted-foreground mb-1">{location.address}</p>

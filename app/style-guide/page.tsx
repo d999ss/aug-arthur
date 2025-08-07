@@ -470,7 +470,7 @@ export default function StyleGuidePage() {
                 { emoji: "🌱", label: "Soil Health" },
                 { emoji: "🔬", label: "Research" },
                 { emoji: "🧬", label: "Genetics" }
-              ].map((icon, index) => (
+              ].map((icon) => (
                 <div key={icon.label} className="text-center p-4 bg-secondary/50 rounded-lg">
                   <div className="text-2xl mb-2">{icon.emoji}</div>
                   <p className="text-small text-muted-foreground">{icon.label}</p>

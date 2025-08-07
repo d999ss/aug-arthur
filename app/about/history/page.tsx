@@ -65,7 +65,7 @@ export default function HistoryPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              {milestones.map((milestone, index) => (
+              {milestones.map((milestone) => (
                 <Card key={milestone.year} className="border-0 shadow-lg">
                   <CardContent className="p-8">
                     <div className="flex flex-col md:flex-row gap-6">

@@ -231,7 +231,7 @@ export function WeatherDashboard() {
       >
         <h3 className="text-title mb-6">7-Day Forecast</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-          {weather.forecast.map((day, index) => (
+          {weather.forecast.map((day) => (
             <div
               key={day.day}
               className="text-center p-4 rounded-lg hover:bg-secondary/50 transition-colors"

@@ -168,7 +168,7 @@ export function Header() {
                               {category.links.map((link) => (
                                 <Link
                                   key={link.href}
-                                  href={link.href}
+                                  href={link.href as any}
                                   className="block group"
                                   onClick={() => setActiveDropdown(null)}
                                 >
@@ -226,7 +226,7 @@ export function Header() {
                               {category.links.map((link) => (
                                 <Link
                                   key={link.href}
-                                  href={link.href}
+                                  href={link.href as any}
                                   className="block group"
                                   onClick={() => setActiveDropdown(null)}
                                 >
@@ -347,7 +347,7 @@ export function Header() {
                                 {category.links.map((link) => (
                                   <Link
                                     key={link.href}
-                                    href={link.href}
+                                    href={link.href as any}
                                     onClick={toggleMenu}
                                     className="block"
                                   >
@@ -401,7 +401,7 @@ export function Header() {
                                 {category.links.map((link) => (
                                   <Link
                                     key={link.href}
-                                    href={link.href}
+                                    href={link.href as any}
                                     onClick={toggleMenu}
                                     className="block"
                                   >

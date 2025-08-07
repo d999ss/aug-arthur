@@ -61,6 +61,8 @@ export function FuturesTicker() {
   if (tickerData.length === 0) return null
 
   const currentData = tickerData[currentIndex]
+  if (!currentData) return null
+  
   const isPositive = currentData.change >= 0
 
   return (

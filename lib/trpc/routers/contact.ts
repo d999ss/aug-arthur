@@ -1,5 +1,4 @@
 import { TRPCError } from '@trpc/server';
-import { z } from 'zod';
 
 import { contactFormSchema } from '@/lib/validators';
 import { errorHandlingProcedure, router } from '../server';

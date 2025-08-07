@@ -94,6 +94,7 @@ export function RoundedVideo({ src, poster, size = 'md', className = '', autoPla
       >
         <button
           onClick={togglePlay}
+          aria-label={isPlaying ? "Pause video" : "Play video"}
           className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors"
         >
           {isPlaying ? (

@@ -61,7 +61,7 @@ export default function LeadershipPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
-            {leaders.map((leader, index) => (
+            {leaders.map((leader) => (
               <Card key={leader.name} className="border-0 shadow-lg max-w-5xl mx-auto">
                 <CardContent className="p-8">
                   <div className="grid md:grid-cols-4 gap-8">

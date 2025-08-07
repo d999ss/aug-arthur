@@ -231,7 +231,7 @@ export default function ProductsServicesPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Link 
-                    href={service.link}
+                    href={service.link as any}
                     className="group block p-6 rounded-xl transition-all duration-300 hover:scale-105"
                     style={{
                       background: 'hsl(0 0% 8%)',
@@ -316,7 +316,7 @@ export default function ProductsServicesPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Link 
-                    href={service.link}
+                    href={service.link as any}
                     className="group block p-6 rounded-xl transition-all duration-300 hover:scale-105"
                     style={{
                       background: 'hsl(var(--card))',

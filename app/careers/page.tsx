@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Heart, DollarSign, GraduationCap, Clock, Award, Users, AlertCircle, ArrowRight } from 'lucide-react';
+import { Heart, DollarSign, GraduationCap, Clock, AlertCircle, ArrowRight } from 'lucide-react';
 
 import { trpc } from '@/lib/trpc/client';
 
